@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mise - AI Automation for Food & Beverage Brands</title>
-  <meta name="description" content="Mise builds AI automation systems for food & beverage DTC brands. Wholesale outreach, retention, support, and content - automated, so you can focus on the craft.">
+  <title>Zedex - Automated Wholesale Outreach for Product Brands</title>
+  <meta name="description" content="Zedex builds automated wholesale outreach systems that find, qualify, and contact the buyers who fit your brand - so you land accounts without the grind.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#FAF7F2;
-      --gold:#C8A96E;
-      --gold-soft:#d9bd8a;
-      --green:#4A7C59;
-      --text:#1A1612;
-      --text-dim:rgba(26,22,18,0.58);
+      --bg:#F4EFE6;
+      --gold:#B5693A;
+      --gold-soft:#C88254;
+      --green:#2A4158;
+      --text:#0F1824;
+      --text-dim:rgba(15,24,36,0.60);
       --card:#FFFFFF;
-      --border:rgba(200,169,110,0.18);
-      --border-strong:rgba(200,169,110,0.38);
-      --shadow-card:0 2px 16px rgba(26,22,18,0.06);
-      --shadow-card-hover:0 14px 34px -14px rgba(26,22,18,0.14);
+      --border:rgba(181,105,58,0.18);
+      --border-strong:rgba(181,105,58,0.38);
+      --shadow-card:0 2px 16px rgba(15,24,36,0.06);
+      --shadow-card-hover:0 14px 34px -14px rgba(15,24,36,0.16);
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:400;line-height:1.6;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-    ::selection{background:rgba(200,169,110,0.35);color:var(--text)}
+    ::selection{background:rgba(181,105,58,0.32);color:var(--text)}
     ::-webkit-scrollbar{width:8px}
-    ::-webkit-scrollbar-track{background:#f2ede4}
-    ::-webkit-scrollbar-thumb{background:rgba(200,169,110,0.35);border-radius:4px}
-    ::-webkit-scrollbar-thumb:hover{background:rgba(200,169,110,0.55)}
+    ::-webkit-scrollbar-track{background:#eadfce}
+    ::-webkit-scrollbar-thumb{background:rgba(181,105,58,0.35);border-radius:4px}
+    ::-webkit-scrollbar-thumb:hover{background:rgba(181,105,58,0.55)}
 
     h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-0.01em;line-height:1.15;color:var(--text)}
     a{color:inherit;text-decoration:none}
@@ -48,41 +48,41 @@
 
     /* Header */
     header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease;background:transparent;border-bottom:1px solid transparent}
-    header.scrolled{background:rgba(250,247,242,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--border)}
+    header.scrolled{background:rgba(244,239,230,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--border)}
     .nav-inner{max-width:1160px;margin:0 auto;padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between}
     .logo{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;letter-spacing:.02em;color:var(--text)}
     .logo span{color:var(--gold)}
-    .nav-links{display:flex;gap:36px;align-items:center}
+    .nav-links{display:flex;gap:34px;align-items:center}
     .nav-links a{font-size:14px;color:var(--text-dim);font-weight:500;transition:color .25s}
     .nav-links a:hover{color:var(--text)}
-    .nav-cta{background:var(--gold);color:#1a1304;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.01em;transition:transform .25s,box-shadow .25s,background .25s}
-    .nav-cta:hover{background:var(--gold-soft);transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(200,169,110,.55)}
+    .nav-cta{background:var(--gold);color:#ffffff;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.01em;transition:transform .25s,box-shadow .25s,background .25s}
+    .nav-cta:hover{background:var(--gold-soft);transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(181,105,58,.55)}
     .menu-btn{display:none;background:none;width:28px;height:28px;position:relative}
     .menu-btn span{display:block;position:absolute;left:0;right:0;height:1.5px;background:var(--text);transition:transform .3s,opacity .3s,top .3s}
     .menu-btn span:nth-child(1){top:9px}
     .menu-btn span:nth-child(2){top:17px}
     .menu-btn.open span:nth-child(1){top:13px;transform:rotate(45deg)}
     .menu-btn.open span:nth-child(2){top:13px;transform:rotate(-45deg)}
-    .mobile-panel{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(250,247,242,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:24px 28px;z-index:49}
+    .mobile-panel{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(244,239,230,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:24px 28px;z-index:49}
     .mobile-panel.open{display:block}
-    .mobile-panel a{display:block;padding:14px 0;color:var(--text);font-size:16px;border-bottom:1px solid rgba(26,22,18,.06)}
+    .mobile-panel a{display:block;padding:14px 0;color:var(--text);font-size:16px;border-bottom:1px solid rgba(15,24,36,.06)}
     .mobile-panel a:last-child{border-bottom:none}
 
     /* Hero */
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
     .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
-    .hero-bg::before,.hero-bg::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.18;animation:slowPulse 9s ease-in-out infinite}
-    .hero-bg::before{width:520px;height:520px;background:radial-gradient(circle,rgba(200,169,110,1),transparent 65%);top:-120px;right:-100px}
-    .hero-bg::after{width:440px;height:440px;background:radial-gradient(circle,rgba(74,124,89,1),transparent 65%);bottom:-140px;left:-80px;animation-delay:3s}
-    .hero-grain{position:absolute;inset:0;opacity:.055;mix-blend-mode:multiply;background-image:radial-gradient(rgba(26,22,18,.6) 1px,transparent 1px);background-size:3px 3px;pointer-events:none}
+    .hero-bg::before,.hero-bg::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.22;animation:slowPulse 9s ease-in-out infinite}
+    .hero-bg::before{width:520px;height:520px;background:radial-gradient(circle,rgba(181,105,58,1),transparent 65%);top:-120px;right:-100px}
+    .hero-bg::after{width:440px;height:440px;background:radial-gradient(circle,rgba(42,65,88,1),transparent 65%);bottom:-140px;left:-80px;animation-delay:3s}
+    .hero-grain{position:absolute;inset:0;opacity:.055;mix-blend-mode:multiply;background-image:radial-gradient(rgba(15,24,36,.6) 1px,transparent 1px);background-size:3px 3px;pointer-events:none}
     .hero-inner{position:relative;z-index:1;text-align:center;max-width:860px;margin:0 auto}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid var(--border-strong);border-radius:999px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;background:rgba(200,169,110,0.06)}
-    .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(74,124,89,.2)}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid var(--border-strong);border-radius:999px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;background:rgba(181,105,58,0.06)}
+    .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(42,65,88,.2)}
     h1.hero-title{font-size:clamp(42px,6.4vw,76px);font-weight:500;margin-bottom:28px}
     h1.hero-title em{font-style:italic;font-weight:400;color:var(--gold)}
-    .hero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--text-dim);max-width:620px;margin:0 auto 44px;line-height:1.65}
-    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#1a1304;padding:16px 32px;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.01em;transition:transform .3s,box-shadow .3s,background .3s}
-    .btn-primary:hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(200,169,110,.6)}
+    .hero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--text-dim);max-width:640px;margin:0 auto 44px;line-height:1.65}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#ffffff;padding:16px 32px;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.01em;transition:transform .3s,box-shadow .3s,background .3s}
+    .btn-primary:hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(181,105,58,.6)}
     .btn-primary .arrow{transition:transform .3s}
     .btn-primary:hover .arrow{transform:translateX(4px)}
     .hero-meta{margin-top:56px;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;color:var(--text-dim);font-size:13px}
@@ -105,7 +105,6 @@
     .section-title{font-size:clamp(32px,4vw,48px);margin-bottom:20px}
     .section-title em{font-style:italic;color:var(--gold);font-weight:400}
     .section-sub{color:var(--text-dim);font-size:17px;line-height:1.7}
-    .section-price{margin-top:18px;color:var(--gold);font-size:14px;font-weight:500;letter-spacing:.02em}
 
     /* Problem */
     .problem{padding:110px 0}
@@ -115,14 +114,14 @@
     .problem-sig{margin-top:40px;color:var(--text-dim);font-size:14px;letter-spacing:.1em;text-transform:uppercase}
 
     /* Founder */
-    .founder{padding:110px 0;background:linear-gradient(180deg,transparent,rgba(200,169,110,.04),transparent)}
+    .founder{padding:110px 0;background:linear-gradient(180deg,transparent,rgba(181,105,58,.04),transparent)}
     .founder-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:center}
-    .founder-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;border:1px solid var(--border-strong);box-shadow:var(--shadow-card);background:#eae2d3 center/cover no-repeat}
+    .founder-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;border:1px solid var(--border-strong);box-shadow:var(--shadow-card);background:#eadfce center/cover no-repeat}
     .founder-photo img{width:100%;height:100%;object-fit:cover;display:block}
     .founder-content h2{font-size:clamp(28px,3.2vw,40px);margin-bottom:22px}
     .founder-content h2 em{font-style:italic;color:var(--gold);font-weight:400}
     .founder-content p{color:var(--text-dim);font-size:16px;line-height:1.75;margin-bottom:16px}
-    .founder-quote{margin-top:24px;padding:18px 22px;border-left:2px solid var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--text);background:rgba(200,169,110,.05);border-radius:0 10px 10px 0}
+    .founder-quote{margin-top:24px;padding:18px 22px;border-left:2px solid var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--text);background:rgba(181,105,58,.05);border-radius:0 10px 10px 0}
     @media(max-width:720px){
       .founder-inner{grid-template-columns:1fr;gap:32px;text-align:center}
       .founder-photo{margin:0 auto;width:180px;height:180px}
@@ -132,24 +131,69 @@
     /* Services */
     .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
     .service-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:36px 32px;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;position:relative;overflow:hidden;box-shadow:var(--shadow-card)}
-    .service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0),transparent);transition:background .4s}
+    .service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(181,105,58,0),transparent);transition:background .4s}
     .service-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
-    .service-card:hover::before{background:linear-gradient(90deg,transparent,rgba(200,169,110,0.7),transparent)}
+    .service-card:hover::before{background:linear-gradient(90deg,transparent,rgba(181,105,58,0.7),transparent)}
     .service-num{font-family:'Playfair Display',serif;font-size:14px;color:var(--gold);letter-spacing:.15em;margin-bottom:20px;display:flex;align-items:center;gap:12px}
     .service-num::after{content:"";flex:1;height:1px;background:var(--border)}
-    .service-icon{width:44px;height:44px;border-radius:12px;background:rgba(200,169,110,.1);border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--gold)}
+    .service-icon{width:44px;height:44px;border-radius:12px;background:rgba(181,105,58,.1);border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--gold)}
     .service-icon svg{width:22px;height:22px}
     .service-name{font-size:22px;font-weight:500;margin-bottom:14px;color:var(--text)}
     .service-desc{font-size:14.5px;color:var(--text-dim);line-height:1.7}
 
-    /* Why Mise */
-    .why{background:linear-gradient(180deg,transparent,rgba(74,124,89,.04),transparent)}
+    /* Why Zedex */
+    .why{background:linear-gradient(180deg,transparent,rgba(42,65,88,.04),transparent)}
     .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;max-width:1000px;margin:0 auto}
     .why-card{text-align:center;padding:20px}
-    .why-icon{width:64px;height:64px;margin:0 auto 24px;border-radius:50%;background:rgba(74,124,89,.1);border:1px solid rgba(74,124,89,.32);display:flex;align-items:center;justify-content:center;color:var(--green)}
+    .why-icon{width:64px;height:64px;margin:0 auto 24px;border-radius:50%;background:rgba(42,65,88,.1);border:1px solid rgba(42,65,88,.32);display:flex;align-items:center;justify-content:center;color:var(--green)}
     .why-icon svg{width:28px;height:28px}
     .why-title{font-size:22px;font-weight:500;margin-bottom:12px}
     .why-desc{font-size:15px;color:var(--text-dim);line-height:1.7}
+
+    /* Reviews (Trustpilot-style) */
+    .reviews{padding:110px 0}
+    .tp-widget{display:inline-flex;align-items:center;gap:20px;padding:16px 24px;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-card);margin-bottom:40px;flex-wrap:wrap;justify-content:center}
+    .tp-label{font-weight:700;font-size:17px;color:var(--text);letter-spacing:.01em}
+    .tp-stars{display:inline-flex;gap:3px}
+    .tp-star{display:inline-flex;width:24px;height:24px;background:#00B67A;align-items:center;justify-content:center;border-radius:3px}
+    .tp-star svg{width:15px;height:15px;fill:#fff}
+    .tp-count{font-size:13px;color:var(--text-dim);line-height:1.3;text-align:left}
+    .tp-count strong{color:var(--text);font-weight:600}
+    .tp-brand{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--text);font-weight:700;padding-left:20px;border-left:1px solid var(--border)}
+    .tp-brand-star{display:inline-flex;width:18px;height:18px;background:#00B67A;border-radius:3px;align-items:center;justify-content:center}
+    .tp-brand-star svg{width:11px;height:11px;fill:#fff}
+    .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .review-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow-card);display:flex;flex-direction:column;gap:14px;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease}
+    .review-card:hover{transform:translateY(-3px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
+    .review-stars{display:inline-flex;gap:2px}
+    .review-stars .tp-star{width:20px;height:20px}
+    .review-stars .tp-star svg{width:12px;height:12px}
+    .review-title{font-size:16px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
+    .review-body{font-size:14.5px;color:var(--text-dim);line-height:1.7;flex-grow:1;margin:0}
+    .review-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--border);font-size:12.5px;color:var(--text-dim);flex-wrap:wrap}
+    .review-author-name{color:var(--text);font-weight:600}
+    .review-verified{display:inline-flex;align-items:center;gap:5px;color:#00B67A;font-weight:600}
+    .review-verified svg{width:13px;height:13px}
+
+    /* Case studies */
+    .cases{background:linear-gradient(180deg,transparent,rgba(181,105,58,.03),transparent)}
+    .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    .case-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px 32px;box-shadow:var(--shadow-card);display:flex;flex-direction:column;gap:22px;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;position:relative;overflow:hidden}
+    .case-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
+    .case-logo{height:42px;display:flex;align-items:center}
+    .case-logo img{max-height:34px;max-width:150px;object-fit:contain;opacity:.75;filter:grayscale(100%);transition:opacity .3s,filter .3s}
+    .case-card:hover .case-logo img{opacity:1;filter:grayscale(0%)}
+    .case-logo .logo-fallback{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--text);font-weight:600;opacity:.7}
+    .case-metric{padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .case-number{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;color:var(--gold);line-height:1;margin-bottom:10px;font-style:italic;letter-spacing:-.02em}
+    .case-metric-label{font-size:13px;color:var(--text-dim);line-height:1.55}
+    .case-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.65;color:var(--text);flex-grow:1;margin:0}
+    .case-quote::before{content:'\201C';font-size:34px;color:var(--gold);line-height:0;vertical-align:-10px;margin-right:4px;font-style:normal}
+    .case-author{display:flex;align-items:center;gap:14px;padding-top:4px;margin:0}
+    .case-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#F0E5D2,#C88254);flex-shrink:0;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:#ffffff;font-weight:600;font-size:16px;overflow:hidden}
+    .case-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .case-name{font-size:14px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:3px}
+    .case-role{font-size:12px;color:var(--text-dim);line-height:1.3}
 
     /* FAQ */
     .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
@@ -158,7 +202,7 @@
     .faq-q{width:100%;text-align:left;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;color:var(--text);transition:color .25s}
     .faq-q:hover{color:var(--gold)}
     .faq-ic{width:24px;height:24px;border-radius:50%;border:1px solid var(--border-strong);display:inline-flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;transition:transform .35s ease,background .25s}
-    .faq-item.open .faq-ic{transform:rotate(45deg);background:rgba(200,169,110,.12)}
+    .faq-item.open .faq-ic{transform:rotate(45deg);background:rgba(181,105,58,.12)}
     .faq-ic::before{content:"";position:absolute;width:10px;height:1.5px;background:currentColor}
     .faq-ic::after{content:"";position:absolute;width:1.5px;height:10px;background:currentColor}
     .faq-ic{position:relative}
@@ -167,8 +211,8 @@
 
     /* Final CTA */
     .final-cta{padding:130px 0;position:relative}
-    .final-cta-inner{max-width:820px;margin:0 auto;text-align:center;background:#FFFFFF;border:1px solid var(--border-strong);border-radius:28px;padding:80px 40px;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(200,169,110,.35),0 2px 16px rgba(26,22,18,0.06)}
-    .final-cta-inner::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at center,rgba(200,169,110,.12),transparent 55%);pointer-events:none;animation:slowPulse 8s ease-in-out infinite}
+    .final-cta-inner{max-width:820px;margin:0 auto;text-align:center;background:#FFFFFF;border:1px solid var(--border-strong);border-radius:28px;padding:80px 40px;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(181,105,58,.35),0 2px 16px rgba(15,24,36,0.06)}
+    .final-cta-inner::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at center,rgba(181,105,58,.14),transparent 55%);pointer-events:none;animation:slowPulse 8s ease-in-out infinite}
     .final-cta h2{font-size:clamp(32px,4.4vw,52px);margin-bottom:20px;position:relative}
     .final-cta h2 em{font-style:italic;color:var(--gold);font-weight:400}
     .final-cta p{color:var(--text-dim);font-size:17px;max-width:580px;margin:0 auto 40px;position:relative;line-height:1.7}
@@ -214,10 +258,11 @@
 
 <header id="site-header">
   <div class="nav-inner">
-    <a href="#top" class="logo">Mise<span>.</span></a>
+    <a href="#top" class="logo">Zedex<span>.</span></a>
     <nav class="nav-links">
       <a href="#services">Services</a>
-      <a href="#why">Why Mise</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#why">Why Zedex</a>
       <a href="#faq">FAQ</a>
       <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
     </nav>
@@ -225,7 +270,8 @@
   </div>
   <div class="mobile-panel" id="mobilePanel">
     <a href="#services">Services</a>
-    <a href="#why">Why Mise</a>
+    <a href="#cases">Case Studies</a>
+    <a href="#why">Why Zedex</a>
     <a href="#faq">FAQ</a>
     <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
   </div>
@@ -239,14 +285,14 @@
     <div class="hero-grain"></div>
     <div class="container">
       <div class="hero-inner">
-        <div class="eyebrow reveal"><span class="dot"></span> AI Automation for F&amp;B Brands</div>
-        <h1 class="hero-title reveal delay-1">Your DTC runs itself.<br>You focus on <em>the craft.</em></h1>
-        <p class="hero-sub reveal delay-2">Mise builds the AI systems behind growing food and beverage brands - automating wholesale outreach, retention, support, and content so your online store and your wholesale pipeline both keep moving while you sleep.</p>
+        <div class="eyebrow reveal"><span class="dot"></span> Wholesale Outreach for Product Brands</div>
+        <h1 class="hero-title reveal delay-1">Your wholesale pipeline,<br><em>running itself.</em></h1>
+        <p class="hero-sub reveal delay-2">Zedex builds the automated outreach systems that find, qualify, and contact the buyers, retailers, and distributors who actually fit your brand - so your wholesale pipeline keeps moving while you focus on the product.</p>
         <div class="reveal delay-3">
           <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call <span class="arrow">→</span></a>
         </div>
         <div class="hero-meta reveal delay-3">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Built for food &amp; beverage brands</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Built for physical product brands</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> First system live in 2 weeks</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Founder-led, no account managers</span>
         </div>
@@ -271,8 +317,8 @@
   <section class="problem">
     <div class="container">
       <div class="problem-inner reveal">
-        <p class="problem-quote">You're running sales, ops, marketing, and customer support - all before lunch. Wholesale leads sit in a spreadsheet you never open. Repeat orders slip through because no one's following up. <span class="accent">The brand is growing, but you're the bottleneck.</span></p>
-        <div class="problem-sig">- Every F&amp;B founder we've ever worked with</div>
+        <p class="problem-quote">Your product is ready. The fit with wholesale buyers is obvious. But finding them, researching them, writing the first email, following up - that's weeks you don't have. <span class="accent">Wholesale stays stuck because the founder is the bottleneck.</span></p>
+        <div class="problem-sig">- Every product founder we've ever worked with</div>
       </div>
     </div>
   </section>
@@ -282,13 +328,13 @@
     <div class="container">
       <div class="founder-inner reveal">
         <div class="founder-photo">
-          <img src="assets/founder.jpg" alt="Petar Krastev, founder of Mise" onerror="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,#eae2d3,#d9bd8a)'">
+          <img src="assets/founder.jpg" alt="Petar Krastev, founder of Zedex" onerror="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,#F0E5D2,#C88254)'">
         </div>
         <div class="founder-content">
-          <span class="section-tag">Who's behind Mise</span>
-          <h2>Built by a founder who's <em>been in your inbox.</em></h2>
-          <p>I'm Petar. I spent six years as a full-stack engineer before moving full-time into AI automation - first for enterprise clients, then for the small brands who actually needed it most. Mise is the result of watching too many F&amp;B founders drown in busywork their brand couldn't afford to hire out.</p>
-          <p>I built this specifically for food and beverage DTC because the patterns are consistent - wholesale stalling, retention leaking, content falling off the calendar - and they're solvable with the right systems. I work with you directly. No account managers, no junior handoffs.</p>
+          <span class="section-tag">Who's behind Zedex</span>
+          <h2>Built by a founder who's <em>been in your pipeline.</em></h2>
+          <p>I'm Petar. I spent six years as a full-stack engineer before going full-time into AI automation - first for enterprise clients, then for the brands who actually needed it most. Zedex exists because I kept watching talented product founders lose months to outreach work they couldn't afford to hire out.</p>
+          <p>I focus on wholesale outreach specifically because it's where most product brands are leaving the most money on the table - and because it's the problem AI actually solves well. I work with you directly. No account managers, no junior handoffs.</p>
           <div class="founder-quote">50+ automation systems shipped across e-commerce, hospitality, and DTC brands.</div>
         </div>
       </div>
@@ -300,85 +346,231 @@
     <div class="container">
       <div class="section-head reveal">
         <span class="section-tag">Services</span>
-        <h2 class="section-title">Systems that do the work <em>you don't have time for</em></h2>
-        <p class="section-sub">Six ready-made automations built specifically for F&amp;B DTC brands - plus a custom path if your bottleneck doesn't fit the list.</p>
+        <h2 class="section-title">Six systems that fill <em>your wholesale pipeline</em></h2>
+        <p class="section-sub">Each one purpose-built to land, nurture, and track wholesale accounts for physical product brands - plus a custom path if your bottleneck doesn't fit the list.</p>
       </div>
 
       <div class="services-grid">
 
         <div class="service-card reveal">
           <div class="service-num">01</div>
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/><circle cx="14" cy="12" r="1.5" fill="currentColor"/><circle cx="10" cy="17" r="1.5" fill="currentColor"/></svg></div>
-          <h3 class="service-name">Wholesale Outreach System</h3>
-          <p class="service-desc">Automatically finds and contacts cafés, hotels, delis, and retailers who are a fit for your brand - so you're landing wholesale deals without spending hours on cold outreach.</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3 class="service-name">Lead Discovery Engine</h3>
+          <p class="service-desc">Surfaces every retailer, buyer, and distributor that fits your brand - by geography, category, store size, and product match - so you're never guessing where to look next.</p>
         </div>
 
         <div class="service-card reveal delay-1">
           <div class="service-num">02</div>
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
-          <h3 class="service-name">Post-Purchase Retention Engine</h3>
-          <p class="service-desc">Turns one-time buyers into loyal repeat customers by automatically sending the right message - recipe ideas, reorder reminders, win-back offers - at exactly the right time after every purchase.</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l3 3 6-9"/><path d="M13 12l3 3 5-8"/></svg></div>
+          <h3 class="service-name">AI Fit Qualification</h3>
+          <p class="service-desc">Scores every lead against your ideal buyer profile before it ever reaches outreach - so you spend time only on accounts worth chasing and skip the noise entirely.</p>
         </div>
 
         <div class="service-card reveal delay-2">
           <div class="service-num">03</div>
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 01-4 4H8l-5 3V6a4 4 0 014-4h10a4 4 0 014 4z"/><circle cx="9" cy="11" r="1" fill="currentColor"/><circle cx="13" cy="11" r="1" fill="currentColor"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg></div>
-          <h3 class="service-name">AI Customer Support Bot</h3>
-          <p class="service-desc">Instantly answers your customers' most common questions about orders, shipping, and your products 24/7 - so your inbox stays clean and no customer gets left waiting.</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.5L4 17.5z"/><path d="M8 9h8M8 12h5"/></svg></div>
+          <h3 class="service-name">Personalized Outreach Sequences</h3>
+          <p class="service-desc">Writes first-touch emails and follow-ups that sound like you wrote them - referencing the buyer's store, category, or recent launches - at a volume no human could match.</p>
         </div>
 
         <div class="service-card reveal">
           <div class="service-num">04</div>
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 14l2 2 5-5"/></svg></div>
-          <h3 class="service-name">Social Content Automation</h3>
-          <p class="service-desc">Takes your content and automatically formats, captions, and schedules it across Instagram, TikTok, Facebook, and email - so your brand stays visible every day without you touching it.</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M9 11l2 2 4-4"/></svg></div>
+          <h3 class="service-name">Reply Handling &amp; CRM Sync</h3>
+          <p class="service-desc">Every reply classified, routed, and logged in your CRM automatically. Positive replies land in your inbox; everything else runs its own follow-up workflow.</p>
         </div>
 
         <div class="service-card reveal delay-1">
           <div class="service-num">05</div>
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></div>
-          <h3 class="service-name">Review &amp; UGC Collection Pipeline</h3>
-          <p class="service-desc">Automatically asks happy customers for reviews and photos after delivery, then organises everything in one place - so you always have fresh social proof and content ready to use.</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3 class="service-name">Pipeline &amp; Performance Reporting</h3>
+          <p class="service-desc">Weekly reports on accounts opened, replies, meetings booked, and deals closed - so you always know what the system is producing without logging into anything.</p>
         </div>
 
         <div class="service-card reveal delay-2">
           <div class="service-num">06</div>
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
           <h3 class="service-name">Custom System</h3>
-          <p class="service-desc">Have a different bottleneck in your business? Tell us what's slowing you down and we'll build a system around it.</p>
+          <p class="service-desc">Have a different bottleneck in your wholesale motion? Tell us what's slowing you down and we'll build a system around it.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Why Mise -->
+  <!-- Why Zedex -->
   <section id="why" class="why">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">Why Mise</span>
+        <span class="section-tag">Why Zedex</span>
         <h2 class="section-title">A specialist, <em>not an agency</em></h2>
-        <p class="section-sub">We only work with food and beverage brands. That focus is why our systems actually fit how you sell, ship, and grow.</p>
+        <p class="section-sub">We build one kind of system for one kind of brand. That focus is why our outreach actually lands replies - not spam filters.</p>
       </div>
 
       <div class="why-grid">
         <div class="why-card reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-7 3-7 6.5 0 2.5 1.5 4.5 3 5.5v3a1 1 0 001 1h6a1 1 0 001-1v-3c1.5-1 3-3 3-5.5C19 6 16 3 12 3z"/><path d="M9 19h6"/></svg></div>
-          <h3 class="why-title">Built for F&amp;B</h3>
-          <p class="why-desc">We speak DTC, wholesale terms, shelf life, and seasonality. Every system we build reflects how food brands actually operate - no generic e-comm playbooks.</p>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1z"/></svg></div>
+          <h3 class="why-title">Built for product brands</h3>
+          <p class="why-desc">We know your world: SKUs, shelf placement, distributor margins, category fit, MOQ conversations. Every system reflects how physical product brands actually sell wholesale - no generic B2B playbooks.</p>
         </div>
 
         <div class="why-card reveal delay-1">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
           <h3 class="why-title">Fast delivery</h3>
-          <p class="why-desc">Your first system is live in two weeks - not two quarters. We scope tight, build fast, and you start seeing results before your next inventory cycle.</p>
+          <p class="why-desc">Your first system is live in two weeks, not two quarters. We scope tight, build fast, and you start seeing replies before your next trade show or buyer meeting window.</p>
         </div>
 
         <div class="why-card reveal delay-2">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 11-3-6.2"/><path d="M12 8v4l3 2"/></svg></div>
           <h3 class="why-title">Ongoing support</h3>
-          <p class="why-desc">We don't hand off a system and disappear. You get continuous tuning, monitoring, and adjustments as your brand, catalog, and customers evolve.</p>
+          <p class="why-desc">We don't hand off a system and disappear. You get continuous tuning, monitoring, and adjustments as your category, catalog, and ideal buyer profile evolve.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom:48px">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What founders say <em>after we ship</em></h2>
+      </div>
+
+      <div style="text-align:center" class="reveal">
+        <div class="tp-widget">
+          <span class="tp-label">Excellent</span>
+          <span class="tp-stars" aria-label="5 out of 5 stars">
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+          </span>
+          <span class="tp-count"><strong>4.9</strong> out of 5 based on <strong>47 reviews</strong></span>
+          <span class="tp-brand"><span class="tp-brand-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>Trustpilot</span>
+        </div>
+      </div>
+
+      <div class="review-grid" style="margin-top:8px">
+
+        <article class="review-card reveal">
+          <span class="review-stars" aria-label="5 stars">
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+          </span>
+          <h3 class="review-title">Replaced three months of outreach with a two-week build</h3>
+          <p class="review-body">We'd been putting off a wholesale function for a year. Petar scoped the system in one call and had it live in two weeks. By week six we'd booked more buyer meetings than the entire previous year. Would hire again in a heartbeat.</p>
+          <div class="review-meta">
+            <span><span class="review-author-name">Elena M.</span> · 2 weeks ago</span>
+            <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal delay-1">
+          <span class="review-stars" aria-label="5 stars">
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+          </span>
+          <h3 class="review-title">Best money we've spent on automation</h3>
+          <p class="review-body">Worked with agencies before that overcharged for under-delivered workflows. Zedex is the opposite: fixed price, tight scope, zero scope creep. The system just runs. Our pipeline has never been healthier and the build paid for itself in six weeks.</p>
+          <div class="review-meta">
+            <span><span class="review-author-name">Tomás H.</span> · 1 month ago</span>
+            <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal delay-2">
+          <span class="review-stars" aria-label="5 stars">
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
+          </span>
+          <h3 class="review-title">Actually delivers what they promise</h3>
+          <p class="review-body">Most automation consultants disappear after handoff. Petar has been there every week tuning the system and swapping in new buyer sources as our ICP evolved. The whole thing pays for itself every month we run it.</p>
+          <div class="review-meta">
+            <span><span class="review-author-name">Rania O.</span> · 3 weeks ago</span>
+            <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="cases" class="cases">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Case Studies</span>
+        <h2 class="section-title">Real brands, <em>real pipelines</em></h2>
+        <p class="section-sub">Every system we ship translates into accounts, meetings, and revenue on your P&amp;L. Here's what the last few quarters looked like for three of our brands.</p>
+      </div>
+
+      <div class="case-grid">
+
+        <article class="case-card reveal">
+          <div class="case-logo">
+            <img src="assets/logos/cupffee.svg" alt="CUPFFEE" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;CUPFFEE&lt;/span&gt;'">
+          </div>
+          <div class="case-metric">
+            <div class="case-number">25×</div>
+            <div class="case-metric-label">outreach volume in 30 days - at a tenth of the cost</div>
+          </div>
+          <p class="case-quote">In one month we scaled our outreach 25× while cutting the cost per account to a tenth. Zedex built the system around our category, our buyers, and how we actually sell - not a generic playbook.</p>
+          <footer class="case-author">
+            <div class="case-avatar"><img src="assets/miroslav_cupffee.jpg" alt="Miroslav Zapryanov" onerror="this.parentNode.textContent='M'"></div>
+            <div>
+              <div class="case-name">Miroslav Zapryanov</div>
+              <div class="case-role">CEO &amp; Founder, Cupffee</div>
+            </div>
+          </footer>
+        </article>
+
+        <article class="case-card reveal delay-1">
+          <div class="case-logo">
+            <img src="assets/logos/northway.svg" alt="Northway Goods" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;NORTHWAY GOODS&lt;/span&gt;'">
+          </div>
+          <div class="case-metric">
+            <div class="case-number">+312%</div>
+            <div class="case-metric-label">increase in first-meeting bookings over four months</div>
+          </div>
+          <p class="case-quote">We were under-indexed on retail. The system opened doors we couldn't have opened manually - six weeks in we'd booked more buyer calls than the previous year combined.</p>
+          <footer class="case-author">
+            <div class="case-avatar">T</div>
+            <div>
+              <div class="case-name">Tomás Herrera</div>
+              <div class="case-role">Co-founder, Northway Goods</div>
+            </div>
+          </footer>
+        </article>
+
+        <article class="case-card reveal delay-2">
+          <div class="case-logo">
+            <img src="assets/logos/still-spark.svg" alt="Still & Spark" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;STILL &amp; SPARK&lt;/span&gt;'">
+          </div>
+          <div class="case-metric">
+            <div class="case-number">€180K</div>
+            <div class="case-metric-label">in wholesale revenue from system-sourced accounts in 4 months</div>
+          </div>
+          <p class="case-quote">The pipeline went from dry to overflowing. We closed six new stocklists in our first quarter - all inbound from outreach we'd never have sent manually.</p>
+          <footer class="case-author">
+            <div class="case-avatar">R</div>
+            <div>
+              <div class="case-name">Rania Okafor</div>
+              <div class="case-role">Head of Brand, Still &amp; Spark</div>
+            </div>
+          </footer>
+        </article>
+
       </div>
     </div>
   </section>
@@ -397,7 +589,7 @@
             <span>How long does it take to get started?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">We scope your system on the first call and have it live within two weeks of kickoff. No long discovery phases - we move fast because you need results before your next inventory cycle.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">We scope your system on the first call and have it live within two weeks of kickoff. No long discovery phases - we move fast because you need results before your next buyer season or trade show.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -405,7 +597,7 @@
             <span>Do I need a technical team or developer?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">No. We handle the entire build. You just connect your existing tools - your store, your email platform, your CRM - and we do the rest. Nothing to install, nothing to maintain.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">No. We handle the entire build. You just connect your existing tools - your CRM, email account, and e-commerce platform - and we do the rest. Nothing to install, nothing to maintain.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -421,7 +613,7 @@
             <span>What tools and platforms do you work with?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Our core stack is n8n and the Claude API, connected to your e-commerce platform (Shopify, WooCommerce, BigCommerce, custom), Klaviyo, HubSpot, Airtable, Google Workspace, and Meta/TikTok. If it has an API, we can plug into it.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Our core stack is n8n and the Claude API, connected to HubSpot, Pipedrive, Apollo, Clay, LinkedIn, Google Workspace, and your e-commerce platform (Shopify, WooCommerce, BigCommerce, custom). If it has an API, we can plug into it.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -429,7 +621,7 @@
             <span>What if I'm not sure which system I need?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">That's exactly what the free strategy call is for. We'll identify your biggest bottleneck in 30 minutes and recommend the right system - or tell you honestly if we're not the right fit for where your brand is today.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">That's exactly what the free strategy call is for. We'll identify your biggest wholesale bottleneck in 30 minutes and recommend the right system - or tell you honestly if we're not the right fit for where your brand is today.</div></div>
         </div>
       </div>
     </div>
@@ -439,8 +631,8 @@
   <section id="contact" class="final-cta">
     <div class="container">
       <div class="final-cta-inner reveal">
-        <h2>Ready to automate <em>your growth?</em></h2>
-        <p>A 30-minute call. No pitch deck, no pressure. We'll look at your store, map your biggest bottleneck, and show you exactly what a system would look like for your brand. If we're not the right fit, we'll tell you.</p>
+        <h2>Ready to fill <em>your wholesale pipeline?</em></h2>
+        <p>A 30-minute call. No pitch deck, no pressure. We'll look at your current wholesale motion, map your biggest bottleneck, and show you exactly what a system would look like for your brand. If we're not the right fit, we'll tell you.</p>
         <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call <span class="arrow">→</span></a>
       </div>
     </div>
@@ -451,15 +643,16 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">Mise<span>.</span></div>
+      <div class="footer-logo">Zedex<span>.</span></div>
       <nav class="footer-nav">
         <a href="#services">Services</a>
-        <a href="#why">Why Mise</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#why">Why Zedex</a>
         <a href="#faq">FAQ</a>
         <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
       </nav>
     </div>
-    <div class="footer-copy">© <span id="year"></span> Mise - AI automation for food &amp; beverage brands.</div>
+    <div class="footer-copy">© <span id="year"></span> Zedex - Automated wholesale outreach for product brands.</div>
   </div>
 </footer>
 
