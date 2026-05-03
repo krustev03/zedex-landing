@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+
+# Internal docs — not for public repo
+CLAUDE.md
