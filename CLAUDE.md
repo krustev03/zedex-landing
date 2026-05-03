@@ -31,25 +31,31 @@ Single-page marketing site for **Zedex** — Petar's freelance offer selling aut
 
 1. Header (scroll-aware, blurs bg after 20px scroll)
 2. **Hero** — 2-col grid (text left, Calendly inline widget right). Stacks on ≤1024px.
-3. **Trust bar** — 3 client logos (Cupffee real; Northway + Still & Spark placeholder) with gold sparkle-star dividers between them. Enhanced 2026-04-24 to match direct-response agency-style prominent logo band.
-4. **Reviews** — Trustpilot-style widget + 3 review cards. Moved up 2026-04-24 to front-load social proof right after trust bar (matching direct-response flow).
-5. **Case Studies** — 3 brand cards (Cupffee real; Northway + Still & Spark placeholder). Moved up with Reviews 2026-04-24.
-6. ~~Pains~~ — **REMOVED 2026-04-24** as part of minimalism pass. ICP is already pain-aware; the agitation pattern wasn't load-bearing for clarity/authority/CTA. CSS for `.pains`, `.pain-grid`, `.pain-card`, `.pain-icon`, `.pain-title`, `.pain-body` still in `<style>` block (not deleted — harmless, restorable).
+3. **Trust bar** — Marquee of brand logos (Cupffee real with local SVG `assets/logos/cupffee.svg`; rest are placeholder brand names with logo-fallback text styling).
+4. **Reviews** — Trustpilot-style widget + 3 review cards.
+5. **Case Studies** — 3 brand cards (Cupffee real; Northway + Still & Spark placeholder).
+6. **Founder** — "Behind Zedex" — round portrait + 3-paragraph intro from Petar. **Moved here 2026-05-03** from position 10 (was right before Final CTA). Reasoning: "I work alone" is the #1 differentiator vs agencies; establishing it early reframes everything that follows through the founder lens. Photo: `assets/founder.jpg`.
 7. ~~VSL / Loom~~ — **ARCHIVED 2026-04-24** (commented out in HTML). Will return once Petar records the 2-minute founder intro. See "Archived sections" below for restore instructions.
-8. How It Works — 4 steps
-9. ~~Integrations~~ — **REMOVED 2026-04-24** as part of minimalism pass. The 10 CRMs (HubSpot, Pipedrive, Salesforce, monday, Zoho, Close, Attio, Folk, ActiveCampaign, Airtable) now live as one line inside the FAQ "What tools and platforms do you work with?" answer. CSS for `.integrations`, `.integration-grid`, `.integration-logo`, `.integration-text`, `.integration-footnote` still in `<style>` block (not deleted).
-10. Outcomes — 6 stat cards
-11. **Engagement models** — 2 tier cards (Done-For-You + White-Label). No prices shown; both CTAs go to Calendly. Added 2026-04-24.
-12. FAQ — accordion (includes pricing-without-price answer, white-label question, and the integrations rollup as one line)
-13. **Founder** — "Behind Zedex" — round portrait + 2-paragraph intro from Petar. Added 2026-04-24 as solo-freelancer trust signal between FAQ and Final CTA. Photo: `assets/founder.jpg`.
-14. Final CTA
-15. Footer
+8. **Outcomes** — 6 stat cards. **Swapped with How It Works 2026-05-03** — founders care about results before process.
+9. **How It Works** — 4 steps.
+10. **Integrations** — 15-logo grid (HubSpot, Salesforce, Pipedrive, Monday, Airtable, Google Workspace, Microsoft 365, Shopify, WooCommerce, Apollo, Zoho, Close, Attio, ActiveCampaign, Clay). **Restored 2026-05-03** as a dedicated section between Outcomes and Engagement Models. Logos via Clearbit with text fallback. Section copy in ICP-native language.
+11. **Engagement models** — 2 tier cards (Done-For-You + White-Label). No prices shown; both CTAs go to Calendly.
+12. FAQ — accordion (includes pricing-without-price answer, white-label question; CRM tools list still in FAQ as supplemental coverage to the Integrations section).
+13. Final CTA
+14. Footer
 
-**Narrative arc:** Hero promise → trust (logos) → proof (reviews + cases) → demonstrate (How → Outcomes → Engagement Models) → answer objections (FAQ) → personal trust (Founder) → close (CTA). Social proof is front-loaded because the ICP (product brand founders) is pain-aware already.
+**Mobile-only**: sticky bottom-of-screen CTA bar (`.mobile-sticky-cta`) added 2026-05-03. Visible only at ≤820px. Body padding-bottom: 80px to prevent overlap.
+
+**Narrative arc** (updated 2026-05-03): Hero promise → trust (logos) → proof at scale (reviews) → proof in depth (cases) → **personal trust (Founder)** → outcomes (what you get) → process (how) → fit (integrations) → engagement (DFY/white-label) → objections (FAQ) → close (Final CTA). The founder reframe at position 6 sets context for the rest of the page.
 
 ## Removed sections (kept their CSS)
 
-- **Pains** (`<!-- Pains -->` previously at line ~598) and **Integrations** (`<!-- Integrations -->` previously at line ~668) were both removed from the HTML in 2026-04-24 minimalism pass. Their CSS is still in the `<style>` block under `/* Pains */` and `/* Integrations */` comments — left in place so the sections can be restored quickly if needed.
+- **Pains** (`<!-- Pains -->` previously at line ~598) was removed in 2026-04-24 minimalism pass. CSS still in `<style>` block under `/* Pains */` comments, restorable.
+- **Integrations** was originally removed 2026-04-24 then **restored 2026-05-03** as a dedicated section. CSS was already preserved.
+
+## Removed sections that may be re-added
+
+- **Pains** (`<!-- Pains -->` previously at line ~598) was removed in 2026-04-24 minimalism pass. CSS still in `<style>` block under `/* Pains */` comments, restorable.
 
 ## Archived sections
 
