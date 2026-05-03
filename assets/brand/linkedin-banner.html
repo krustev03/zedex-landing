@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zedex — LinkedIn Banner (1584×396)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#2a2a2a;padding:40px;font-family:'Inter',sans-serif}
+  .note{color:#ccc;max-width:1584px;margin:0 auto 20px;font-size:14px;line-height:1.6}
+  .note code{background:#111;padding:2px 8px;border-radius:4px;color:#F4EFE6}
+
+  /* LinkedIn banner — exact 1584×396 */
+  .banner{
+    position:relative;
+    width:1584px;
+    height:396px;
+    background:#F4EFE6;
+    overflow:hidden;
+    font-family:'Inter',sans-serif;
+    margin:0 auto 40px;
+  }
+
+  /* Soft blurred background blobs */
+  .banner::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    right:-8%;
+    width:620px;
+    height:620px;
+    border-radius:50%;
+    background:rgba(181,105,58,0.22);
+    filter:blur(90px);
+    pointer-events:none;
+  }
+  .banner::after{
+    content:"";
+    position:absolute;
+    bottom:-40%;
+    left:-6%;
+    width:560px;
+    height:560px;
+    border-radius:50%;
+    background:rgba(42,65,88,0.22);
+    filter:blur(90px);
+    pointer-events:none;
+  }
+
+  /* Grain overlay */
+  .grain{
+    position:absolute;
+    inset:0;
+    opacity:.05;
+    mix-blend-mode:multiply;
+    background-image:radial-gradient(rgba(15,24,36,.6) 1px,transparent 1px);
+    background-size:3px 3px;
+    pointer-events:none;
+  }
+
+  /* LinkedIn avatar overlay indicator (visual reference — shows where the avatar will sit; not part of final) */
+  .avatar-zone{
+    position:absolute;
+    left:64px;
+    bottom:-44px;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:2px dashed rgba(15,24,36,0.18);
+    background:rgba(15,24,36,0.03);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(15,24,36,0.35);
+    z-index:3;
+    pointer-events:none;
+  }
+  .banner.production .avatar-zone{display:none}
+
+  /* Content — positioned in RIGHT HALF to avoid avatar overlap */
+  .content{
+    position:absolute;
+    top:0;
+    right:0;
+    width:62%;
+    height:100%;
+    padding:70px 100px 70px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-end;
+    text-align:right;
+    z-index:2;
+  }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:#B5693A;
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Inter',sans-serif;
+    font-weight:800;
+    font-size:60px;
+    line-height:1.04;
+    letter-spacing:-0.028em;
+    color:#0F1824;
+    margin:0;
+    max-width:780px;
+  }
+  h1 em{
+    font-style:italic;
+    color:#B5693A;
+    font-weight:700;
+  }
+  .sub{
+    margin-top:22px;
+    font-size:17px;
+    line-height:1.55;
+    color:rgba(15,24,36,0.62);
+    letter-spacing:0;
+    max-width:620px;
+    font-weight:500;
+  }
+
+  /* Wordmark in lower-right corner */
+  .wordmark{
+    position:absolute;
+    bottom:32px;
+    right:100px;
+    font-size:14px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:800;
+    color:#0F1824;
+    z-index:2;
+  }
+  .wordmark .dot{color:#B5693A}
+
+  /* Decorative rule — upper-right */
+  .rule{
+    position:absolute;
+    top:80px;
+    right:100px;
+    width:80px;
+    height:1px;
+    background:#B5693A;
+    opacity:.7;
+    z-index:2;
+  }
+</style>
+</head>
+<body>
+
+<div class="note">
+  <strong style="color:#F4EFE6">Zedex LinkedIn Banner — 1584×396</strong><br>
+  The dashed circle in the lower-left is a <strong>visual reference</strong> showing where LinkedIn overlays your profile photo. Content is positioned on the right half to stay clear of it.<br><br>
+  <strong>To export as PNG:</strong> open this file in Chrome at 100% zoom → press F12 → device toolbar (Ctrl/Cmd+Shift+M) → set viewport to <code>1584 × 396</code> → right-click the banner → <code>Capture node screenshot</code>. Upload the PNG to LinkedIn.<br>
+  <strong>Alternative:</strong> remove the <code>avatar-zone</code> class in inspector, take a full-page screenshot, and crop to 1584×396 in any image tool.
+</div>
+
+<!-- VARIANT A: Primary -->
+<div class="banner">
+  <div class="grain"></div>
+  <div class="avatar-zone">Profile photo<br>overlay</div>
+  <div class="rule"></div>
+  <div class="content">
+    <div class="eyebrow">For Product Brands</div>
+    <h1>Automated wholesale outreach,<br><em>built around your brand.</em></h1>
+    <p class="sub">Verified buyers. Email infrastructure. Replies in your inbox. Live in 2 weeks.</p>
+  </div>
+  <div class="wordmark">Zedex<span class="dot">.</span></div>
+</div>
+
+<div class="note">
+  <strong style="color:#F4EFE6">Variant B — shorter headline option</strong>
+</div>
+
+<!-- VARIANT B: Shorter -->
+<div class="banner">
+  <div class="grain"></div>
+  <div class="avatar-zone">Profile photo<br>overlay</div>
+  <div class="rule"></div>
+  <div class="content">
+    <div class="eyebrow">Zedex · Wholesale Systems</div>
+    <h1>The wholesale pipeline,<br><em>done for you.</em></h1>
+    <p class="sub">For product brands moving into retail.</p>
+  </div>
+  <div class="wordmark">Zedex<span class="dot">.</span></div>
+</div>
+
+<div class="note">
+  <strong style="color:#F4EFE6">Variant C — outcome-led</strong>
+</div>
+
+<!-- VARIANT C: Outcome -->
+<div class="banner">
+  <div class="grain"></div>
+  <div class="avatar-zone">Profile photo<br>overlay</div>
+  <div class="rule"></div>
+  <div class="content">
+    <div class="eyebrow">Zedex · For Product Brands</div>
+    <h1>More wholesale buyers.<br><em>Without hiring a sales team.</em></h1>
+    <p class="sub">Done-for-you wholesale outreach — live in 2 weeks, zero headcount added.</p>
+  </div>
+  <div class="wordmark">Zedex<span class="dot">.</span></div>
+</div>
+
+</body>
+</html>

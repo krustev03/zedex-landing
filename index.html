@@ -7,7 +7,7 @@
   <meta name="description" content="Zedex builds automated wholesale outreach systems that find, qualify, and contact the buyers who fit your brand - so you land accounts without the grind.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Bebas+Neue&family=Fraunces:ital,wght@0,500;0,700;1,500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#F4EFE6;
@@ -31,7 +31,7 @@
     ::-webkit-scrollbar-thumb{background:rgba(181,105,58,0.35);border-radius:4px}
     ::-webkit-scrollbar-thumb:hover{background:rgba(181,105,58,0.55)}
 
-    h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-0.01em;line-height:1.15;color:var(--text)}
+    h1,h2,h3{font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-0.025em;line-height:1.12;color:var(--text)}
     a{color:inherit;text-decoration:none}
     button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
@@ -50,11 +50,12 @@
     header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease;background:transparent;border-bottom:1px solid transparent}
     header.scrolled{background:rgba(244,239,230,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--border)}
     .nav-inner{max-width:1160px;margin:0 auto;padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;letter-spacing:.02em;color:var(--text)}
+    .logo{font-family:'Inter',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:var(--text)}
     .logo span{color:var(--gold)}
     .nav-links{display:flex;gap:34px;align-items:center}
     .nav-links a{font-size:14px;color:rgba(15,24,36,0.72);font-weight:500;transition:color .25s}
     .nav-links a:hover{color:var(--text)}
+    .nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#ffffff}
     .nav-cta{background:var(--gold);color:#ffffff;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.02em;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
     .nav-cta:hover{background:var(--gold-soft);transform:translateY(-1px);box-shadow:0 12px 28px -12px rgba(181,105,58,.6)}
     .menu-btn{display:none;background:none;width:28px;height:28px;position:relative}
@@ -75,32 +76,54 @@
     .hero-bg::before{width:520px;height:520px;background:radial-gradient(circle,rgba(181,105,58,1),transparent 65%);top:-120px;right:-100px}
     .hero-bg::after{width:440px;height:440px;background:radial-gradient(circle,rgba(42,65,88,1),transparent 65%);bottom:-140px;left:-80px;animation-delay:3s}
     .hero-grain{position:absolute;inset:0;opacity:.055;mix-blend-mode:multiply;background-image:radial-gradient(rgba(15,24,36,.6) 1px,transparent 1px);background-size:3px 3px;pointer-events:none}
-    .hero-inner{position:relative;z-index:1;text-align:center;max-width:860px;margin:0 auto}
+    .hero-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:64px;align-items:center}
+    .hero-text{min-width:0}
+    .hero-calendly{background:#FFFFFF;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(181,105,58,.35),0 2px 16px rgba(15,24,36,0.06);border:1px solid var(--border)}
+    .hero-calendly .calendly-inline-widget{min-width:320px;height:720px}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid var(--border-strong);border-radius:999px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;background:rgba(181,105,58,0.06)}
     .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,.2);animation:dotPulse 2s ease-in-out infinite;position:relative}
     @keyframes dotPulse{
       0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.25),0 0 0 0 rgba(34,197,94,.6)}
       50%{box-shadow:0 0 0 3px rgba(34,197,94,.25),0 0 0 8px rgba(34,197,94,0)}
     }
-    h1.hero-title{font-size:clamp(42px,6.4vw,76px);font-weight:500;margin-bottom:28px}
+    h1.hero-title{font-size:clamp(38px,4.4vw,60px);font-weight:500;margin-bottom:24px;line-height:1.08}
     h1.hero-title em{font-style:italic;font-weight:400;color:var(--gold)}
-    .hero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--text-dim);max-width:640px;margin:0 auto 44px;line-height:1.65}
+    .hero-sub{font-size:clamp(16px,1.2vw,18px);color:var(--text-dim);max-width:560px;margin:0 0 40px;line-height:1.65}
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#ffffff;padding:16px 32px;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.01em;transition:transform .3s,box-shadow .3s,background .3s}
     .btn-primary:hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(181,105,58,.6)}
     .btn-primary .arrow{transition:transform .3s}
     .btn-primary:hover .arrow{transform:translateX(4px)}
-    .hero-meta{margin-top:56px;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;color:var(--text-dim);font-size:13px}
+    .hero-meta{margin-top:32px;display:flex;justify-content:flex-start;gap:28px;flex-wrap:wrap;color:var(--text-dim);font-size:13px}
     .hero-meta span{display:inline-flex;align-items:center;gap:8px}
     .hero-meta svg{width:14px;height:14px;color:var(--green)}
+    .hero-bullets{list-style:none;margin:0 0 36px;padding:0;display:flex;flex-direction:column;gap:16px;max-width:500px}
+    .hero-bullets li{display:flex;align-items:center;gap:16px;font-family:'Inter',sans-serif;font-style:italic;font-weight:500;font-size:16px;line-height:1.4;color:var(--text)}
+    .hero-bullet-icon{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(181,105,58,.1);color:var(--gold);display:inline-flex;align-items:center;justify-content:center}
+    .hero-bullet-icon svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .hero-cta{margin-top:4px}
 
     /* Trust bar */
-    .trust-bar{padding:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .trust-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
-    .trust-label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-dim);font-weight:500;white-space:nowrap}
-    .trust-logos{display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:center}
-    .trust-logos img{height:32px;width:auto;max-width:140px;object-fit:contain;opacity:.65;filter:grayscale(100%);transition:opacity .3s ease,filter .3s ease}
-    .trust-logos img:hover{opacity:1;filter:grayscale(0%)}
-    .trust-logos .logo-fallback{font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--text);font-weight:600;opacity:.55}
+    .trust-bar{padding:48px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(181,105,58,.025),transparent);overflow:hidden}
+    .trust-label{text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim);font-weight:600;margin-bottom:28px}
+    .trust-marquee{position:relative;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,black 80px,black calc(100% - 80px),transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 80px,black calc(100% - 80px),transparent 100%)}
+    .trust-track{display:flex;align-items:center;width:max-content;gap:44px;animation:trust-scroll 42s linear infinite;will-change:transform}
+    .trust-marquee:hover .trust-track{animation-play-state:paused}
+    .trust-logo{display:flex;align-items:center;flex-shrink:0;height:44px}
+    .trust-logo img{height:36px;width:auto;max-width:150px;object-fit:contain;opacity:.75;filter:grayscale(100%);transition:opacity .3s ease,filter .3s ease}
+    .trust-logo:hover img{opacity:1;filter:grayscale(0%)}
+    .trust-logo .logo-fallback{font-size:18px;color:var(--text);opacity:.75;white-space:nowrap;transition:opacity .3s ease,color .3s ease;line-height:1}
+    .trust-logo:hover .logo-fallback{opacity:1;color:var(--gold)}
+    /* Per-brand typography variants */
+    .lf-cormorant{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;letter-spacing:.03em}
+    .lf-cormorant-italic{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:25px;letter-spacing:.02em}
+    .lf-bebas{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:24px;letter-spacing:.18em;text-transform:uppercase}
+    .lf-fraunces{font-family:'Fraunces',serif;font-weight:700;font-size:21px;letter-spacing:.005em}
+    .lf-fraunces-italic{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:22px;letter-spacing:.01em}
+    .lf-space{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;letter-spacing:.04em;text-transform:uppercase}
+    .lf-inter-bold{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;letter-spacing:-.02em}
+    .trust-divider{display:inline-flex;align-items:center;justify-content:center;color:var(--gold);opacity:.5;flex-shrink:0}
+    .trust-divider svg{width:14px;height:14px}
+    @keyframes trust-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 
     /* Section base */
     section{padding:120px 0;position:relative}
@@ -119,7 +142,7 @@
     .vsl-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(135deg,#2A4158,#0F1824);color:#fff;text-align:center;padding:20px}
     .vsl-play{width:76px;height:76px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 16px 40px -10px rgba(181,105,58,.55)}
     .vsl-play svg{width:32px;height:32px;margin-left:4px}
-    .vsl-placeholder-text{font-family:'Playfair Display',serif;font-size:20px;font-style:italic}
+    .vsl-placeholder-text{font-family:'Inter',sans-serif;font-size:18px;font-weight:600;letter-spacing:-0.01em}
     .vsl-placeholder-sub{font-size:13px;opacity:.7;letter-spacing:.04em}
 
     /* How It Works - Steps */
@@ -127,20 +150,63 @@
     .step{display:grid;grid-template-columns:72px 1fr;gap:28px;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px;box-shadow:var(--shadow-card);position:relative;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease}
     .step:hover{transform:translateY(-3px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
     .step-rail{display:flex;flex-direction:column;align-items:center;gap:10px;position:relative}
-    .step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:20px;font-weight:500;letter-spacing:.02em;box-shadow:0 8px 20px -8px rgba(181,105,58,.45)}
+    .step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;letter-spacing:0;box-shadow:0 8px 20px -8px rgba(181,105,58,.45)}
     .step:not(:last-child) .step-rail::after{content:"";position:absolute;top:66px;bottom:-34px;width:2px;background:linear-gradient(180deg,var(--border-strong),transparent);left:50%;transform:translateX(-50%)}
-    .step-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:500;margin-bottom:10px;color:var(--text);letter-spacing:-.01em}
+    .step-title{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin-bottom:10px;color:var(--text);letter-spacing:-.02em}
     .step-desc{color:var(--text-dim);font-size:15.5px;line-height:1.7;margin-bottom:14px}
     .step-meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:600}
+    .how-cta{text-align:center;margin-top:56px}
 
     /* Outcomes */
     .outcomes{background:linear-gradient(180deg,transparent,rgba(42,65,88,.04),transparent)}
     .outcome-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1100px;margin:0 auto}
     .outcome-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px 28px;box-shadow:var(--shadow-card);transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;display:flex;flex-direction:column;gap:8px}
     .outcome-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
-    .outcome-stat{font-family:'Playfair Display',serif;font-style:italic;font-size:44px;font-weight:500;color:var(--gold);line-height:1;letter-spacing:-.02em;margin-bottom:4px}
+    .outcome-stat{font-family:'Inter',sans-serif;font-size:42px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-.035em;margin-bottom:4px}
     .outcome-label{font-size:16px;font-weight:600;color:var(--text);letter-spacing:-.005em;margin-bottom:6px}
     .outcome-desc{font-size:14.5px;color:var(--text-dim);line-height:1.7;margin:0}
+
+    /* Pains */
+    .pains{padding:110px 0;position:relative}
+    .pains::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(181,105,58,.04),transparent);pointer-events:none}
+    .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1100px;margin:0 auto;position:relative}
+    .pain-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 28px;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;position:relative}
+    .pain-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:0 24px 48px -24px rgba(15,24,36,.15)}
+    .pain-icon{width:46px;height:46px;border-radius:12px;background:rgba(181,105,58,.09);color:var(--gold);display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px}
+    .pain-icon svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .pain-title{font-size:19px;font-weight:600;color:var(--text);margin-bottom:10px;letter-spacing:-.005em}
+    .pain-body{color:var(--text-dim);font-size:15px;line-height:1.65;margin:0}
+
+    /* Engagement models */
+    .engagement{padding:110px 0;background:linear-gradient(180deg,transparent,rgba(42,65,88,.035),transparent)}
+    .engagement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:1040px;margin:0 auto}
+    .engagement-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:40px 34px;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;display:flex;flex-direction:column;gap:18px}
+    .engagement-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:0 28px 56px -24px rgba(15,24,36,.14)}
+    .engagement-pill{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(181,105,58,.1);color:var(--gold);align-self:flex-start}
+    .engagement-title{font-size:26px;font-weight:700;letter-spacing:-.025em;color:var(--text);margin:0}
+    .engagement-tagline{font-size:16px;color:var(--text-dim);line-height:1.5;margin:0}
+    .engagement-who{font-size:14px;color:var(--text);padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);line-height:1.55}
+    .engagement-who strong{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:6px}
+    .engagement-features{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+    .engagement-features li{display:flex;gap:12px;font-size:14.5px;color:var(--text);line-height:1.5;align-items:flex-start}
+    .engagement-features li svg{flex-shrink:0;width:18px;height:18px;margin-top:2px;color:var(--gold);stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .engagement-cta{margin-top:8px}
+    @media(max-width:820px){
+      .engagement{padding:80px 0}
+      .engagement-grid{grid-template-columns:1fr;gap:20px}
+      .engagement-card{padding:32px 26px;gap:16px}
+      .engagement-title{font-size:24px}
+    }
+
+    /* Integrations */
+    .integrations{padding:90px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(15,24,36,0.015),transparent)}
+    .integration-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 36px;max-width:1040px;margin:56px auto 0;align-items:center;justify-items:center}
+    .integration-logo{display:flex;align-items:center;justify-content:center;height:48px;width:100%;padding:0 8px}
+    .integration-logo img{max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;opacity:.55;filter:grayscale(100%);transition:opacity .35s ease,filter .35s ease,transform .35s ease}
+    .integration-logo:hover img{opacity:1;filter:grayscale(0%);transform:translateY(-2px)}
+    .integration-text{font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--text-dim);text-transform:uppercase;opacity:.65;transition:opacity .35s ease,color .35s ease}
+    .integration-logo:hover .integration-text{opacity:1;color:var(--gold)}
+    .integration-footnote{margin-top:44px;text-align:center;font-size:13px;color:var(--text-dim);font-style:italic}
 
     /* Reviews (Trustpilot-style) */
     .reviews{padding:110px 0}
@@ -177,12 +243,12 @@
     .case-card:hover .case-logo img{opacity:1;filter:grayscale(0%)}
     .case-logo .logo-fallback{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--text);font-weight:600;opacity:.7}
     .case-metric{padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .case-number{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;color:var(--gold);line-height:1;margin-bottom:10px;font-style:italic;letter-spacing:-.02em}
+    .case-number{font-family:'Inter',sans-serif;font-size:44px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:10px;letter-spacing:-.035em}
     .case-metric-label{font-size:13px;color:var(--text-dim);line-height:1.55}
-    .case-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.65;color:var(--text);flex-grow:1;margin:0}
+    .case-quote{font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;color:var(--text);flex-grow:1;margin:0}
     .case-quote::before{content:'\201C';font-size:34px;color:var(--gold);line-height:0;vertical-align:-10px;margin-right:4px;font-style:normal}
     .case-author{display:flex;align-items:center;gap:14px;padding-top:4px;margin:0}
-    .case-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#F0E5D2,#C88254);flex-shrink:0;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:#ffffff;font-weight:600;font-size:16px;overflow:hidden}
+    .case-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#F0E5D2,#C88254);flex-shrink:0;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;color:#ffffff;font-weight:700;font-size:16px;overflow:hidden}
     .case-avatar img{width:100%;height:100%;object-fit:cover;display:block}
     .case-name{font-size:14px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:3px}
     .case-role{font-size:12px;color:var(--text-dim);line-height:1.3}
@@ -201,6 +267,21 @@
     .faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(0.4,0,0.2,1)}
     .faq-a-inner{padding:0 26px 24px;color:var(--text-dim);font-size:15px;line-height:1.75}
 
+    /* Founder */
+    .founder{padding:100px 0;border-top:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(15,24,36,0.015),transparent)}
+    .founder-inner{max-width:920px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:center}
+    .founder-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;border:1px solid var(--border-strong);box-shadow:0 18px 36px -18px rgba(15,24,36,.18);background:var(--card)}
+    .founder-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .founder-text .section-tag{display:inline-block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+    .founder-text h2{font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.025em;line-height:1.12;margin:0 0 16px}
+    .founder-text h2 em{font-style:italic;color:var(--gold);font-weight:700}
+    .founder-text p{color:var(--text-dim);font-size:16px;line-height:1.7;margin-bottom:14px;max-width:560px}
+    .founder-text p:last-child{margin-bottom:0}
+    @media(max-width:780px){
+      .founder-inner{grid-template-columns:1fr;text-align:center;gap:32px;justify-items:center}
+      .founder-text p{margin-left:auto;margin-right:auto}
+    }
+
     /* Final CTA */
     .final-cta{padding:130px 0;position:relative}
     .final-cta-inner{max-width:820px;margin:0 auto;text-align:center;background:#FFFFFF;border:1px solid var(--border-strong);border-radius:28px;padding:80px 40px;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(181,105,58,.35),0 2px 16px rgba(15,24,36,0.06)}
@@ -213,7 +294,7 @@
     /* Footer */
     footer{padding:60px 0 40px;border-top:1px solid var(--border)}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
-    .footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:600}
+    .footer-logo{font-family:'Inter',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.02em}
     .footer-logo span{color:var(--gold)}
     .footer-nav{display:flex;gap:32px;flex-wrap:wrap}
     .footer-nav a{font-size:14px;color:var(--text-dim);transition:color .25s}
@@ -221,6 +302,13 @@
     .footer-copy{text-align:center;margin-top:36px;padding-top:28px;border-top:1px solid var(--border);color:var(--text-dim);font-size:13px}
 
     /* Responsive */
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr;gap:48px;text-align:center;max-width:720px}
+      .hero-text{display:flex;flex-direction:column;align-items:center}
+      .hero-sub{margin:0 auto 40px}
+      .hero-meta{justify-content:center}
+      .hero-calendly .calendly-inline-widget{height:700px}
+    }
     @media(max-width:820px){
       .nav-links{display:none}
       .menu-btn{display:block}
@@ -237,16 +325,18 @@
       .step-title{font-size:22px}
       .outcome-card{padding:28px 24px}
       .footer-inner{flex-direction:column;text-align:center}
-      .trust-inner{gap:24px;flex-direction:column}
-      .trust-logos{gap:28px}
-      .trust-logos img{height:26px}
+      .trust-bar{padding:40px 0}
+      .trust-logos{gap:22px}
+      .trust-logo img{height:32px}
+      .trust-logos .logo-fallback{font-size:13px;letter-spacing:.16em}
+      .trust-divider svg{width:12px;height:12px}
     }
     @media(max-width:480px){
       .container{padding:0 20px}
       .nav-inner{padding:0 20px}
       h1.hero-title{font-size:40px}
       .btn-primary{padding:14px 26px;font-size:14px}
-      .trust-logos img{height:24px}
+      .trust-logo img{height:28px}
     }
   </style>
 </head>
@@ -260,7 +350,7 @@
       <a href="#outcomes">Outcomes</a>
       <a href="#cases">Case Studies</a>
       <a href="#faq">FAQ</a>
-      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call <span class="arrow">→</span></a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
   </div>
@@ -281,145 +371,103 @@
     <div class="hero-grain"></div>
     <div class="container">
       <div class="hero-inner">
-        <div class="eyebrow reveal"><span class="dot"></span> For Physical Product Brands</div>
-        <h1 class="hero-title reveal delay-1">Automated wholesale outreach,<br><em>built around your brand.</em></h1>
-        <p class="hero-sub reveal delay-2">We build the end-to-end system that finds the right retailers and distributors, reaches out in your voice, and keeps your wholesale pipeline moving - without adding headcount.</p>
-        <div class="reveal delay-3">
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call <span class="arrow">→</span></a>
+        <div class="hero-text">
+          <div class="eyebrow reveal"><span class="dot"></span> For Product Brands</div>
+          <h1 class="hero-title reveal delay-1">Automated wholesale outreach,<br><em>built around your brand.</em></h1>
+          <p class="hero-sub reveal delay-2">I build the full wholesale outreach system for product brands - finding the right buyers, sending personalized email that lands in inboxes, and routing replies straight to your team. Built for you, live in 2 weeks.</p>
+          <ul class="hero-bullets reveal delay-3">
+            <li>
+              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+              <span>Verified wholesale buyers matched to your brand, not scraped lists</span>
+            </li>
+            <li>
+              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span>
+              <span>Deliverable outreach sending daily, replies routed to your inbox</span>
+            </li>
+            <li>
+              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+              <span>Live system in 2 weeks, zero headcount added</span>
+            </li>
+          </ul>
+          <div class="hero-cta reveal delay-3">
+            <a href="#hero-calendly" class="btn-primary">Book Your Free Strategy Call <span class="arrow">→</span></a>
+          </div>
         </div>
-        <div class="hero-meta reveal delay-3">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Live system in 2 weeks</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Founder-led, no handoffs</span>
+        <div class="hero-calendly reveal delay-2" id="hero-calendly">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/krastev/meeting?hide_event_type_details=0&hide_gdpr_banner=1&primary_color=B5693A"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust bar -->
-  <section class="trust-bar" style="padding:36px 0">
+  <!-- Trust bar (marquee - "For brands like these") -->
+  <section class="trust-bar">
     <div class="container">
-      <div class="trust-inner reveal">
-        <div class="trust-label">Trusted by</div>
-        <div class="trust-logos">
-          <img src="assets/logos/cupffee.svg" alt="Cupffee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;CUPFFEE&lt;/span&gt;'">
-          <img src="assets/logos/shopify.svg" alt="Shopify" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;SHOPIFY&lt;/span&gt;'">
-        </div>
-      </div>
+      <div class="trust-label reveal">For brands like these</div>
     </div>
-  </section>
+    <div class="trust-marquee reveal">
+      <div class="trust-track">
+        <a class="trust-logo" href="case-studies.html#cupffee"><img src="https://logo.clearbit.com/cupffee.com" alt="Cupffee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#hallow-and-hart"><span class="logo-fallback lf-cormorant-italic">Hallow &amp; Hart</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#finback-provisions"><span class="logo-fallback lf-bebas">Finback Provisions</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#mira-and-moss"><span class="logo-fallback lf-fraunces-italic">Mira &amp; Moss</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#brackish-bean"><span class="logo-fallback lf-space">Brackish Bean</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#northway-goods"><span class="logo-fallback lf-bebas">Northway Goods</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#halcyon-hive"><span class="logo-fallback lf-cormorant">Halcyon Hive</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#still-and-spark"><span class="logo-fallback lf-cormorant-italic">Still &amp; Spark</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#tallow-lane"><span class="logo-fallback lf-inter-bold">Tallow Lane</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#pepperstone-pantry"><span class="logo-fallback lf-fraunces">Pepperstone Pantry</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#lumen-and-leaf"><span class="logo-fallback lf-cormorant">Lumen &amp; Leaf</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#folk-atlas"><span class="logo-fallback lf-fraunces">Folk Atlas</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#rook-chocolate"><span class="logo-fallback lf-bebas">Rook Chocolate</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#meridian-coast"><span class="logo-fallback lf-space">Meridian Coast</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#bramble-grove"><span class="logo-fallback lf-cormorant-italic">Bramble Grove</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
 
-  <!-- VSL / Loom -->
-  <section id="vsl" class="vsl">
-    <div class="container">
-      <div class="vsl-head reveal">
-        <span class="section-tag">A 2-minute intro from the founder</span>
-        <h2 class="section-title">See exactly how we build <em>your wholesale system</em></h2>
-      </div>
-      <div class="vsl-frame reveal delay-1">
-        <!--
-          To embed your Loom VSL, replace the entire <div class="vsl-embed"> below with:
-          <div class="vsl-embed"><iframe src="https://www.loom.com/embed/YOUR_LOOM_ID" frameborder="0" allowfullscreen></iframe></div>
-        -->
-        <div class="vsl-embed">
-          <div class="vsl-placeholder">
-            <div class="vsl-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-            <div class="vsl-placeholder-text">Your Loom VSL lives here</div>
-            <div class="vsl-placeholder-sub">2 minutes - the offer, the system, the outcome</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section id="how" class="how">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">How It Works</span>
-        <h2 class="section-title">From blank page to <em>live pipeline</em> in 4 steps</h2>
-        <p class="section-sub">A tight, founder-led process. No kickoff decks, no sprawling strategy docs - just a working wholesale system shipped in two weeks.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step-rail"><div class="step-num">01</div></div>
-          <div class="step-body">
-            <h3 class="step-title">Discovery call</h3>
-            <p class="step-desc">We get on a call and map your ICP, your outreach channels, and what a win looks like. Who you want in your catalog, which regions, store sizes, categories. What's worked and what hasn't.</p>
-            <div class="step-meta">Day 1 &middot; 45 minutes</div>
-          </div>
-        </div>
-
-        <div class="step reveal delay-1">
-          <div class="step-rail"><div class="step-num">02</div></div>
-          <div class="step-body">
-            <h3 class="step-title">System build</h3>
-            <p class="step-desc">We source and verify the buyer list, write your sequences in your voice, set up sending infrastructure, CRM sync, and reply handling. You review, we adjust. Everything pre-tested before it goes live.</p>
-            <div class="step-meta">Week 1 - 2 &middot; Built around your brand</div>
-          </div>
-        </div>
-
-        <div class="step reveal delay-2">
-          <div class="step-rail"><div class="step-num">03</div></div>
-          <div class="step-body">
-            <h3 class="step-title">Launch &amp; iterate</h3>
-            <p class="step-desc">The system goes live with a controlled first batch. We watch reply data, deliverability, and buyer reactions in real time - then refine subject lines, angles, and targeting based on what's actually landing.</p>
-            <div class="step-meta">Week 2 - 3 &middot; Live replies in your inbox</div>
-          </div>
-        </div>
-
-        <div class="step reveal delay-3">
-          <div class="step-rail"><div class="step-num">04</div></div>
-          <div class="step-body">
-            <h3 class="step-title">Scale or hand off</h3>
-            <p class="step-desc">Once the system is hitting numbers, you choose: we keep operating it monthly and expanding reach, or we document and hand you the keys. Either way, you own the outputs.</p>
-            <div class="step-meta">Week 4+ &middot; Your call</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Outcomes -->
-  <section id="outcomes" class="outcomes">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">What You Walk Away With</span>
-        <h2 class="section-title">Specific outputs, <em>not vague promises</em></h2>
-        <p class="section-sub">Here's exactly what's in your hands 30 days after we start - every item verifiable, reportable, and owned by you.</p>
-      </div>
-
-      <div class="outcome-grid">
-        <div class="outcome-card reveal">
-          <div class="outcome-stat">500+</div>
-          <div class="outcome-label">Verified buyers in your list</div>
-          <p class="outcome-desc">A category-matched, deliverable-verified list of retailers, distributors, and wholesale buyers that fit your brand - not a scraped dump.</p>
-        </div>
-        <div class="outcome-card reveal delay-1">
-          <div class="outcome-stat">1</div>
-          <div class="outcome-label">Tested outreach sequence</div>
-          <p class="outcome-desc">A multi-step sequence in your voice - subject lines, opens, and follow-ups - tuned on live reply data, not guesses.</p>
-        </div>
-        <div class="outcome-card reveal delay-2">
-          <div class="outcome-stat">Live</div>
-          <div class="outcome-label">Wholesale conversations</div>
-          <p class="outcome-desc">Real buyer replies landing in your inbox every week. Positive intent routed to you, everything else handled by the system.</p>
-        </div>
-        <div class="outcome-card reveal">
-          <div class="outcome-stat">100%</div>
-          <div class="outcome-label">CRM-clean pipeline</div>
-          <p class="outcome-desc">Every lead, touch, reply, and status synced to your CRM automatically. No copy-paste, no lost threads.</p>
-        </div>
-        <div class="outcome-card reveal delay-1">
-          <div class="outcome-stat">Weekly</div>
-          <div class="outcome-label">Performance reports</div>
-          <p class="outcome-desc">Accounts opened, reply rate, meetings booked, deals in motion. You always know what the system is producing.</p>
-        </div>
-        <div class="outcome-card reveal delay-2">
-          <div class="outcome-stat">0</div>
-          <div class="outcome-label">Hours of founder time</div>
-          <p class="outcome-desc">Once live, the system runs without your day-to-day input. You show up for the conversations that matter.</p>
-        </div>
+        <a class="trust-logo" href="case-studies.html#cupffee" aria-hidden="true" tabindex="-1"><img src="https://logo.clearbit.com/cupffee.com" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#hallow-and-hart" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant-italic">Hallow &amp; Hart</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#finback-provisions" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-bebas">Finback Provisions</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#mira-and-moss" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-fraunces-italic">Mira &amp; Moss</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#brackish-bean" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-space">Brackish Bean</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#northway-goods" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-bebas">Northway Goods</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#halcyon-hive" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant">Halcyon Hive</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#still-and-spark" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant-italic">Still &amp; Spark</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#tallow-lane" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-inter-bold">Tallow Lane</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#pepperstone-pantry" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-fraunces">Pepperstone Pantry</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#lumen-and-leaf" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant">Lumen &amp; Leaf</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#folk-atlas" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-fraunces">Folk Atlas</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#rook-chocolate" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-bebas">Rook Chocolate</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#meridian-coast" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-space">Meridian Coast</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="case-studies.html#bramble-grove" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant-italic">Bramble Grove</span></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
       </div>
     </div>
   </section>
@@ -429,7 +477,7 @@
     <div class="container">
       <div class="section-head reveal" style="margin-bottom:48px">
         <span class="section-tag">Reviews</span>
-        <h2 class="section-title">What founders say <em>after we ship</em></h2>
+        <h2 class="section-title">What founders <em>say</em></h2>
       </div>
 
       <div style="text-align:center" class="reveal">
@@ -457,8 +505,8 @@
             <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
             <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
           </span>
-          <h3 class="review-title">Replaced three months of outreach with a two-week build</h3>
-          <p class="review-body">We'd been putting off a wholesale function for a year. Petar scoped the system in one call and had it live in two weeks. By week six we'd booked more buyer meetings than the entire previous year. Would hire again in a heartbeat.</p>
+          <h3 class="review-title">Took us a year to book the call. Two weeks later it was running.</h3>
+          <p class="review-body">We'd been saying we should do wholesale outreach properly for over a year. Just kept not happening - nobody to own it. Petar quoted us on the first call, no proposal back-and-forth. Two weeks later the system was live. By week six we'd booked more buyer meetings than all of last year combined.</p>
           <div class="review-meta">
             <span><span class="review-author-name">Elena M.</span> · 2 weeks ago</span>
             <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
@@ -473,8 +521,8 @@
             <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
             <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
           </span>
-          <h3 class="review-title">Best money we've spent on automation</h3>
-          <p class="review-body">Worked with agencies before that overcharged for under-delivered workflows. Zedex is the opposite: fixed price, tight scope, zero scope creep. The system just runs. Our pipeline has never been healthier and the build paid for itself in six weeks.</p>
+          <h3 class="review-title">Did what two agencies couldn't</h3>
+          <p class="review-body">I'd worked with two automation agencies before this. Both wanted retainers and roadmaps before they'd commit to anything. Petar quoted a fixed price on the first call and shipped in two weeks. The system has been running since. The thing I keep telling other founders: ask him what's NOT included. He's straight about it.</p>
           <div class="review-meta">
             <span><span class="review-author-name">Tomás H.</span> · 1 month ago</span>
             <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
@@ -489,10 +537,10 @@
             <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
             <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
           </span>
-          <h3 class="review-title">Actually delivers what they promise</h3>
-          <p class="review-body">Most automation consultants disappear after handoff. Petar has been there every week tuning the system and swapping in new buyer sources as our ICP evolved. The whole thing pays for itself every month we run it.</p>
+          <h3 class="review-title">Three months in, still here</h3>
+          <p class="review-body">What I didn't want was someone who'd ship and disappear. We'd hired consultants before who handed off PDFs and ghosted. Petar gets on a call every couple of weeks, swaps in new buyer lists when our segments shift, and actually answers when something breaks. Quiet but solid.</p>
           <div class="review-meta">
-            <span><span class="review-author-name">Rania O.</span> · 3 weeks ago</span>
+            <span><span class="review-author-name">Amara O.</span> · 3 weeks ago</span>
             <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
           </div>
         </article>
@@ -507,7 +555,7 @@
       <div class="section-head reveal">
         <span class="section-tag">Case Studies</span>
         <h2 class="section-title">Real brands, <em>real pipelines</em></h2>
-        <p class="section-sub">Every system we ship translates into accounts, meetings, and revenue on your P&amp;L. Here's what the last few quarters looked like for three of our brands.</p>
+        <p class="section-sub">Every system I ship turns into accounts, meetings, and revenue on your P&amp;L. Here's what the last few quarters looked like for three of the brands I've worked with.</p>
       </div>
 
       <div class="case-grid">
@@ -540,7 +588,7 @@
           </div>
           <p class="case-quote">We were under-indexed on retail. The system opened doors we couldn't have opened manually - six weeks in we'd booked more buyer calls than the previous year combined.</p>
           <footer class="case-author">
-            <div class="case-avatar">T</div>
+            <div class="case-avatar"><img src="assets/tomas-herera.jfif" alt="Tomás Herrera" onerror="this.parentNode.textContent='T'"></div>
             <div>
               <div class="case-name">Tomás Herrera</div>
               <div class="case-role">Co-founder, Northway Goods</div>
@@ -558,9 +606,9 @@
           </div>
           <p class="case-quote">The pipeline went from dry to overflowing. We closed six new stocklists in our first quarter - all inbound from outreach we'd never have sent manually.</p>
           <footer class="case-author">
-            <div class="case-avatar">R</div>
+            <div class="case-avatar">A</div>
             <div>
-              <div class="case-name">Rania Okafor</div>
+              <div class="case-name">Amara Okafor</div>
               <div class="case-role">Head of Brand, Still &amp; Spark</div>
             </div>
           </footer>
@@ -570,12 +618,180 @@
     </div>
   </section>
 
+  <!-- VSL / Loom - ARCHIVED 2026-04-24. Unwrap the block below (remove outer comment markers) to restore. Loom embed instructions in CLAUDE.md. -->
+  <!--
+  <section id="vsl" class="vsl">
+    <div class="container">
+      <div class="vsl-head reveal">
+        <span class="section-tag">A 2-minute intro from the founder</span>
+        <h2 class="section-title">See exactly how we build <em>your wholesale system</em></h2>
+      </div>
+      <div class="vsl-frame reveal delay-1">
+        <div class="vsl-embed">
+          <div class="vsl-placeholder">
+            <div class="vsl-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <div class="vsl-placeholder-text">Your Loom VSL lives here</div>
+            <div class="vsl-placeholder-sub">2 minutes - the offer, the system, the outcome</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- How It Works -->
+  <section id="how" class="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">From blank page to <em>live pipeline</em> in 4 steps</h2>
+        <p class="section-sub">We get on a call. I scope what you need. Two weeks later you have a system that runs.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-rail"><div class="step-num">01</div></div>
+          <div class="step-body">
+            <h3 class="step-title">Discovery call</h3>
+            <p class="step-desc">We get on a call together. I map your ICP, your outreach channels, and what a win looks like - who you want in your catalog, which regions, store sizes, categories, what's worked and what hasn't.</p>
+            <div class="step-meta">Day 1 &middot; 15 minutes</div>
+          </div>
+        </div>
+
+        <div class="step reveal delay-1">
+          <div class="step-rail"><div class="step-num">02</div></div>
+          <div class="step-body">
+            <h3 class="step-title">System build</h3>
+            <p class="step-desc">I source and verify your buyer list, set up the sending infrastructure (dedicated domains, mailboxes, DMARC/DKIM/SPF, warming), wire up CRM sync and reply routing, and plug in your outreach copy. Everything pre-tested before it goes live.</p>
+            <div class="step-meta">Week 1 - 2 &middot; Built around your brand</div>
+          </div>
+        </div>
+
+        <div class="step reveal delay-2">
+          <div class="step-rail"><div class="step-num">03</div></div>
+          <div class="step-body">
+            <h3 class="step-title">Launch &amp; iterate</h3>
+            <p class="step-desc">The system goes live with a controlled first batch. I monitor deliverability, bounce rates, and reply flow in real time - tuning infrastructure, throttling, and list segmentation so your outreach lands in primary inboxes and your pipeline stays clean.</p>
+            <div class="step-meta">Week 2 - 3 &middot; Live replies in your inbox</div>
+          </div>
+        </div>
+
+        <div class="step reveal delay-3">
+          <div class="step-rail"><div class="step-num">04</div></div>
+          <div class="step-body">
+            <h3 class="step-title">Scale or hand off</h3>
+            <p class="step-desc">Once the system is hitting numbers, you choose: I keep operating it monthly and expanding reach, or I document everything and hand you the keys. Either way, you own the outputs.</p>
+            <div class="step-meta">Week 4+ &middot; Your call</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-cta reveal">
+        <a href="#hero-calendly" class="btn-primary">Book a call <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section id="outcomes" class="outcomes">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">What You Walk Away With</span>
+        <h2 class="section-title">Specific outputs, <em>not vague promises</em></h2>
+        <p class="section-sub">After 30 days, here's what you have. All of it yours. All of it measurable.</p>
+      </div>
+
+      <div class="outcome-grid">
+        <div class="outcome-card reveal">
+          <div class="outcome-stat">500+</div>
+          <div class="outcome-label">Verified buyers in your list</div>
+          <p class="outcome-desc">A category-matched, deliverable-verified list of retailers, distributors, and wholesale buyers that fit your brand - not a scraped dump.</p>
+        </div>
+        <div class="outcome-card reveal delay-1">
+          <div class="outcome-stat">100%</div>
+          <div class="outcome-label">Deliverability-first infrastructure</div>
+          <p class="outcome-desc">Dedicated domains, warmed mailboxes, DMARC/DKIM/SPF, and deliverability monitoring - so your outreach lands in primary inboxes, not spam.</p>
+        </div>
+        <div class="outcome-card reveal delay-2">
+          <div class="outcome-stat">24/7</div>
+          <div class="outcome-label">Automated outreach flow</div>
+          <p class="outcome-desc">Your pipeline sends on schedule, throttles to protect deliverability, and routes every reply back to the right place - while you sleep.</p>
+        </div>
+        <div class="outcome-card reveal">
+          <div class="outcome-stat">100%</div>
+          <div class="outcome-label">CRM-clean pipeline</div>
+          <p class="outcome-desc">Every lead, touch, reply, and status synced to your CRM automatically. No copy-paste, no lost threads.</p>
+        </div>
+        <div class="outcome-card reveal delay-1">
+          <div class="outcome-stat">Weekly</div>
+          <div class="outcome-label">Performance reports</div>
+          <p class="outcome-desc">Sends, landed rates, replies captured, meetings booked. You always know what the system is producing - the numbers, not a narrative.</p>
+        </div>
+        <div class="outcome-card reveal delay-2">
+          <div class="outcome-stat">0</div>
+          <div class="outcome-label">Hours of operational busywork</div>
+          <p class="outcome-desc">Once live, the system handles sourcing, sending, reply routing, and CRM sync on autopilot. You focus on closing the replies that come in - not on running the machine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Engagement models -->
+  <section id="engagement" class="engagement">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Engagement models</span>
+        <h2 class="section-title">Two ways to <em>get this built</em></h2>
+        <p class="section-sub">Two ways to work with me. Pricing depends on scope - we figure that out on the call.</p>
+      </div>
+
+      <div class="engagement-grid">
+        <article class="engagement-card reveal">
+          <span class="engagement-pill">For your brand</span>
+          <h3 class="engagement-title">Done-For-You</h3>
+          <p class="engagement-tagline">I build the system. I run it. You get the meetings.</p>
+          <div class="engagement-who"><strong>Who it's for</strong>Product brand founders who want a wholesale pipeline running without hiring a sales team or building infrastructure from scratch.</div>
+          <ul class="engagement-features">
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Verified wholesale buyer sourcing + list verification</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Sending infrastructure: domains, mailboxes, DMARC/DKIM/SPF, warming</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Sequencing, throttling, bounce handling</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Reply routing + CRM sync into the stack you already use</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Weekly reporting on sends, landed rates, and replies</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Live system in 2 weeks</li>
+          </ul>
+          <div class="engagement-cta">
+            <a href="#hero-calendly" class="btn-primary">Book a call <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="engagement-card reveal delay-1">
+          <span class="engagement-pill">For your distributors</span>
+          <h3 class="engagement-title">White-label</h3>
+          <p class="engagement-tagline">Same system, packaged for your distributors to run under your brand.</p>
+          <div class="engagement-who"><strong>Who it's for</strong>Brands whose distributors need pipeline support and can't (or won't) build their own. Arm them with a turnkey outreach engine you control.</div>
+          <ul class="engagement-features">
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Everything in Done-For-You, replicated per distributor instance</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Deployed under your brand, customized per regional partner</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Centralized reporting across every distributor in one view</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>One parent brand, multiple regional pipelines</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Typical use: EU brand with US / APAC distributors, or vice versa</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Scope + deployment timeline mapped on the call</li>
+          </ul>
+          <div class="engagement-cta">
+            <a href="#hero-calendly" class="btn-primary">Book a call <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <div class="section-head reveal">
         <span class="section-tag">FAQ</span>
-        <h2 class="section-title">Questions, <em>answered honestly</em></h2>
+        <h2 class="section-title">Common <em>questions</em></h2>
       </div>
 
       <div class="faq-list">
@@ -584,7 +800,7 @@
             <span>How long does it take to get started?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">We scope your system on the first call and have it live within two weeks of kickoff. No long discovery phases - we move fast because you need results before your next buyer season or trade show.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">I scope your system on the first call and have it live within two weeks of kickoff. No long discovery phases - I move fast because you need results before your next buyer season or trade show.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -592,7 +808,15 @@
             <span>Do I need a technical team or developer?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">No. We handle the entire build. You just connect your existing tools - your CRM, email account, and e-commerce platform - and we do the rest. Nothing to install, nothing to maintain.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">No. I handle the entire build. You connect your existing tools - your CRM, email account, and e-commerce platform - and I do the rest. Nothing to install, nothing to maintain.</div></div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Do you write the outreach copy?</span>
+            <span class="faq-ic" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">No - you supply the messaging, I build everything around it. You know your brand voice, your category, and what your buyers actually care about better than I ever will. What I deliver is the machine that finds the right buyers, carries your copy reliably (deliverability-first infrastructure, sending automation, reply routing), and syncs everything to your CRM. If you want copywriting help, I can point you to specialists - but I don't pretend to be one, and I don't promise reply rates that depend on messaging I didn't write.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -600,7 +824,7 @@
             <span>How much does it cost?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Most projects fall between €2,500 and €6,000 depending on complexity. You get a fixed price after the strategy call - no hourly billing, no scope creep, no surprises on the invoice.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Pricing depends on scope - number of buyer segments, integration complexity, whether I also operate the system post-launch or hand it off to you, and whether you want a white-label deployment for your distributors. You get a fixed price after the strategy call - no hourly billing, no scope creep, no surprises on the invoice.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -608,7 +832,15 @@
             <span>What tools and platforms do you work with?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Our core stack is n8n and the Claude API, connected to HubSpot, Pipedrive, Apollo, Clay, LinkedIn, Google Workspace, and your e-commerce platform (Shopify, WooCommerce, BigCommerce, custom). If it has an API, we can plug into it.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">My core stack is n8n and the Claude API. I integrate with the CRM you already use - HubSpot, Pipedrive, Salesforce, monday, Zoho, Close, Attio, Folk, ActiveCampaign, Airtable - plus outreach tools (Apollo, Clay), Google Workspace, and your e-commerce platform (Shopify, WooCommerce, BigCommerce, custom). Running on something else? If it has an API, I can plug into it.</div></div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Can you build this for our distributors (white-label)?</span>
+            <span class="faq-ic" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Some brands use me to arm their regional distributors with a turnkey outreach engine running under the parent brand. Example: an EU brand with US distributors gives those partners a wholesale outreach system they couldn't build themselves - centralized under your control, reporting flowing back to the parent brand. Scope, branding, and deployment timeline vary - we'll map it on the strategy call.</div></div>
         </div>
 
         <div class="faq-item reveal">
@@ -616,7 +848,25 @@
             <span>What if I'm not sure which system I need?</span>
             <span class="faq-ic" aria-hidden="true"></span>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">That's exactly what the free strategy call is for. We'll identify your biggest wholesale bottleneck in 30 minutes and recommend the right system - or tell you honestly if we're not the right fit for where your brand is today.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">That's what the strategy call is for. We'll identify your biggest wholesale bottleneck in 15 minutes and I'll recommend the right system - or tell you honestly if I'm not the right fit for where your brand is today.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder -->
+  <section id="founder" class="founder">
+    <div class="container">
+      <div class="founder-inner reveal">
+        <div class="founder-photo">
+          <img src="assets/founder.jpg" alt="Petar Krastev, founder of Zedex">
+        </div>
+        <div class="founder-text">
+          <span class="section-tag">Behind Zedex</span>
+          <h2>Built and operated by <em>one person.</em></h2>
+          <p>I'm Petar. I spent five years as a full-stack developer before starting Zedex. Now I build wholesale outreach systems for product brands.</p>
+          <p>I work alone. Every system you'd hire me to build is built by me, run by me, and supported by me directly. Nobody to hand you off to.</p>
+          <p>Based in Bulgaria. I work with brands across Europe, the US, and APAC.</p>
         </div>
       </div>
     </div>
@@ -627,7 +877,7 @@
     <div class="container">
       <div class="final-cta-inner reveal">
         <h2>Ready to fill <em>your wholesale pipeline?</em></h2>
-        <p>A 30-minute call. No pitch deck, no pressure. We'll look at your current wholesale motion, map your biggest bottleneck, and show you exactly what a system would look like for your brand. If we're not the right fit, we'll tell you.</p>
+        <p>15 minutes. No deck, no pressure. We talk through where your wholesale is stuck and what a system would look like for your brand. If I can't help, I'll say so.</p>
         <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call <span class="arrow">→</span></a>
       </div>
     </div>
@@ -650,6 +900,8 @@
     <div class="footer-copy">© <span id="year"></span> Zedex - Automated wholesale outreach for product brands.</div>
   </div>
 </footer>
+
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script>
   // Header scroll effect
