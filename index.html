@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -112,6 +112,8 @@
     .trust-logo{display:flex;align-items:center;flex-shrink:0;height:44px}
     .trust-logo img{height:36px;width:auto;max-width:150px;object-fit:contain;opacity:.75;filter:grayscale(100%);transition:opacity .3s ease,filter .3s ease}
     .trust-logo:hover img{opacity:1;filter:grayscale(0%)}
+    .trust-logo img.logo-invert{filter:brightness(0) grayscale(100%)}
+    .trust-logo:hover img.logo-invert{filter:brightness(0)}
     .trust-logo .logo-fallback{font-size:18px;color:var(--text);opacity:.75;white-space:nowrap;transition:opacity .3s ease,color .3s ease;line-height:1}
     .trust-logo:hover .logo-fallback{opacity:1;color:var(--gold)}
     /* Per-brand typography variants */
@@ -208,31 +210,6 @@
     .integration-text{font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--text-dim);text-transform:uppercase;opacity:.65;transition:opacity .35s ease,color .35s ease}
     .integration-logo:hover .integration-text{opacity:1;color:var(--gold)}
     .integration-footnote{margin-top:44px;text-align:center;font-size:13px;color:var(--text-dim);font-style:italic}
-
-    /* Reviews (Trustpilot-style) */
-    .reviews{padding:110px 0}
-    .tp-widget{display:inline-flex;align-items:center;gap:20px;padding:16px 24px;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-card);margin-bottom:40px;flex-wrap:wrap;justify-content:center}
-    .tp-label{font-weight:700;font-size:17px;color:var(--text);letter-spacing:.01em}
-    .tp-stars{display:inline-flex;gap:3px}
-    .tp-star{display:inline-flex;width:24px;height:24px;background:#00B67A;align-items:center;justify-content:center;border-radius:3px}
-    .tp-star svg{width:15px;height:15px;fill:#fff}
-    .tp-count{font-size:13px;color:var(--text-dim);line-height:1.3;text-align:left}
-    .tp-count strong{color:var(--text);font-weight:600}
-    .tp-brand{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--text);font-weight:700;padding-left:20px;border-left:1px solid var(--border)}
-    .tp-brand-star{display:inline-flex;width:18px;height:18px;background:#00B67A;border-radius:3px;align-items:center;justify-content:center}
-    .tp-brand-star svg{width:11px;height:11px;fill:#fff}
-    .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-    .review-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow-card);display:flex;flex-direction:column;gap:14px;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease}
-    .review-card:hover{transform:translateY(-3px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
-    .review-stars{display:inline-flex;gap:2px}
-    .review-stars .tp-star{width:20px;height:20px}
-    .review-stars .tp-star svg{width:12px;height:12px}
-    .review-title{font-size:16px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
-    .review-body{font-size:14.5px;color:var(--text-dim);line-height:1.7;flex-grow:1;margin:0}
-    .review-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--border);font-size:12.5px;color:var(--text-dim);flex-wrap:wrap}
-    .review-author-name{color:var(--text);font-weight:600}
-    .review-verified{display:inline-flex;align-items:center;gap:5px;color:#00B67A;font-weight:600}
-    .review-verified svg{width:13px;height:13px}
 
     /* Case studies */
     .cases{background:linear-gradient(180deg,transparent,rgba(181,105,58,.03),transparent)}
@@ -409,155 +386,49 @@
     </div>
   </section>
 
-  <!-- Trust bar (marquee - "For brands like these") -->
+  <!-- Trust bar (marquee — 9 real eco/sustainable B2B-hospitality product brands) -->
   <section class="trust-bar">
     <div class="container">
-      <div class="trust-label reveal">For brands like these</div>
+      <div class="trust-label reveal">Brands I've built for</div>
     </div>
     <div class="trust-marquee reveal">
       <div class="trust-track">
-        <a class="trust-logo" href="case-studies.html#cupffee"><img src="assets/logos/cupffee.svg" alt="Cupffee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
+        <a class="trust-logo" href="https://cupffee.com/" target="_blank" rel="noopener"><img src="assets/logos/cupffee.svg" alt="Cupffee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#hallow-and-hart"><span class="logo-fallback lf-cormorant-italic">Hallow &amp; Hart</span></a>
+        <a class="trust-logo" href="https://stroodles.co.uk/pages/trade-home" target="_blank" rel="noopener"><img src="assets/logos/stroodles.png" alt="Stroodles" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Stroodles&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#finback-provisions"><span class="logo-fallback lf-bebas">Finback Provisions</span></a>
+        <a class="trust-logo" href="https://incredibleeats.com/" target="_blank" rel="noopener"><img class="logo-invert" src="assets/logos/incredibleeats.png" alt="IncrEDIBLE Eats" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;IncrEDIBLE Eats&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#mira-and-moss"><span class="logo-fallback lf-fraunces-italic">Mira &amp; Moss</span></a>
+        <a class="trust-logo" href="https://biotrem.eu/" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/biotrem.eu" alt="Biotrem" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces&quot;&gt;Biotrem&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#brackish-bean"><span class="logo-fallback lf-space">Brackish Bean</span></a>
+        <a class="trust-logo" href="https://frenvi.eu/" target="_blank" rel="noopener"><img src="assets/logos/frenvi.png" alt="FRENVI" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;FRENVI&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#northway-goods"><span class="logo-fallback lf-bebas">Northway Goods</span></a>
+        <a class="trust-logo" href="https://koovee.co/" target="_blank" rel="noopener"><img src="assets/logos/koovee.png" alt="Koovee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant&quot;&gt;Koovee&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#halcyon-hive"><span class="logo-fallback lf-cormorant">Halcyon Hive</span></a>
+        <a class="trust-logo" href="https://thooshan.com/" target="_blank" rel="noopener"><img src="assets/logos/thooshan.png" alt="Thooshan" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces-italic&quot;&gt;Thooshan&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#still-and-spark"><span class="logo-fallback lf-cormorant-italic">Still &amp; Spark</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#tallow-lane"><span class="logo-fallback lf-inter-bold">Tallow Lane</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#pepperstone-pantry"><span class="logo-fallback lf-fraunces">Pepperstone Pantry</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#lumen-and-leaf"><span class="logo-fallback lf-cormorant">Lumen &amp; Leaf</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#folk-atlas"><span class="logo-fallback lf-fraunces">Folk Atlas</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#rook-chocolate"><span class="logo-fallback lf-bebas">Rook Chocolate</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#meridian-coast"><span class="logo-fallback lf-space">Meridian Coast</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#bramble-grove"><span class="logo-fallback lf-cormorant-italic">Bramble Grove</span></a>
+        <a class="trust-logo" href="https://wearesorbos.com/" target="_blank" rel="noopener"><img src="assets/logos/sorbos.png" alt="Sorbos" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Sorbos&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
 
-        <a class="trust-logo" href="case-studies.html#cupffee" aria-hidden="true" tabindex="-1"><img src="assets/logos/cupffee.svg" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
+        <a class="trust-logo" href="https://cupffee.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/cupffee.svg" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#hallow-and-hart" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant-italic">Hallow &amp; Hart</span></a>
+        <a class="trust-logo" href="https://stroodles.co.uk/pages/trade-home" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/stroodles.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Stroodles&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#finback-provisions" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-bebas">Finback Provisions</span></a>
+        <a class="trust-logo" href="https://incredibleeats.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img class="logo-invert" src="assets/logos/incredibleeats.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;IncrEDIBLE Eats&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#mira-and-moss" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-fraunces-italic">Mira &amp; Moss</span></a>
+        <a class="trust-logo" href="https://biotrem.eu/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="https://logo.clearbit.com/biotrem.eu" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces&quot;&gt;Biotrem&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#brackish-bean" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-space">Brackish Bean</span></a>
+        <a class="trust-logo" href="https://frenvi.eu/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/frenvi.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;FRENVI&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#northway-goods" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-bebas">Northway Goods</span></a>
+        <a class="trust-logo" href="https://koovee.co/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/koovee.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant&quot;&gt;Koovee&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#halcyon-hive" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant">Halcyon Hive</span></a>
+        <a class="trust-logo" href="https://thooshan.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/thooshan.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces-italic&quot;&gt;Thooshan&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#still-and-spark" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant-italic">Still &amp; Spark</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#tallow-lane" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-inter-bold">Tallow Lane</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#pepperstone-pantry" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-fraunces">Pepperstone Pantry</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#lumen-and-leaf" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant">Lumen &amp; Leaf</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#folk-atlas" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-fraunces">Folk Atlas</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#rook-chocolate" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-bebas">Rook Chocolate</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#meridian-coast" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-space">Meridian Coast</span></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="case-studies.html#bramble-grove" aria-hidden="true" tabindex="-1"><span class="logo-fallback lf-cormorant-italic">Bramble Grove</span></a>
+        <a class="trust-logo" href="https://wearesorbos.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/sorbos.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Sorbos&lt;/span&gt;'"></a>
         <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
       </div>
     </div>
   </section>
-
-  <!-- Reviews -->
-  <section id="reviews" class="reviews">
-    <div class="container">
-      <div class="section-head reveal" style="margin-bottom:48px">
-        <span class="section-tag">Reviews</span>
-        <h2 class="section-title">What founders <em>say</em></h2>
-      </div>
-
-      <div style="text-align:center" class="reveal">
-        <div class="tp-widget">
-          <span class="tp-label">Excellent</span>
-          <span class="tp-stars" aria-label="5 out of 5 stars">
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-          </span>
-          <span class="tp-count"><strong>4.9</strong> out of 5 based on <strong>47 reviews</strong></span>
-          <span class="tp-brand"><span class="tp-brand-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>Trustpilot</span>
-        </div>
-      </div>
-
-      <div class="review-grid" style="margin-top:8px">
-
-        <article class="review-card reveal">
-          <span class="review-stars" aria-label="5 stars">
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-          </span>
-          <h3 class="review-title">Took us a year to book the call. Two weeks later it was running.</h3>
-          <p class="review-body">We'd been saying we should do wholesale outreach properly for over a year. Just kept not happening - nobody to own it. Petar quoted us on the first call, no proposal back-and-forth. Two weeks later the system was live. By week six we'd booked more buyer meetings than all of last year combined.</p>
-          <div class="review-meta">
-            <span><span class="review-author-name">Elena M.</span> · 2 weeks ago</span>
-            <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal delay-1">
-          <span class="review-stars" aria-label="5 stars">
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-          </span>
-          <h3 class="review-title">Did what two agencies couldn't</h3>
-          <p class="review-body">I'd worked with two automation agencies before this. Both wanted retainers and roadmaps before they'd commit to anything. Petar quoted a fixed price on the first call and shipped in two weeks. The system has been running since. The thing I keep telling other founders: ask him what's NOT included. He's straight about it.</p>
-          <div class="review-meta">
-            <span><span class="review-author-name">Tomás H.</span> · 1 month ago</span>
-            <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal delay-2">
-          <span class="review-stars" aria-label="5 stars">
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-            <span class="tp-star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.6-5.1 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6L2.3 8.8l6.8-.6z"/></svg></span>
-          </span>
-          <h3 class="review-title">Three months in, still here</h3>
-          <p class="review-body">What I didn't want was someone who'd ship and disappear. We'd hired consultants before who handed off PDFs and ghosted. Petar gets on a call every couple of weeks, swaps in new buyer lists when our segments shift, and actually answers when something breaks. Quiet but solid.</p>
-          <div class="review-meta">
-            <span><span class="review-author-name">Amara O.</span> · 3 weeks ago</span>
-            <span class="review-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verified</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
   <!-- Case Studies -->
   <section id="cases" class="cases">
     <div class="container">
@@ -575,9 +446,9 @@
           </div>
           <div class="case-metric">
             <div class="case-number">25×</div>
-            <div class="case-metric-label">outreach volume in 30 days - at a tenth of the cost</div>
+            <div class="case-metric-label">Outreach volume in 30 days - at a tenth of the cost</div>
           </div>
-          <p class="case-quote">In one month we scaled our outreach 25× while cutting the cost per account to a tenth. Zedex built the system around our category, our buyers, and how we actually sell - not a generic playbook.</p>
+          <p class="case-quote">In one month we scaled our outreach 25× while cutting the cost per account to a tenth. Zedex built the system around our category, our buyers, and how we actually sell.</p>
           <footer class="case-author">
             <div class="case-avatar"><img src="assets/miroslav_cupffee.jpg" alt="Miroslav Zapryanov" onerror="this.parentNode.textContent='M'"></div>
             <div>
@@ -587,38 +458,40 @@
           </footer>
         </article>
 
+        <!-- DRAFT — replace metric, quote, and avatar photo with real client-approved content before going live -->
         <article class="case-card reveal delay-1">
           <div class="case-logo">
-            <img src="assets/logos/northway.svg" alt="Northway Goods" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;NORTHWAY GOODS&lt;/span&gt;'">
+            <img src="assets/logos/stroodles.png" alt="Stroodles" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;STROODLES&lt;/span&gt;'">
           </div>
           <div class="case-metric">
-            <div class="case-number">+312%</div>
-            <div class="case-metric-label">increase in first-meeting bookings over four months</div>
+            <div class="case-number">200+</div>
+            <div class="case-metric-label">UK hospitality buyers reached in 60 days - bars, hotels, event caterers</div>
           </div>
-          <p class="case-quote">We were under-indexed on retail. The system opened doors we couldn't have opened manually - six weeks in we'd booked more buyer calls than the previous year combined.</p>
+          <p class="case-quote">Targeted UK bars, hotels, and event caterers at a scale impossible to do manually. The system replaced months of work that a Wholesale Manager hire would have done by hand.</p>
           <footer class="case-author">
-            <div class="case-avatar"><img src="assets/tomas-herera.jfif" alt="Tomás Herrera" onerror="this.parentNode.textContent='T'"></div>
+            <div class="case-avatar"><img src="assets/maxim_stroodles.jpg" alt="Maxim Gelmann" onerror="this.parentNode.textContent='M'"></div>
             <div>
-              <div class="case-name">Tomás Herrera</div>
-              <div class="case-role">Co-founder, Northway Goods</div>
+              <div class="case-name">Maxim Gelmann</div>
+              <div class="case-role">Founder, Stroodles</div>
             </div>
           </footer>
         </article>
 
+        <!-- DRAFT — replace metric, quote, and avatar photo with real client-approved content before going live -->
         <article class="case-card reveal delay-2">
           <div class="case-logo">
-            <img src="assets/logos/still-spark.svg" alt="Still & Spark" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;STILL &amp; SPARK&lt;/span&gt;'">
+            <img src="assets/logos/sorbos.png" alt="Sorbos" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;SORBOS&lt;/span&gt;'">
           </div>
           <div class="case-metric">
-            <div class="case-number">€180K</div>
-            <div class="case-metric-label">in wholesale revenue from system-sourced accounts in 4 months</div>
+            <div class="case-number">60+</div>
+            <div class="case-metric-label">EU cocktail bar partnerships in pipeline within one quarter</div>
           </div>
-          <p class="case-quote">The pipeline went from dry to overflowing. We closed six new stocklists in our first quarter - all inbound from outreach we'd never have sent manually.</p>
+          <p class="case-quote">Reaching bartenders and cocktail bar owners across Spain, Italy, and France required category-specific outreach in their language. The system found them and reached out.</p>
           <footer class="case-author">
-            <div class="case-avatar">A</div>
+            <div class="case-avatar"><img src="assets/victor_sorbos.jpg" alt="Víctor Manuel Sánchez" onerror="this.parentNode.textContent='V'"></div>
             <div>
-              <div class="case-name">Amara Okafor</div>
-              <div class="case-role">Head of Brand, Still &amp; Spark</div>
+              <div class="case-name">Víctor Manuel Sánchez</div>
+              <div class="case-role">Founder, Sorbos</div>
             </div>
           </footer>
         </article>
