@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zedex - Automated Wholesale Outreach for Product Brands</title>
-  <meta name="description" content="Zedex builds automated wholesale outreach systems that find, qualify, and contact the buyers who fit your brand - so you land accounts without the grind.">
+  <title>Zedex - Get Cited in ChatGPT. Stop Renting Leads. AI Search for HVAC + Plumbing</title>
+  <meta name="description" content="AI search visibility for owner-operated HVAC and plumbing shops. I make sure your shop is the answer when homeowners ask ChatGPT, Perplexity, Gemini, or Google AI for the best trade in their city. Month-to-month, no contracts.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,30 +103,20 @@
     .hero-bullet-icon svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
     .hero-cta{margin-top:4px}
 
-    /* Trust bar */
-    .trust-bar{padding:48px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(181,105,58,.025),transparent);overflow:hidden}
-    .trust-label{text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim);font-weight:600;margin-bottom:28px}
-    .trust-marquee{position:relative;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,black 80px,black calc(100% - 80px),transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 80px,black calc(100% - 80px),transparent 100%)}
-    .trust-track{display:flex;align-items:center;width:max-content;gap:44px;animation:trust-scroll 42s linear infinite;will-change:transform}
-    .trust-marquee:hover .trust-track{animation-play-state:paused}
-    .trust-logo{display:flex;align-items:center;flex-shrink:0;height:44px}
-    .trust-logo img{height:36px;width:auto;max-width:150px;object-fit:contain;opacity:.75;filter:grayscale(100%);transition:opacity .3s ease,filter .3s ease}
-    .trust-logo:hover img{opacity:1;filter:grayscale(0%)}
-    .trust-logo img.logo-invert{filter:brightness(0) grayscale(100%)}
-    .trust-logo:hover img.logo-invert{filter:brightness(0)}
-    .trust-logo .logo-fallback{font-size:18px;color:var(--text);opacity:.75;white-space:nowrap;transition:opacity .3s ease,color .3s ease;line-height:1}
-    .trust-logo:hover .logo-fallback{opacity:1;color:var(--gold)}
-    /* Per-brand typography variants */
-    .lf-cormorant{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;letter-spacing:.03em}
-    .lf-cormorant-italic{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:25px;letter-spacing:.02em}
-    .lf-bebas{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:24px;letter-spacing:.18em;text-transform:uppercase}
-    .lf-fraunces{font-family:'Fraunces',serif;font-weight:700;font-size:21px;letter-spacing:.005em}
-    .lf-fraunces-italic{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:22px;letter-spacing:.01em}
-    .lf-space{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;letter-spacing:.04em;text-transform:uppercase}
-    .lf-inter-bold{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;letter-spacing:-.02em}
-    .trust-divider{display:inline-flex;align-items:center;justify-content:center;color:var(--gold);opacity:.5;flex-shrink:0}
-    .trust-divider svg{width:14px;height:14px}
-    @keyframes trust-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+    /* Insight callout (replaces trust bar) */
+    .insight{padding:90px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(181,105,58,.04),transparent);position:relative}
+    .insight-inner{max-width:920px;margin:0 auto;text-align:center}
+    .insight-tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:22px;display:inline-block}
+    .insight-title{font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.025em;margin-bottom:24px;line-height:1.2}
+    .insight-title em{font-style:italic;color:var(--gold);font-weight:600}
+    .insight-body{color:var(--text);font-size:17px;line-height:1.75;max-width:760px;margin:0 auto 32px}
+    .insight-body strong{color:var(--gold);font-weight:700}
+    .insight-stat{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;margin:36px 0 28px}
+    .insight-bar{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .insight-bar-label{font-size:13px;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+    .insight-bar-fill{height:14px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));border-radius:999px;min-width:60px}
+    .insight-bar-num{font-family:'Inter',sans-serif;font-weight:800;font-size:18px;color:var(--text)}
+    .insight-pivot{font-family:'Inter',sans-serif;font-style:italic;font-size:18px;color:var(--gold);font-weight:600;max-width:680px;margin:0 auto;line-height:1.5}
 
     /* Section base */
     section{padding:120px 0;position:relative}
@@ -136,17 +126,27 @@
     .section-title em{font-style:italic;color:var(--gold);font-weight:400}
     .section-sub{color:var(--text-dim);font-size:17px;line-height:1.7}
 
-    /* VSL */
-    .vsl{padding:100px 0 80px}
-    .vsl-head{max-width:720px;margin:0 auto 48px;text-align:center}
-    .vsl-frame{max-width:920px;margin:0 auto;position:relative}
-    .vsl-embed{position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#0F1824;box-shadow:0 30px 60px -30px rgba(15,24,36,.35),0 2px 16px rgba(15,24,36,0.1);border:1px solid var(--border-strong)}
-    .vsl-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .vsl-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(135deg,#2A4158,#0F1824);color:#fff;text-align:center;padding:20px}
-    .vsl-play{width:76px;height:76px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 16px 40px -10px rgba(181,105,58,.55)}
-    .vsl-play svg{width:32px;height:32px;margin-left:4px}
-    .vsl-placeholder-text{font-family:'Inter',sans-serif;font-size:18px;font-weight:600;letter-spacing:-0.01em}
-    .vsl-placeholder-sub{font-size:13px;opacity:.7;letter-spacing:.04em}
+    /* What I do (3 pillars) */
+    .pillars{padding:110px 0}
+    .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
+    .pillar-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px 30px;box-shadow:var(--shadow-card);transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;display:flex;flex-direction:column;gap:18px}
+    .pillar-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
+    .pillar-num{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+    .pillar-title{font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--text);margin:0}
+    .pillar-body{color:var(--text-dim);font-size:15.5px;line-height:1.7;margin:0}
+    @media(max-width:920px){.pillar-grid{grid-template-columns:1fr;gap:20px}}
+
+    /* Live proof */
+    .liveproof{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(42,65,88,.04),transparent)}
+    .liveproof-inner{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--border-strong);border-radius:24px;padding:56px 48px;box-shadow:0 30px 60px -30px rgba(181,105,58,.25),0 2px 16px rgba(15,24,36,0.06);text-align:center}
+    .liveproof-tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px;display:inline-block}
+    .liveproof-title{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.025em;margin-bottom:22px;line-height:1.2}
+    .liveproof-title em{font-style:italic;color:var(--gold);font-weight:600}
+    .liveproof-body{color:var(--text);font-size:17px;line-height:1.7;margin-bottom:14px}
+    .liveproof-body strong{font-weight:700}
+    .liveproof-query{display:inline-block;background:rgba(181,105,58,.1);color:var(--gold);font-family:'Inter',monospace;font-size:15px;font-weight:600;padding:10px 18px;border-radius:10px;margin:14px 0;border:1px solid var(--border-strong)}
+    .liveproof-foot{font-size:14px;color:var(--text-dim);margin-top:24px;font-style:italic}
+    @media(max-width:820px){.liveproof-inner{padding:40px 28px}}
 
     /* How It Works - Steps */
     .steps{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:24px;position:relative}
@@ -168,68 +168,39 @@
     .outcome-stat{font-family:'Inter',sans-serif;font-size:42px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-.035em;margin-bottom:4px}
     .outcome-label{font-size:16px;font-weight:600;color:var(--text);letter-spacing:-.005em;margin-bottom:6px}
     .outcome-desc{font-size:14.5px;color:var(--text-dim);line-height:1.7;margin:0}
+    .outcomes-foot{text-align:center;margin-top:48px;font-size:13px;color:var(--text-dim);font-style:italic;max-width:680px;margin-left:auto;margin-right:auto}
 
-    /* Pains */
-    .pains{padding:110px 0;position:relative}
-    .pains::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(181,105,58,.04),transparent);pointer-events:none}
-    .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1100px;margin:0 auto;position:relative}
-    .pain-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 28px;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;position:relative}
-    .pain-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:0 24px 48px -24px rgba(15,24,36,.15)}
-    .pain-icon{width:46px;height:46px;border-radius:12px;background:rgba(181,105,58,.09);color:var(--gold);display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px}
-    .pain-icon svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
-    .pain-title{font-size:19px;font-weight:600;color:var(--text);margin-bottom:10px;letter-spacing:-.005em}
-    .pain-body{color:var(--text-dim);font-size:15px;line-height:1.65;margin:0}
+    /* Who it's for */
+    .audience{padding:110px 0;border-top:1px solid var(--border)}
+    .audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1000px;margin:0 auto}
+    .audience-col{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px 32px}
+    .audience-col h3{font-size:20px;font-weight:700;margin-bottom:20px;letter-spacing:-.015em}
+    .audience-col h3.yes{color:var(--gold)}
+    .audience-col h3.no{color:var(--green)}
+    .audience-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+    .audience-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text);line-height:1.55}
+    .audience-list li svg{flex-shrink:0;width:20px;height:20px;margin-top:1px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .audience-list li.yes svg{color:var(--gold)}
+    .audience-list li.no svg{color:var(--green);opacity:.6}
+    @media(max-width:820px){.audience-grid{grid-template-columns:1fr}}
 
-    /* Engagement models */
-    .engagement{padding:110px 0;background:linear-gradient(180deg,transparent,rgba(42,65,88,.035),transparent)}
-    .engagement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:1040px;margin:0 auto}
-    .engagement-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:40px 34px;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;display:flex;flex-direction:column;gap:18px}
-    .engagement-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:0 28px 56px -24px rgba(15,24,36,.14)}
-    .engagement-pill{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(181,105,58,.1);color:var(--gold);align-self:flex-start}
-    .engagement-title{font-size:26px;font-weight:700;letter-spacing:-.025em;color:var(--text);margin:0}
-    .engagement-tagline{font-size:16px;color:var(--text-dim);line-height:1.5;margin:0}
-    .engagement-who{font-size:14px;color:var(--text);padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);line-height:1.55}
-    .engagement-who strong{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:6px}
-    .engagement-features{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
-    .engagement-features li{display:flex;gap:12px;font-size:14.5px;color:var(--text);line-height:1.5;align-items:flex-start}
-    .engagement-features li svg{flex-shrink:0;width:18px;height:18px;margin-top:2px;color:var(--gold);stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
-    .engagement-cta{margin-top:8px}
-    @media(max-width:820px){
-      .engagement{padding:80px 0}
-      .engagement-grid{grid-template-columns:1fr;gap:20px}
-      .engagement-card{padding:32px 26px;gap:16px}
-      .engagement-title{font-size:24px}
-    }
+    /* Anti-positioning */
+    .antipos{padding:90px 0;background:linear-gradient(180deg,transparent,rgba(42,65,88,.025),transparent)}
+    .antipos-list{max-width:760px;margin:32px auto 0;display:flex;flex-direction:column;gap:14px}
+    .antipos-list li{display:flex;align-items:flex-start;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 22px;font-size:15px;color:var(--text);line-height:1.5}
+    .antipos-list li svg{flex-shrink:0;width:20px;height:20px;margin-top:1px;color:#C76B6B;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .antipos-list li strong{font-weight:700;display:block;margin-bottom:2px;color:var(--text)}
+    .antipos-list li span{color:var(--text-dim);font-size:14px}
 
-    /* Integrations */
-    .integrations{padding:90px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(15,24,36,0.015),transparent)}
-    .integration-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 36px;max-width:1040px;margin:56px auto 0;align-items:center;justify-items:center}
-    .integration-logo{display:flex;align-items:center;justify-content:center;height:48px;width:100%;padding:0 8px}
-    .integration-logo img{max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;opacity:.55;filter:grayscale(100%);transition:opacity .35s ease,filter .35s ease,transform .35s ease}
-    .integration-logo:hover img{opacity:1;filter:grayscale(0%);transform:translateY(-2px)}
-    .integration-text{font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--text-dim);text-transform:uppercase;opacity:.65;transition:opacity .35s ease,color .35s ease}
-    .integration-logo:hover .integration-text{opacity:1;color:var(--gold)}
-    .integration-footnote{margin-top:44px;text-align:center;font-size:13px;color:var(--text-dim);font-style:italic}
-
-    /* Case studies */
-    .cases{background:linear-gradient(180deg,transparent,rgba(181,105,58,.03),transparent)}
-    .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-    .case-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px 32px;box-shadow:var(--shadow-card);display:flex;flex-direction:column;gap:22px;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;position:relative;overflow:hidden}
-    .case-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-card-hover)}
-    .case-logo{height:42px;display:flex;align-items:center}
-    .case-logo img{max-height:34px;max-width:150px;object-fit:contain;opacity:.75;filter:grayscale(100%);transition:opacity .3s,filter .3s}
-    .case-card:hover .case-logo img{opacity:1;filter:grayscale(0%)}
-    .case-logo .logo-fallback{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--text);font-weight:600;opacity:.7}
-    .case-metric{padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .case-number{font-family:'Inter',sans-serif;font-size:44px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:10px;letter-spacing:-.035em}
-    .case-metric-label{font-size:13px;color:var(--text-dim);line-height:1.55}
-    .case-quote{font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;color:var(--text);flex-grow:1;margin:0}
-    .case-quote::before{content:'\201C';font-size:34px;color:var(--gold);line-height:0;vertical-align:-10px;margin-right:4px;font-style:normal}
-    .case-author{display:flex;align-items:center;gap:14px;padding-top:4px;margin:0}
-    .case-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#F0E5D2,#C88254);flex-shrink:0;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;color:#ffffff;font-weight:700;font-size:16px;overflow:hidden}
-    .case-avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .case-name{font-size:14px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:3px}
-    .case-role{font-size:12px;color:var(--text-dim);line-height:1.3}
+    /* Pricing frame */
+    .pricing{padding:110px 0}
+    .pricing-inner{max-width:820px;margin:0 auto;text-align:center}
+    .pricing-tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;display:inline-block}
+    .pricing-title{font-size:clamp(30px,3.6vw,42px);font-weight:700;letter-spacing:-.025em;margin-bottom:24px;line-height:1.18}
+    .pricing-title em{font-style:italic;color:var(--gold);font-weight:600}
+    .pricing-body{color:var(--text);font-size:17px;line-height:1.75;margin-bottom:32px}
+    .pricing-body strong{font-weight:700;color:var(--gold)}
+    .pricing-detail{font-size:15px;color:var(--text-dim);line-height:1.65;margin:0 auto 36px;max-width:640px}
 
     /* FAQ */
     .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
@@ -294,7 +265,7 @@
       .nav-links{display:none}
       .menu-btn{display:block}
       section{padding:90px 0}
-      .vsl{padding:70px 0 60px}
+      .insight{padding:70px 0}
       .final-cta{padding:90px 0}
       .final-cta-inner{padding:56px 24px}
       .section-head{margin-bottom:52px}
@@ -306,18 +277,12 @@
       .step-title{font-size:22px}
       .outcome-card{padding:28px 24px}
       .footer-inner{flex-direction:column;text-align:center}
-      .trust-bar{padding:40px 0}
-      .trust-logos{gap:22px}
-      .trust-logo img{height:32px}
-      .trust-logos .logo-fallback{font-size:13px;letter-spacing:.16em}
-      .trust-divider svg{width:12px;height:12px}
     }
     @media(max-width:480px){
       .container{padding:0 20px}
       .nav-inner{padding:0 20px}
-      h1.hero-title{font-size:40px}
+      h1.hero-title{font-size:38px}
       .btn-primary{padding:14px 26px;font-size:14px}
-      .trust-logo img{height:28px}
     }
 
     /* Mobile sticky CTA */
@@ -337,7 +302,7 @@
     <nav class="nav-links">
       <a href="#how">How It Works</a>
       <a href="#outcomes">Outcomes</a>
-      <a href="#cases">Case Studies</a>
+      <a href="#who">Who It's For</a>
       <a href="#faq">FAQ</a>
       <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call <span class="arrow">→</span></a>
     </nav>
@@ -346,7 +311,7 @@
   <div class="mobile-panel" id="mobilePanel">
     <a href="#how">How It Works</a>
     <a href="#outcomes">Outcomes</a>
-    <a href="#cases">Case Studies</a>
+    <a href="#who">Who It's For</a>
     <a href="#faq">FAQ</a>
     <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
   </div>
@@ -361,21 +326,21 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
-          <div class="eyebrow reveal"><span class="dot"></span> For Product Brands</div>
-          <h1 class="hero-title reveal delay-1">Automated wholesale outreach,<br><em>built around your brand.</em></h1>
-          <p class="hero-sub reveal delay-2">I build the full wholesale outreach system for product brands - finding the right buyers, sending personalized email that lands in inboxes, and routing replies straight to your team. Built for you, live in 2 weeks.</p>
+          <div class="eyebrow reveal"><span class="dot"></span> AI Search Visibility for Trade Shops</div>
+          <h1 class="hero-title reveal delay-1">When a homeowner asks ChatGPT for the best HVAC in your city,<br><em>your shop should be in the answer.</em></h1>
+          <p class="hero-sub reveal delay-2">AI-search visibility for owner-operated HVAC and plumbing shops. Stop renting leads from HomeAdvisor - start being the answer when ChatGPT, Perplexity, Gemini, and Google AI Overviews recommend a contractor in your city.</p>
           <ul class="hero-bullets reveal delay-3">
             <li>
-              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></span>
-              <span>Verified wholesale buyers matched to your brand, not scraped lists</span>
+              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span>
+              <span>Get cited in ChatGPT, Perplexity, Gemini, and Google AI Overviews</span>
             </li>
             <li>
-              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span>
-              <span>Deliverable outreach sending daily, replies routed to your inbox</span>
+              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span>
+              <span>Schema, GBP, and content engineered for AI extraction</span>
             </li>
             <li>
-              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-              <span>Live system in 2 weeks, zero headcount added</span>
+              <span class="hero-bullet-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+              <span>Month-to-month, no contracts, weekly citation reports</span>
             </li>
           </ul>
           <div class="hero-cta reveal delay-3">
@@ -389,364 +354,245 @@
     </div>
   </section>
 
-  <!-- Trust bar (marquee — 9 real eco/sustainable B2B-hospitality product brands) -->
-  <section class="trust-bar">
+  <!-- Structural Insight -->
+  <section class="insight">
     <div class="container">
-      <div class="trust-label reveal">Brands I've built for</div>
-    </div>
-    <div class="trust-marquee reveal">
-      <div class="trust-track">
-        <a class="trust-logo" href="https://cupffee.com/" target="_blank" rel="noopener"><img src="assets/logos/cupffee.svg" alt="Cupffee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://stroodles.co.uk/pages/trade-home" target="_blank" rel="noopener"><img src="assets/logos/stroodles.png" alt="Stroodles" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Stroodles&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://incredibleeats.com/" target="_blank" rel="noopener"><img class="logo-invert" src="assets/logos/incredibleeats.png" alt="IncrEDIBLE Eats" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;IncrEDIBLE Eats&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://biotrem.eu/" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/biotrem.eu" alt="Biotrem" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces&quot;&gt;Biotrem&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://frenvi.eu/" target="_blank" rel="noopener"><img src="assets/logos/frenvi.png" alt="FRENVI" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;FRENVI&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://koovee.co/" target="_blank" rel="noopener"><img src="assets/logos/koovee.png" alt="Koovee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant&quot;&gt;Koovee&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://thooshan.com/" target="_blank" rel="noopener"><img src="assets/logos/thooshan.png" alt="Thooshan" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces-italic&quot;&gt;Thooshan&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://wearesorbos.com/" target="_blank" rel="noopener"><img src="assets/logos/sorbos.png" alt="Sorbos" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Sorbos&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-
-        <a class="trust-logo" href="https://cupffee.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/cupffee.svg" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-inter-bold&quot;&gt;Cupffee&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://stroodles.co.uk/pages/trade-home" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/stroodles.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Stroodles&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://incredibleeats.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img class="logo-invert" src="assets/logos/incredibleeats.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;IncrEDIBLE Eats&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://biotrem.eu/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="https://logo.clearbit.com/biotrem.eu" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces&quot;&gt;Biotrem&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://frenvi.eu/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/frenvi.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-bebas&quot;&gt;FRENVI&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://koovee.co/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/koovee.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant&quot;&gt;Koovee&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://thooshan.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/thooshan.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-fraunces-italic&quot;&gt;Thooshan&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
-        <a class="trust-logo" href="https://wearesorbos.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/sorbos.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback lf-cormorant-italic&quot;&gt;Sorbos&lt;/span&gt;'"></a>
-        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+      <div class="insight-inner reveal">
+        <span class="insight-tag">The Structural Insight</span>
+        <h2 class="insight-title">Your 25 years and 300 reviews don't matter to AI.<br><em>Here's why.</em></h2>
+        <p class="insight-body">A 25-year HVAC owner with 300 five-star reviews has near-zero web corpus footprint outside Google reviews and a basic website. HomeAdvisor produces millions of indexed pages.</p>
+        <p class="insight-body">AI assistants - ChatGPT, Perplexity, Gemini, Google AI Overviews - see roughly <strong>10,000x more content from rent-the-lead platforms</strong> than from the actual contractor. So when a homeowner asks ChatGPT for the best plumber in their city, the platforms come up. The shops don't.</p>
+        <div class="insight-stat">
+          <div class="insight-bar">
+            <div class="insight-bar-label">HomeAdvisor pages indexed</div>
+            <div class="insight-bar-fill" style="width:280px"></div>
+            <div class="insight-bar-num">2,400,000+</div>
+          </div>
+          <div class="insight-bar">
+            <div class="insight-bar-label">Average HVAC shop pages</div>
+            <div class="insight-bar-fill" style="width:18px"></div>
+            <div class="insight-bar-num">~12</div>
+          </div>
+        </div>
+        <p class="insight-pivot">The fix isn't ranking higher. It's existing in the dataset at all. That's what I build.</p>
       </div>
     </div>
   </section>
-  <!-- Case Studies -->
-  <section id="cases" class="cases">
+
+  <!-- What I do (3 Pillars) -->
+  <section class="pillars" id="how">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">Case Studies</span>
-        <h2 class="section-title">Real brands, <em>real pipelines</em></h2>
-        <p class="section-sub">Every system I ship turns into accounts, meetings, and revenue on your P&amp;L. Here's what the last few quarters looked like for three of the brands I've worked with.</p>
+        <span class="section-tag">What I Build</span>
+        <h2 class="section-title">The system <em>I ship</em></h2>
+        <p class="section-sub">Two layers, one system. Built for 2026 search behavior - Google AND AI assistants.</p>
       </div>
-
-      <div class="case-grid">
-
-        <article class="case-card reveal">
-          <div class="case-logo">
-            <img src="assets/logos/cupffee.svg" alt="CUPFFEE" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;CUPFFEE&lt;/span&gt;'">
-          </div>
-          <div class="case-metric">
-            <div class="case-number">25×</div>
-            <div class="case-metric-label">Outreach volume in 30 days - at a tenth of the cost</div>
-          </div>
-          <p class="case-quote">In one month we scaled our outreach 25× while cutting the cost per account to a tenth. Zedex built the system around our category, our buyers, and how we actually sell.</p>
-          <footer class="case-author">
-            <div class="case-avatar"><img src="assets/miroslav_cupffee.jpg" alt="Miroslav Zapryanov" onerror="this.parentNode.textContent='M'"></div>
-            <div>
-              <div class="case-name">Miroslav Zapryanov</div>
-              <div class="case-role">CEO &amp; Founder, Cupffee</div>
-            </div>
-          </footer>
-        </article>
-
-        <!-- DRAFT — replace metric, quote, and avatar photo with real client-approved content before going live -->
-        <article class="case-card reveal delay-1">
-          <div class="case-logo">
-            <img src="assets/logos/stroodles.png" alt="Stroodles" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;STROODLES&lt;/span&gt;'">
-          </div>
-          <div class="case-metric">
-            <div class="case-number">200+</div>
-            <div class="case-metric-label">UK hospitality buyers reached in 60 days - bars, hotels, event caterers</div>
-          </div>
-          <p class="case-quote">Targeted UK bars, hotels, and event caterers at a scale impossible to do manually. The system replaced months of work that a Wholesale Manager hire would have done by hand.</p>
-          <footer class="case-author">
-            <div class="case-avatar"><img src="assets/maxim_stroodles.jpg" alt="Maxim Gelmann" onerror="this.parentNode.textContent='M'"></div>
-            <div>
-              <div class="case-name">Maxim Gelmann</div>
-              <div class="case-role">Founder, Stroodles</div>
-            </div>
-          </footer>
-        </article>
-
-        <!-- DRAFT — replace metric, quote, and avatar photo with real client-approved content before going live -->
-        <article class="case-card reveal delay-2">
-          <div class="case-logo">
-            <img src="assets/logos/sorbos.png" alt="Sorbos" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;SORBOS&lt;/span&gt;'">
-          </div>
-          <div class="case-metric">
-            <div class="case-number">60+</div>
-            <div class="case-metric-label">EU cocktail bar partnerships in pipeline within one quarter</div>
-          </div>
-          <p class="case-quote">Reaching bartenders and cocktail bar owners across Spain, Italy, and France required category-specific outreach in their language. The system found them and reached out.</p>
-          <footer class="case-author">
-            <div class="case-avatar"><img src="assets/victor_sorbos.jpg" alt="Víctor Manuel Sánchez" onerror="this.parentNode.textContent='V'"></div>
-            <div>
-              <div class="case-name">Víctor Manuel Sánchez</div>
-              <div class="case-role">Founder, Sorbos</div>
-            </div>
-          </footer>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Founder -->
-  <section id="founder" class="founder">
-    <div class="container">
-      <div class="founder-inner reveal">
-        <div class="founder-photo">
-          <img src="assets/founder.jpg" alt="Petar Krastev, founder of Zedex">
+      <div class="pillar-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-num">Layer 1</div>
+          <h3 class="pillar-title">AI-Search Optimization (AEO)</h3>
+          <p class="pillar-body">Schema markup tuned for AI extraction. Content engineered to be cited by ChatGPT, Perplexity, and Google AI Overviews. Authority signals AI engines weight. Weekly tracking of your citation count across all four major AI tools.</p>
         </div>
-        <div class="founder-text">
-          <span class="section-tag">Behind Zedex</span>
-          <h2>Built and operated by <em>one person.</em></h2>
-          <p>I'm Petar. I spent five years as a full-stack developer before starting Zedex. Now I build wholesale outreach systems for product brands.</p>
-          <p>I work alone. Every system you'd hire me to build is built by me, run by me, and supported by me directly. Nobody to hand you off to.</p>
-          <p>Based in Bulgaria. I work with brands across Europe, the US, and APAC.</p>
+        <div class="pillar-card reveal delay-1">
+          <div class="pillar-num">Layer 2</div>
+          <h3 class="pillar-title">Traditional SEO Foundation</h3>
+          <p class="pillar-body">Local Business + FAQ + Service + Review schema. Google Business Profile optimization. Local citation building, NAP consistency, "near me" keyword targeting. Without the foundation, the AEO layer doesn't compound.</p>
+        </div>
+        <div class="pillar-card reveal delay-2">
+          <div class="pillar-num">Layer 3</div>
+          <h3 class="pillar-title">Reporting That Pays the Techs</h3>
+          <p class="pillar-body">Monthly reporting on AI citation count, ranking movement, GBP performance, calls booked. Numbers you can use to decide whether the work is paying off. No charts that don't tie to phone calls.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VSL / Loom - ARCHIVED 2026-04-24. Unwrap the block below (remove outer comment markers) to restore. Loom embed instructions in CLAUDE.md. -->
-  <!--
-  <section id="vsl" class="vsl">
+  <!-- Live Proof -->
+  <section class="liveproof">
     <div class="container">
-      <div class="vsl-head reveal">
-        <span class="section-tag">A 2-minute intro from the founder</span>
-        <h2 class="section-title">See exactly how we build <em>your wholesale system</em></h2>
-      </div>
-      <div class="vsl-frame reveal delay-1">
-        <div class="vsl-embed">
-          <div class="vsl-placeholder">
-            <div class="vsl-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-            <div class="vsl-placeholder-text">Your Loom VSL lives here</div>
-            <div class="vsl-placeholder-sub">2 minutes - the offer, the system, the outcome</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
-  <!-- Outcomes -->
-  <section id="outcomes" class="outcomes">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">What You Walk Away With</span>
-        <h2 class="section-title">Specific outputs, <em>not vague promises</em></h2>
-        <p class="section-sub">After 30 days, here's what you have. All of it yours. All of it measurable.</p>
-      </div>
-
-      <div class="outcome-grid">
-        <div class="outcome-card reveal">
-          <div class="outcome-stat">500+</div>
-          <div class="outcome-label">Verified buyers in your list</div>
-          <p class="outcome-desc">A category-matched, deliverable-verified list of retailers, distributors, and wholesale buyers that fit your brand - not a scraped dump.</p>
-        </div>
-        <div class="outcome-card reveal delay-1">
-          <div class="outcome-stat">100%</div>
-          <div class="outcome-label">Email setup that lands in inboxes</div>
-          <p class="outcome-desc">Dedicated domains, properly warmed mailboxes, full authentication, and ongoing monitoring - so your messages land in primary inboxes, not spam.</p>
-        </div>
-        <div class="outcome-card reveal delay-2">
-          <div class="outcome-stat">24/7</div>
-          <div class="outcome-label">Automated outreach flow</div>
-          <p class="outcome-desc">Your pipeline sends on schedule, throttles to protect deliverability, and routes every reply back to the right place - while you sleep.</p>
-        </div>
-        <div class="outcome-card reveal">
-          <div class="outcome-stat">100%</div>
-          <div class="outcome-label">CRM-clean pipeline</div>
-          <p class="outcome-desc">Every lead, touch, reply, and status synced to your CRM automatically. No copy-paste, no lost threads.</p>
-        </div>
-        <div class="outcome-card reveal delay-1">
-          <div class="outcome-stat">Weekly</div>
-          <div class="outcome-label">Performance reports</div>
-          <p class="outcome-desc">Emails sent, what landed in inboxes, replies captured, meetings booked. You always know what the system is producing - the numbers, not a narrative.</p>
-        </div>
-        <div class="outcome-card reveal delay-2">
-          <div class="outcome-stat">0</div>
-          <div class="outcome-label">Hours of manual chasing</div>
-          <p class="outcome-desc">Once live, the system handles finding buyers, sending emails, routing replies, and updating your CRM on autopilot. You focus on closing the replies that come in - not on running the machine.</p>
-        </div>
+      <div class="liveproof-inner reveal">
+        <span class="liveproof-tag">Test It Yourself. Right Now.</span>
+        <h2 class="liveproof-title">Open ChatGPT in another tab.<br><em>Ask the question your customer would.</em></h2>
+        <p class="liveproof-body">Type this:</p>
+        <div class="liveproof-query">"Best HVAC company in [your city]"</div>
+        <p class="liveproof-body">If your shop is in the answer - <strong>congratulations, you're already winning AI search.</strong> Most contractors aren't.</p>
+        <p class="liveproof-body">If your shop isn't there - that's the gap I close.</p>
+        <p class="liveproof-foot">Want a free 5-minute audit showing exactly where you stand across all four AI tools? Email <a href="mailto:petar@zedex.dev" style="color:var(--gold);font-weight:500;text-decoration:none">petar@zedex.dev</a> with your shop name + city.</p>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section id="how" class="how">
+  <section id="process">
     <div class="container">
       <div class="section-head reveal">
         <span class="section-tag">How It Works</span>
-        <h2 class="section-title">From blank page to <em>live pipeline</em> in 4 steps</h2>
-        <p class="section-sub">We get on a call. I scope what you need. Two weeks later you have a system that runs.</p>
+        <h2 class="section-title">90 days from signed to <em>shipping citations.</em></h2>
+        <p class="section-sub">First citations typically land between Day 30-60. Phone-call lift between Day 60-90. The work compounds month over month.</p>
       </div>
-
       <div class="steps">
         <div class="step reveal">
           <div class="step-rail"><div class="step-num">01</div></div>
-          <div class="step-body">
-            <h3 class="step-title">Discovery call</h3>
-            <p class="step-desc">We get on a call together. I map who you want stocking your products - which retailers, regions, store types, categories - and what's worked vs. what's been stuck.</p>
-            <div class="step-meta">Day 1 &middot; 15 minutes</div>
+          <div>
+            <h3 class="step-title">Audit & Strategy</h3>
+            <p class="step-desc">I run a citation count across all four major AI tools (ChatGPT, Perplexity, Gemini, Google AI Overviews) for your city + trade. Identify the specific gaps. Map the 90-day plan against your top 5 keywords.</p>
+            <div class="step-meta">Week 1</div>
           </div>
         </div>
-
         <div class="step reveal delay-1">
           <div class="step-rail"><div class="step-num">02</div></div>
-          <div class="step-body">
-            <h3 class="step-title">System build</h3>
-            <p class="step-desc">I find and verify your buyer list, set up the email setup that gets your messages into inboxes (dedicated domains, properly warmed mailboxes, full authentication), connect it to your CRM, and plug in your outreach copy. Everything pre-tested before it goes live.</p>
-            <div class="step-meta">Week 1 - 2 &middot; Built around your brand</div>
+          <div>
+            <h3 class="step-title">Foundation Deploy</h3>
+            <p class="step-desc">Schema markup deployed (Local Business, FAQ, Service, Review). Google Business Profile optimization. NAP citation cleanup. Baseline content batch shipped. Most shops don't have proper schema - this alone moves the needle.</p>
+            <div class="step-meta">Week 2-3</div>
           </div>
         </div>
-
         <div class="step reveal delay-2">
           <div class="step-rail"><div class="step-num">03</div></div>
-          <div class="step-body">
-            <h3 class="step-title">Launch &amp; iterate</h3>
-            <p class="step-desc">The system goes live with a small first batch. I watch how it's performing - what's landing in inboxes, what's bouncing, what's replying - and tune the system so your emails land in primary inboxes (not spam) and your pipeline stays clean.</p>
-            <div class="step-meta">Week 2 - 3 &middot; Live replies in your inbox</div>
+          <div>
+            <h3 class="step-title">AEO Citation Acceleration</h3>
+            <p class="step-desc">AI-citation-targeted content shipped weekly. Authority signals built. Review velocity engine running. Tracking weekly across all four AI tools. First citations typically land Day 30-60.</p>
+            <div class="step-meta">Week 4-12</div>
           </div>
         </div>
-
         <div class="step reveal delay-3">
           <div class="step-rail"><div class="step-num">04</div></div>
-          <div class="step-body">
-            <h3 class="step-title">Scale or hand off</h3>
-            <p class="step-desc">Once the system is hitting numbers, you choose: I keep operating it monthly and expanding reach, or I document everything and hand you the keys. Either way, you own the outputs.</p>
-            <div class="step-meta">Week 4+ &middot; Your call</div>
+          <div>
+            <h3 class="step-title">Monthly Compounding</h3>
+            <p class="step-desc">Continuous content cadence, schema updates as AI engines evolve, monthly reporting. The work compounds - month 6 looks different from month 1. Citations grow. Rankings hold. Phone keeps ringing.</p>
+            <div class="step-meta">Day 90+</div>
           </div>
         </div>
       </div>
-
       <div class="how-cta reveal">
-        <a href="#hero-calendly" class="btn-primary">Book a call <span class="arrow">→</span></a>
+        <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Strategy Call <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
 
-
-  <!-- Integrations -->
-  <section id="integrations" class="integrations">
+  <!-- Outcomes -->
+  <section class="outcomes" id="outcomes">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">Integration Partners</span>
-        <h2 class="section-title">Partnered with <em>the tools your team uses every day</em></h2>
-        <p class="section-sub">Your CRM, your email, your e-commerce platform - direct integrations into the stack you already run. No new software to learn, no team training, nothing to migrate.</p>
+        <span class="section-tag">Outcomes</span>
+        <h2 class="section-title">What this looks like in <em>6 months.</em></h2>
+        <p class="section-sub">Typical Growth-tier outcomes. Specifics vary by starting baseline, market competitiveness, and consistency.</p>
       </div>
-
-      <div class="integration-grid reveal">
-        <a class="integration-logo" href="https://hubspot.com" target="_blank" rel="noopener">
-          <img src="assets/logos/hubspot.svg" alt="HubSpot" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;HubSpot&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://salesforce.com" target="_blank" rel="noopener">
-          <img src="assets/logos/salesforce.svg" alt="Salesforce" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Salesforce&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://pipedrive.com" target="_blank" rel="noopener">
-          <img src="assets/logos/pipedrive.svg" alt="Pipedrive" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Pipedrive&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://monday.com" target="_blank" rel="noopener">
-          <img src="assets/logos/monday.png" alt="Monday" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Monday&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://airtable.com" target="_blank" rel="noopener">
-          <img src="assets/logos/airtable.svg" alt="Airtable" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Airtable&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://workspace.google.com" target="_blank" rel="noopener">
-          <img src="assets/logos/googleworkspace.svg" alt="Google Workspace" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Google Workspace&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noopener">
-          <img src="assets/logos/microsoft.svg" alt="Microsoft 365" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Microsoft 365&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://shopify.com" target="_blank" rel="noopener">
-          <img src="assets/logos/shopify.svg" alt="Shopify" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Shopify&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://woocommerce.com" target="_blank" rel="noopener">
-          <img src="assets/logos/woocommerce.svg" alt="WooCommerce" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;WooCommerce&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://apollo.io" target="_blank" rel="noopener">
-          <img src="assets/logos/apollo.png" alt="Apollo" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Apollo&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://zoho.com" target="_blank" rel="noopener">
-          <img src="assets/logos/zoho.svg" alt="Zoho" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Zoho&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://close.com" target="_blank" rel="noopener">
-          <img src="assets/logos/close.svg" alt="Close" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Close&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://attio.com" target="_blank" rel="noopener">
-          <img src="assets/logos/attio.ico" alt="Attio" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Attio&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://activecampaign.com" target="_blank" rel="noopener">
-          <img src="assets/logos/activecampaign.svg" alt="ActiveCampaign" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;ActiveCampaign&lt;/span&gt;'">
-        </a>
-        <a class="integration-logo" href="https://clay.com" target="_blank" rel="noopener">
-          <img src="assets/logos/clay.png" alt="Clay" onerror="this.outerHTML='&lt;span class=&quot;integration-text&quot;&gt;Clay&lt;/span&gt;'">
-        </a>
+      <div class="outcome-grid">
+        <div class="outcome-card reveal">
+          <div class="outcome-stat">+15-25</div>
+          <div class="outcome-label">new booked calls / month</div>
+          <p class="outcome-desc">From AI search citations + improved Google rankings + GBP optimization.</p>
+        </div>
+        <div class="outcome-card reveal delay-1">
+          <div class="outcome-stat">0 → 8-15</div>
+          <div class="outcome-label">AI citations / quarter</div>
+          <p class="outcome-desc">Tracked weekly across ChatGPT, Perplexity, Gemini, and Google AI Overviews.</p>
+        </div>
+        <div class="outcome-card reveal delay-2">
+          <div class="outcome-stat">40-60%</div>
+          <div class="outcome-label">reduction in HomeAdvisor / LSA spend</div>
+          <p class="outcome-desc">Over 6 months as organic + AI search traffic picks up the slack.</p>
+        </div>
+        <div class="outcome-card reveal">
+          <div class="outcome-stat">Top 3</div>
+          <div class="outcome-label">Google ranking for primary keyword</div>
+          <p class="outcome-desc">"[Trade] near me" and "[Trade] in [city]" — the searches that actually drive calls.</p>
+        </div>
+        <div class="outcome-card reveal delay-1">
+          <div class="outcome-stat">5x</div>
+          <div class="outcome-label">AI Overview appearances</div>
+          <p class="outcome-desc">On your service-area queries. AI Overviews appear in 17.7% of home-service searches now.</p>
+        </div>
+        <div class="outcome-card reveal delay-2">
+          <div class="outcome-stat">£750-2K</div>
+          <div class="outcome-label">typical monthly retainer</div>
+          <p class="outcome-desc">Compared to $1,500-3,000/mo most contractors spend on HomeAdvisor, Angi, or LSAs.</p>
+        </div>
       </div>
-
-      <p class="integration-footnote reveal">Running on something else? If it has an API, I can plug into it.</p>
+      <p class="outcomes-foot">Results vary by starting baseline, market competitiveness, and consistency. These ranges reflect the typical Growth-tier client outcome over 6 months.</p>
     </div>
   </section>
 
-
-  <!-- Engagement models -->
-  <section id="engagement" class="engagement">
+  <!-- Who It's For -->
+  <section class="audience" id="who">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">Engagement models</span>
-        <h2 class="section-title">Two ways to <em>get this built</em></h2>
-        <p class="section-sub">Two ways to work with me. Pricing depends on scope - we figure that out on the call.</p>
+        <span class="section-tag">Built For</span>
+        <h2 class="section-title">Owner-operators who want to <em>own their visibility.</em></h2>
+        <p class="section-sub">Not every contractor is the right fit. Here's the line.</p>
       </div>
-
-      <div class="engagement-grid">
-        <article class="engagement-card reveal">
-          <span class="engagement-pill">For your brand</span>
-          <h3 class="engagement-title">Done-For-You</h3>
-          <p class="engagement-tagline">I build the system. I run it. You get the meetings.</p>
-          <div class="engagement-who"><strong>Who it's for</strong>Product brand founders who want a wholesale pipeline running without hiring a sales team or building infrastructure from scratch.</div>
-          <ul class="engagement-features">
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Verified wholesale buyer sourcing + list verification</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Email setup that lands: dedicated domains, warmed mailboxes, full authentication</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Email sequences, smart send pacing, automatic bounce handling</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Replies routed back + everything synced to the CRM you already use</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Weekly reporting on sends, what landed, and replies</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Live system in 2 weeks</li>
+      <div class="audience-grid">
+        <div class="audience-col reveal">
+          <h3 class="yes">Built for</h3>
+          <ul class="audience-list">
+            <li class="yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>HVAC and plumbing owner-operators (1-50 employees)</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>$300K-$5M annual revenue</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Currently spending $1,500-3,000/mo on HomeAdvisor, Angi, Thumbtack, LSAs, or Yell</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Owner makes the marketing decisions (no committee)</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Wants to stop renting leads and start owning visibility</span></li>
           </ul>
-          <div class="engagement-cta">
-            <a href="#hero-calendly" class="btn-primary">Book a call <span class="arrow">→</span></a>
-          </div>
-        </article>
-
-        <article class="engagement-card reveal delay-1">
-          <span class="engagement-pill">For your distributors</span>
-          <h3 class="engagement-title">White-label</h3>
-          <p class="engagement-tagline">Same system, packaged for your distributors to run under your brand.</p>
-          <div class="engagement-who"><strong>Who it's for</strong>Brands whose distributors need pipeline support and can't (or won't) build their own. Arm them with a turnkey outreach engine you control.</div>
-          <ul class="engagement-features">
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Everything in Done-For-You, replicated per distributor instance</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Deployed under your brand, customized per regional partner</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Centralized reporting across every distributor in one view</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>One parent brand, multiple regional pipelines</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Typical use: EU brand with US / APAC distributors, or vice versa</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Scope + deployment timeline mapped on the call</li>
+        </div>
+        <div class="audience-col reveal delay-1">
+          <h3 class="no">Not built for</h3>
+          <ul class="audience-list">
+            <li class="no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Large commercial / industrial contractors (different motion)</span></li>
+            <li class="no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Franchises with corporate marketing</span></li>
+            <li class="no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Shops already cited prominently in AI search</span></li>
+            <li class="no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Owners who want a Google Ads or paid media manager</span></li>
+            <li class="no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Anyone looking for a 12-month lock-in contract</span></li>
           </ul>
-          <div class="engagement-cta">
-            <a href="#hero-calendly" class="btn-primary">Book a call <span class="arrow">→</span></a>
-          </div>
-        </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder -->
+  <section class="founder">
+    <div class="container">
+      <div class="founder-inner">
+        <div class="founder-photo reveal"><img src="assets/founder.jpg" alt="Petar Krastev, Founder of Zedex" onerror="this.parentNode.style.background='linear-gradient(135deg,#F0E5D2,#C88254)';this.style.display='none'"></div>
+        <div class="founder-text reveal delay-1">
+          <span class="section-tag">Behind Zedex</span>
+          <h2>I work alone <em>- on purpose.</em></h2>
+          <p>I'm Petar. I build AI search systems for HVAC and plumbing shops. No account managers, no juniors, no handoff. When you call me at 3pm, I pick up.</p>
+          <p>I've been automating workflows with AI for over two years. Same stack pointed at a different goal: making sure your shop is the answer when ChatGPT, Perplexity, Gemini, or Google AI recommends a trade in your city.</p>
+          <p>Decisions get made in-call, not "let me check with the team." Month-to-month, no contracts. If the work isn't moving citations, you cancel. That's the deal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anti-positioning -->
+  <section class="antipos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">What This Isn't</span>
+        <h2 class="section-title">Self-qualify. <em>Save us both time.</em></h2>
+        <p class="section-sub">Plenty of agencies do these things. I don't. If you need any of them, find a different vendor.</p>
+      </div>
+      <ul class="antipos-list">
+        <li class="reveal"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not Google Ads or paid media management.</strong><span>That's a different vendor.</span></div></li>
+        <li class="reveal delay-1"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not generic SEO with a 2022 playbook.</strong><span>Most local SEO agencies do half the job. AEO is the new layer they don't ship.</span></div></li>
+        <li class="reveal delay-2"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not a backlink farm or black-hat SEO.</strong><span>White-hat, AI-first, sustainable.</span></div></li>
+        <li class="reveal"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not a content marketing agency.</strong><span>Content is one component. Schema + GBP + citation work matters more than blog volume.</span></div></li>
+        <li class="reveal delay-1"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not a social media manager.</strong><span>No Facebook, Instagram, or TikTok.</span></div></li>
+        <li class="reveal delay-2"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not a directory listing service.</strong><span>Yell / HomeAdvisor / Angi are what I replace, not what I provide.</span></div></li>
+        <li class="reveal"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><div><strong>Not a one-time audit.</strong><span>Audit is the entry offer. Outcomes compound on the retainer.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pricing Frame -->
+  <section class="pricing">
+    <div class="container">
+      <div class="pricing-inner reveal">
+        <span class="pricing-tag">Pricing</span>
+        <h2 class="pricing-title">Same money. <em>Different model.</em></h2>
+        <p class="pricing-body">If you're already paying $1,500-3,000/month to HomeAdvisor, Angi, LSAs, or Yell - that money disappears the day you stop paying.</p>
+        <p class="pricing-body"><strong>Same monthly budget moved to AEO builds visibility you OWN.</strong> Citations that compound. Rankings you keep. A pipeline that doesn't reset every month.</p>
+        <p class="pricing-detail">Three retainer tiers. Month-to-month, no contracts. Setup fee waived for prospects committing to 6+ months upfront. Specific pricing on the call - depends on your shop size, city competitiveness, and which tier fits.</p>
+        <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a 15-Min Strategy Call <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -756,64 +602,44 @@
     <div class="container">
       <div class="section-head reveal">
         <span class="section-tag">FAQ</span>
-        <h2 class="section-title">Common <em>questions</em></h2>
+        <h2 class="section-title">Common <em>questions.</em></h2>
       </div>
-
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>How long does it take to get started?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">I scope your system on the first call and have it live within two weeks of kickoff. No long discovery phases - I move fast because you need results before your next buyer season or trade show.</div></div>
+          <button class="faq-q" aria-expanded="false">What's an AI citation? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">When someone asks ChatGPT "best HVAC in [city]," ChatGPT names 3-5 shops in its answer. An AI citation = your shop being in that answer. Right now most contractors aren't in any AI answer for their city. The first contractor to get cited in their market wins the next 5 years of inbound leads.</div></div>
         </div>
-
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>Do I need a technical team or developer?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">No. I handle the entire build. You connect your existing tools - your CRM, email account, and e-commerce platform - and I do the rest. Nothing to install, nothing to maintain.</div></div>
+          <button class="faq-q" aria-expanded="false">How is this different from regular SEO? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most local SEO agencies are optimizing for 2022 Google - keywords, backlinks, content. I do that PLUS the AEO layer (AI search). Two layers, one system. AI search is now 45% of how people find local services, and most agencies haven't built for it yet.</div></div>
         </div>
-
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>Do you write the outreach copy?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">No - you supply the messaging, I build everything around it. You know your brand voice, your category, and what your buyers actually care about better than I ever will. What I deliver is the machine that finds the right buyers, carries your copy reliably (the email setup that lands in inboxes, the sending engine, the reply routing), and syncs everything to your CRM. If you want copywriting help, I can point you to specialists - but I don't pretend to be one, and I don't promise reply rates that depend on messaging I didn't write.</div></div>
+          <button class="faq-q" aria-expanded="false">I tried SEO before and got ripped off. Why is this different? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">I get it. Average documented loss to bad SEO contracts is $3,000-$5,000. What's different here: month-to-month with no lock-in, weekly reporting on AI citations (a metric you can verify yourself by asking ChatGPT), no charts that don't tie to phone calls. If citations don't move, you cancel.</div></div>
         </div>
-
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>How much does it cost?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Pricing depends on scope - number of buyer segments, integration complexity, whether I also operate the system post-launch or hand it off to you, and whether you want a white-label deployment for your distributors. You get a fixed price after the strategy call - no hourly billing, no scope creep, no surprises on the invoice.</div></div>
+          <button class="faq-q" aria-expanded="false">Do my customers really use AI search? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">45% of consumers used AI tools (ChatGPT, Perplexity, Google AI Overviews) to find local services in 2026 - up from 6% the year before. Curve is still climbing. Even if your current customers don't, the next generation of homeowners absolutely does.</div></div>
         </div>
-
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>What tools and platforms do you work with?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">My core stack is n8n and the Claude API. I connect to whatever CRM you already use - HubSpot, Pipedrive, Salesforce, Monday, Zoho, Close, Attio, Folk, ActiveCampaign, Airtable - plus buyer-finding tools (Apollo, Clay), Google Workspace, and your e-commerce platform (Shopify, WooCommerce, BigCommerce, custom). Running on something else? If it has an API, I can plug into it.</div></div>
+          <button class="faq-q" aria-expanded="false">How long until I see results? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">First citations typically land between Day 30-60. Measurable phone-call lift between Day 60-90. AI citation count grows monthly thereafter. Compare to renting leads - those start the day you pay, but stop the day you stop. AEO compounds.</div></div>
         </div>
-
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>Can you build this for our distributors (white-label)?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Yes. Some brands use me to arm their regional distributors with a turnkey outreach engine running under the parent brand. Example: an EU brand with US distributors gives those partners a wholesale outreach system they couldn't build themselves - centralized under your control, reporting flowing back to the parent brand. Scope, branding, and deployment timeline vary - we'll map it on the strategy call.</div></div>
+          <button class="faq-q" aria-expanded="false">How much does it cost? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Three tiers - typically £750-2,000/month retainer plus a one-time setup fee. Specific pricing on the call once I see your shop size and starting baseline. Anchor: most clients are already spending more than my retainer on HomeAdvisor or LSAs.</div></div>
         </div>
-
         <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>What if I'm not sure which system I need?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">That's what the strategy call is for. We'll identify your biggest wholesale bottleneck in 15 minutes and I'll recommend the right system - or tell you honestly if I'm not the right fit for where your brand is today.</div></div>
+          <button class="faq-q" aria-expanded="false">What if I cancel? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Month-to-month, cancel anytime. The work I've shipped (schema, GBP, content) stays with you. Unlike rented leads, you keep what we built. Also unlike some agencies - I won't take your website hostage.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Can I see results from another shop? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">I'm building the contractor case studies now. Cupffee, Stroodles, and Sorbos are my product-brand cases (different vertical). What I'll do instead: the free 5-min audit shows YOUR shop's current AI citation count. That's stronger proof than someone else's case study because it's your data, live.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Do you only work with HVAC and plumbing? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Lead with HVAC + plumbing because the offer fits cleanest. Will expand to electrical, roofing, and GC after first paid case studies. If you're an electrician/roofer/GC and the math fits - book the call anyway.</div></div>
         </div>
       </div>
     </div>
@@ -823,9 +649,9 @@
   <section id="contact" class="final-cta">
     <div class="container">
       <div class="final-cta-inner reveal">
-        <h2>Ready to fill <em>your wholesale pipeline?</em></h2>
-        <p>15 minutes. No deck, no pressure. We talk through where your wholesale is stuck and what a system would look like for your brand. If I can't help, I'll say so.</p>
-        <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call <span class="arrow">→</span></a>
+        <h2>Ready to <em>stop renting leads?</em></h2>
+        <p>15-minute strategy call. I'll run a live AI citation check on your shop during the call - you'll see exactly where you stand across ChatGPT, Perplexity, Gemini, and Google AI Overviews. If I can't help, I'll tell you in the first 5 minutes.</p>
+        <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a 15-Min Strategy Call <span class="arrow">→</span></a>
         <p class="final-cta-email">Or email me directly: <a href="mailto:petar@zedex.dev">petar@zedex.dev</a></p>
       </div>
     </div>
@@ -840,12 +666,13 @@
       <nav class="footer-nav">
         <a href="#how">How It Works</a>
         <a href="#outcomes">Outcomes</a>
-        <a href="#cases">Case Studies</a>
+        <a href="#who">Who It's For</a>
         <a href="#faq">FAQ</a>
         <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
+        <a href="/wholesale.html">For Product Brands</a>
       </nav>
     </div>
-    <div class="footer-copy">© <span id="year"></span> Zedex - Automated wholesale outreach for product brands. <a href="mailto:petar@zedex.dev" style="color:var(--gold);text-decoration:none">petar@zedex.dev</a></div>
+    <div class="footer-copy">© <span id="year"></span> Zedex - AI search visibility for HVAC + plumbing shops. <a href="mailto:petar@zedex.dev" style="color:var(--gold);text-decoration:none">petar@zedex.dev</a></div>
   </div>
 </footer>
 
