@@ -106,50 +106,13 @@
       max-width: 1180px; margin: 0 auto; padding: 0 28px;
       height: 68px; display: flex; align-items: center; justify-content: space-between;
     }
-    .logo { display: flex; align-items: center; gap: 0; }
+    .logo { display: flex; align-items: center; }
     .logo-text { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; color: var(--navy); }
     .logo-text em { font-style: normal; color: var(--blue); }
-    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links > a { font-size: 14px; color: var(--text-dim); font-weight: 500; transition: color 0.2s; white-space: nowrap; }
     .nav-links > a:hover { color: var(--navy); }
-    .nav-badge {
-      display: inline-block; padding: 2px 7px; border-radius: 999px;
-      font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
-      margin-left: 5px; vertical-align: middle;
-    }
-    .nav-badge.free { background: var(--blue); color: #fff; }
-    .nav-badge.new-tag { background: #7C3AED; color: #fff; }
-    /* More dropdown */
-    .nav-more { position: relative; }
-    .nav-more-btn {
-      display: flex; align-items: center; gap: 4px;
-      font-size: 14px; color: var(--text-dim); font-weight: 500; cursor: pointer;
-      transition: color 0.2s; white-space: nowrap; background: none; border: none; padding: 0; font-family: inherit;
-    }
-    .nav-more-btn:hover { color: var(--navy); }
-    .nav-more-btn svg { transition: transform 0.2s; }
-    .nav-more.open .nav-more-btn svg { transform: rotate(180deg); }
-    .nav-dropdown {
-      position: absolute; top: calc(100% + 14px); right: 0;
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 6px; min-width: 160px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      opacity: 0; pointer-events: none; transform: translateY(-6px);
-      transition: opacity 0.18s, transform 0.18s; z-index: 200;
-    }
-    .nav-more.open .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateY(0); }
-    .nav-dropdown a {
-      display: block; padding: 9px 14px; font-size: 14px; color: var(--text); font-weight: 500;
-      border-radius: 8px; transition: background 0.15s;
-    }
-    .nav-dropdown a:hover { background: var(--bg-alt); color: var(--navy); }
-    .nav-lang {
-      display: flex; align-items: center; gap: 3px;
-      font-size: 14px; color: var(--text-dim); font-weight: 500; cursor: pointer;
-      background: none; border: none; padding: 0; font-family: inherit; white-space: nowrap;
-      transition: color 0.2s;
-    }
-    .nav-lang:hover { color: var(--navy); }
+    .nav-links > a.btn-primary, .nav-links > a.btn-primary:hover { color: #fff; }
     .menu-btn { display: none; width: 28px; height: 28px; position: relative; }
     .menu-btn span { display: block; position: absolute; left: 0; right: 0; height: 1.5px; background: var(--navy); transition: transform 0.3s, top 0.3s; }
     .menu-btn span:nth-child(1) { top: 9px; }
@@ -375,7 +338,7 @@
     .founder-name { font-size: clamp(28px, 3vw, 40px); margin-bottom: 8px; }
     .founder-role { font-size: 16px; color: var(--blue); font-weight: 600; margin-bottom: 24px; }
     .founder-bio { font-size: 15px; color: var(--text-dim); line-height: 1.8; margin-bottom: 16px; }
-    .founder-calendly { margin-top: 36px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .founder-calendly { margin-top: 52px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 
     /* ── ANTI-POSITIONING ── */
     .antipos { background: var(--bg-alt); border-top: 1px solid var(--border); }
@@ -494,33 +457,20 @@
       <span class="logo-text">Zedex <em>AI</em></span>
     </a>
     <nav class="nav-links">
-      <a href="#services">Tools <span class="nav-badge free">FREE</span></a>
-      <a href="#cases">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#process">Events <span class="nav-badge new-tag">NEW</span></a>
-      <div class="nav-more" id="navMore">
-        <button class="nav-more-btn" id="moreBtn" aria-expanded="false">
-          More
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="nav-dropdown" id="navDropdown">
-          <a href="#process">Process</a>
-          <a href="#faq">FAQ</a>
-          <a href="#why">Why Zedex</a>
-        </div>
-      </div>
-      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Contact</a>
-      <button class="nav-lang" id="langBtn">EN <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <a href="#services">What I Build</a>
+      <a href="#process">How It Works</a>
+      <a href="#founder">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call <span class="arrow">→</span></a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
   </div>
   <div class="mobile-panel" id="mobilePanel">
-    <a href="#services">Services</a>
-    <a href="#cases">Portfolio</a>
-    <a href="#process">Process</a>
+    <a href="#services">What I Build</a>
+    <a href="#process">How It Works</a>
+    <a href="#founder">About</a>
     <a href="#faq">FAQ</a>
-    <a href="#why">Why Zedex</a>
-    <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Contact</a>
+    <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
   </div>
 </header>
 
@@ -802,7 +752,7 @@
           <div class="step-body">
             <span class="step-when-tag">Day 1</span>
             <h3 class="step-h">Discovery Call</h3>
-            <p class="step-p">30 minutes, free. We map 3 processes you're currently doing manually that AI should own. No prep needed — just show up.</p>
+            <p class="step-p">15 minutes, free. We map 3 processes you're currently doing manually that AI should own. No prep needed — just show up.</p>
           </div>
         </div>
         <div class="step-item reveal d1">
@@ -926,11 +876,11 @@
           <p class="founder-role">Founder &amp; Automation Engineer</p>
           <p class="founder-bio">I build AI automations for businesses that are tired of doing things manually. Before this, I spent five years as a full-stack developer — which means I actually understand your stack, not just the AI layer sitting on top of it.</p>
           <p class="founder-bio">I work alone. When we talk, you're talking to the person who will build your system. No account managers, no handoffs, no juniors doing the actual work. Decisions get made on the call, not three days later in a Slack thread.</p>
-          <p class="founder-bio">50+ automations shipped across industries. The average client saves 15–20 hours per week. Book a call below — 30 minutes, no obligation, I'll tell you exactly what I'd build for you first.</p>
-          <div class="founder-calendly">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/krastev/meeting?hide_gdpr_banner=1&primary_color=2563EB" style="min-width:320px;height:630px;"></div>
-          </div>
+          <p class="founder-bio">50+ automations shipped across industries. The average client saves 15–20 hours per week. Book a call below — 15 minutes, no obligation, I'll tell you exactly what I'd build for you first.</p>
         </div>
+      </div>
+      <div class="founder-calendly reveal">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/krastev/meeting?hide_gdpr_banner=1&primary_color=2563EB" style="min-width:320px;height:700px;"></div>
       </div>
     </div>
   </section>
@@ -1013,7 +963,7 @@
     <div class="container">
       <div class="final-cta-inner reveal">
         <h2>Let's find the one thing to automate first.</h2>
-        <p>30-minute call, free. Tell me what you're doing manually. I'll tell you exactly what I'd build, how long it takes, and what it costs.</p>
+        <p>15-minute call, free. Tell me what you're doing manually. I'll tell you exactly what I'd build, how long it takes, and what it costs.</p>
         <div class="ctas">
           <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-white">Book a Call <span class="arrow">→</span></a>
           <a href="mailto:petar@zedex.dev" class="btn-white-outline">Email Directly <span class="arrow">→</span></a>
@@ -1083,19 +1033,6 @@
     menuBtn.classList.remove('open');
     mobilePanel.classList.remove('open');
   }));
-
-  const navMore = document.getElementById('navMore');
-  const moreBtn = document.getElementById('moreBtn');
-  if (navMore && moreBtn) {
-    moreBtn.addEventListener('click', e => {
-      e.stopPropagation();
-      const open = navMore.classList.toggle('open');
-      moreBtn.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', () => navMore.classList.remove('open'));
-    navMore.addEventListener('click', e => e.stopPropagation());
-    navMore.querySelectorAll('.nav-dropdown a').forEach(a => a.addEventListener('click', () => navMore.classList.remove('open')));
-  }
 
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
