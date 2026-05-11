@@ -118,6 +118,13 @@
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a { font-size: 14px; color: var(--text-dim); font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--navy); }
+    .nav-badge {
+      display: inline-block; padding: 1px 7px; border-radius: 999px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
+      margin-left: 4px; vertical-align: middle;
+    }
+    .nav-badge.free { background: #CCFBF1; color: #0D9488; }
+    .nav-badge.new-tag { background: #EDE9FE; color: #7C3AED; }
     .menu-btn { display: none; width: 28px; height: 28px; position: relative; }
     .menu-btn span { display: block; position: absolute; left: 0; right: 0; height: 1.5px; background: var(--navy); transition: transform 0.3s, top 0.3s; }
     .menu-btn span:nth-child(1) { top: 9px; }
@@ -147,7 +154,7 @@
     }
     .hero-inner {
       position: relative; z-index: 1;
-      display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: center;
+      display: grid; grid-template-columns: 1fr 540px; gap: 52px; align-items: center;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
@@ -201,10 +208,15 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
       background: var(--border);
     }
-    .dash-panel { background: var(--card); padding: 14px 16px; }
-    .dm-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
-    .dm-value-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px; }
-    .dm-big { font-size: 22px; font-weight: 800; color: var(--navy); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+    .dash-panel { background: var(--card); padding: 18px 20px; }
+    .dm-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .dm-value-row { display: flex; align-items: baseline; gap: 7px; margin-bottom: 8px; }
+    .dm-big { font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+    .dm-substats { display: flex; gap: 0; margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
+    .dm-substat { flex: 1; text-align: center; }
+    .dm-substat:not(:last-child) { border-right: 1px solid var(--border); }
+    .dm-substat strong { display: block; font-size: 13px; font-weight: 800; color: var(--navy); }
+    .dm-substat span { font-size: 10px; color: var(--text-muted); }
     .dm-delta { font-size: 11px; font-weight: 600; color: var(--green); }
     .dm-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; background: var(--blue-light); color: var(--blue); padding: 2px 7px; border-radius: 999px; }
     .dm-bars-svg { width: 100%; height: 30px; display: block; margin: 4px 0 2px; }
@@ -438,7 +450,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-      .hero-dashboard { max-width: 560px; margin: 0 auto; }
+      .hero-dashboard { max-width: 600px; margin: 0 auto; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .services-grid-bottom { max-width: 100%; }
       .industry-grid { grid-template-columns: repeat(2, 1fr); }
@@ -465,7 +477,7 @@
       .hero-ctas { flex-direction: column; }
       .industry-grid { grid-template-columns: 1fr; }
       .final-cta .ctas { flex-direction: column; align-items: center; }
-      .dash-body { grid-template-columns: 1fr; }
+      .dash-grid { grid-template-columns: 1fr; gap: 1px; }
     }
 
     .mobile-sticky { display: none; }
@@ -491,7 +503,8 @@
       <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Strategy Call <span class="arrow">→</span></a>
+      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Free Call <span class="nav-badge free">FREE</span></a>
+      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
   </div>
@@ -593,28 +606,7 @@
                 </div>
               </div>
 
-              <!-- Panel 3: Executions bar chart -->
-              <div class="dash-panel">
-                <div class="dm-label">EXECUTIONS / WEEK</div>
-                <div class="dm-value-row">
-                  <span class="dm-big" style="font-size:19px">1.2M+</span>
-                  <span class="dm-delta">↑ 18%</span>
-                </div>
-                <svg class="dm-bars-svg" viewBox="0 0 92 30" preserveAspectRatio="none">
-                  <rect x="0"  y="22" width="8" height="8"  rx="1" fill="#DBEAFE"/>
-                  <rect x="10" y="16" width="8" height="14" rx="1" fill="#DBEAFE"/>
-                  <rect x="20" y="19" width="8" height="11" rx="1" fill="#DBEAFE"/>
-                  <rect x="30" y="11" width="8" height="19" rx="1" fill="#DBEAFE"/>
-                  <rect x="40" y="17" width="8" height="13" rx="1" fill="#DBEAFE"/>
-                  <rect x="50" y="7"  width="8" height="23" rx="1" fill="#DBEAFE"/>
-                  <rect x="60" y="13" width="8" height="17" rx="1" fill="#2563EB"/>
-                  <rect x="70" y="3"  width="8" height="27" rx="1" fill="#2563EB"/>
-                  <rect x="82" y="0"  width="10" height="30" rx="1" fill="#2563EB"/>
-                </svg>
-                <div class="dm-footnote">vs last month</div>
-              </div>
-
-              <!-- Panel 4: Client score circle -->
+              <!-- Panel 3: Client score circle (bottom-left, like encorp AI Risk Status) -->
               <div class="dash-panel">
                 <div class="dm-label">CLIENT SCORE</div>
                 <div class="dm-circle-row">
@@ -632,6 +624,32 @@
                     <div class="dm-score-sub">30 clients</div>
                   </div>
                 </div>
+                <div class="dm-substats">
+                  <div class="dm-substat"><strong>30</strong><span>clients</span></div>
+                  <div class="dm-substat"><strong>0</strong><span>incidents</span></div>
+                  <div class="dm-substat"><strong>100%</strong><span>on-time</span></div>
+                </div>
+              </div>
+
+              <!-- Panel 4: Executions bar chart (bottom-right) -->
+              <div class="dash-panel">
+                <div class="dm-label">EXECUTIONS / WEEK</div>
+                <div class="dm-value-row">
+                  <span class="dm-big" style="font-size:20px">1.2M+</span>
+                  <span class="dm-delta">↑ 18%</span>
+                </div>
+                <svg class="dm-bars-svg" viewBox="0 0 92 30" preserveAspectRatio="none">
+                  <rect x="0"  y="22" width="8" height="8"  rx="1" fill="#DBEAFE"/>
+                  <rect x="10" y="16" width="8" height="14" rx="1" fill="#DBEAFE"/>
+                  <rect x="20" y="19" width="8" height="11" rx="1" fill="#DBEAFE"/>
+                  <rect x="30" y="11" width="8" height="19" rx="1" fill="#DBEAFE"/>
+                  <rect x="40" y="17" width="8" height="13" rx="1" fill="#DBEAFE"/>
+                  <rect x="50" y="7"  width="8" height="23" rx="1" fill="#DBEAFE"/>
+                  <rect x="60" y="13" width="8" height="17" rx="1" fill="#2563EB"/>
+                  <rect x="70" y="3"  width="8" height="27" rx="1" fill="#2563EB"/>
+                  <rect x="82" y="0"  width="10" height="30" rx="1" fill="#2563EB"/>
+                </svg>
+                <div class="dm-footnote">vs last month</div>
               </div>
             </div>
 
