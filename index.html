@@ -143,6 +143,13 @@
       border-radius: 8px; transition: background 0.15s;
     }
     .nav-dropdown a:hover { background: var(--bg-alt); color: var(--navy); }
+    .nav-lang {
+      display: flex; align-items: center; gap: 3px;
+      font-size: 14px; color: var(--text-dim); font-weight: 500; cursor: pointer;
+      background: none; border: none; padding: 0; font-family: inherit; white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .nav-lang:hover { color: var(--navy); }
     .menu-btn { display: none; width: 28px; height: 28px; position: relative; }
     .menu-btn span { display: block; position: absolute; left: 0; right: 0; height: 1.5px; background: var(--navy); transition: transform 0.3s, top 0.3s; }
     .menu-btn span:nth-child(1) { top: 9px; }
@@ -514,10 +521,10 @@
       <span class="logo-text">Zedex <em>AI</em></span>
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
+      <a href="#services">Tools <span class="nav-badge free">FREE</span></a>
       <a href="#cases">Portfolio</a>
-      <a href="#pricing">Pricing</a>
-      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Free Audit <span class="nav-badge free">FREE</span></a>
+      <a href="#services">Services</a>
+      <a href="#process">Events <span class="nav-badge new-tag">NEW</span></a>
       <div class="nav-more" id="navMore">
         <button class="nav-more-btn" id="moreBtn" aria-expanded="false">
           More
@@ -529,17 +536,18 @@
           <a href="#why">Why Zedex</a>
         </div>
       </div>
-      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
+      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Contact</a>
+      <button class="nav-lang" id="langBtn">EN <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
   </div>
   <div class="mobile-panel" id="mobilePanel">
     <a href="#services">Services</a>
     <a href="#cases">Portfolio</a>
-    <a href="#pricing">Pricing</a>
     <a href="#process">Process</a>
     <a href="#faq">FAQ</a>
-    <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
+    <a href="#why">Why Zedex</a>
+    <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Contact</a>
   </div>
 </header>
 
@@ -863,64 +871,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">Pricing</span>
-        <h2 class="section-title">Transparent pricing</h2>
-        <p class="section-sub">Pick the scope that fits you. No hidden hourly rates. Final quote after a free 30-minute scoping call.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card reveal">
-          <p class="pricing-name">À La Carte</p>
-          <p class="pricing-price">From $500</p>
-          <p class="pricing-price-note">per engagement</p>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li>AI Training — $1,000 per cohort (up to 20 people)</li>
-            <li>AI Automation — from $500 per build (scope-based)</li>
-            <li>Single-engagement, fixed-fee delivery</li>
-            <li>Clear deliverables and timeline upfront</li>
-          </ul>
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-outline" style="width:100%;justify-content:center">Get a Quote <span class="arrow">→</span></a>
-        </div>
-        <div class="pricing-card featured reveal d1">
-          <span class="pricing-badge">Most Popular</span>
-          <p class="pricing-name">Growth</p>
-          <p class="pricing-price">$3,500</p>
-          <p class="pricing-price-note">per month · 6-month minimum</p>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li>Fractional AI Director — 1–2 days/week</li>
-            <li>AI-OPS managed services — 24/7 monitoring</li>
-            <li>1 automation build included monthly</li>
-            <li>Quarterly KPI report</li>
-            <li>AI risk register maintained</li>
-            <li>Priority support response</li>
-          </ul>
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center">Book a Strategy Call <span class="arrow">→</span></a>
-        </div>
-        <div class="pricing-card reveal d2">
-          <p class="pricing-name">Enterprise</p>
-          <p class="pricing-price">$5,000</p>
-          <p class="pricing-price-note">per month · or $50K/year</p>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li>10 AI Training cohorts (200+ people trained)</li>
-            <li>Fractional AI Director for 6 months</li>
-            <li>Full AI audit, risk register, and policies</li>
-            <li>AI-OPS managed services for 12 months</li>
-            <li>Dedicated account director + SLA</li>
-            <li>Custom case study + co-marketing rights</li>
-          </ul>
-          <a href="mailto:petar@zedex.dev" class="btn-outline" style="width:100%;justify-content:center">Talk to Enterprise <span class="arrow">→</span></a>
-        </div>
-      </div>
-      <p class="pricing-disclaimer reveal">Prices above are indicative. Final quote follows the free 30-minute scoping call where we lock down your specific scope.</p>
     </div>
   </section>
 
