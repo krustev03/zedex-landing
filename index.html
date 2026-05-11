@@ -263,147 +263,127 @@
       background: #FAFCFF; font-size: 10.5px; color: var(--text-muted); font-weight: 500;
     }
 
-    /* ── TRUST LOGOS ── */
-    .trust { padding: 56px 0; border-top: 1px solid var(--border); background: var(--card); }
-    .trust-label { text-align: center; font-size: 12px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 28px; }
-    .logos-track { overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); }
-    .logos-inner { display: flex; gap: 56px; align-items: center; animation: marquee 28s linear infinite; width: max-content; }
-    .logos-inner:hover { animation-play-state: paused; }
-    .logo-item { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-muted); white-space: nowrap; }
-
-    /* ── SECTION BASE ── */
+    /* ── SECTION SHARED ── */
     section { padding: 100px 0; }
-    .section-head { max-width: 680px; margin: 0 auto 64px; text-align: center; }
-    .section-title { font-size: clamp(32px, 3.6vw, 48px); margin-bottom: 16px; }
+    .section-head { max-width: 720px; margin: 0 auto 64px; text-align: center; }
+    .section-title { font-size: clamp(32px, 4vw, 48px); margin-bottom: 18px; color: var(--navy); }
     .section-sub { font-size: 17px; color: var(--text-dim); line-height: 1.72; }
+    .section-tag { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 18px; display: inline-block; }
 
-    /* ── SERVICES ── */
-    .services { background: var(--card); border-top: 1px solid var(--border); }
-    .services-intro { font-size: 17px; color: var(--text-dim); line-height: 1.72; max-width: 680px; margin: 0 auto 64px; text-align: center; }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .services-grid-bottom { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 700px; margin: 20px auto 0; }
-    .service-card {
-      border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 26px;
-      background: var(--card);
+    /* ── INSIGHT ── */
+    .insight { background: var(--card); border-top: 1px solid var(--border); }
+    .insight-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .insight-title { font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 20px; }
+    .insight-body { font-size: 16px; color: var(--text-dim); line-height: 1.78; }
+    .insight-chart { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+    .insight-chart-title { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .insight-bars { display: flex; flex-direction: column; gap: 14px; }
+    .insight-bar-row { display: flex; align-items: center; gap: 12px; }
+    .insight-bar-label { font-size: 12px; font-weight: 600; color: var(--text-dim); width: 90px; flex-shrink: 0; text-align: right; }
+    .insight-bar-track { flex: 1; height: 10px; background: var(--bg-alt); border-radius: 999px; overflow: hidden; }
+    .insight-bar-fill { height: 100%; border-radius: 999px; }
+    .insight-bar-val { font-size: 12px; font-weight: 700; color: var(--navy); width: 36px; flex-shrink: 0; }
+
+    /* ── PILLARS ── */
+    .pillars { background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .pillar-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 34px 28px; position: relative; overflow: hidden;
       transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-      position: relative; overflow: hidden;
     }
-    .service-card::before {
+    .pillar-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--blue), #60A5FA);
-      opacity: 0; transition: opacity 0.3s;
+      background: linear-gradient(90deg, var(--blue), #60A5FA); opacity: 0; transition: opacity 0.3s;
     }
-    .service-card:hover { border-color: var(--blue-border); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .service-card:hover::before { opacity: 1; }
-    .service-type { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; display: block; }
-    .service-name { font-size: 19px; font-weight: 700; margin-bottom: 10px; color: var(--navy); }
-    .service-desc { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
-    .service-link { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--blue); margin-top: 18px; transition: gap 0.2s; }
-    .service-link:hover { gap: 9px; }
+    .pillar-card:hover { border-color: var(--blue-border); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .pillar-card:hover::before { opacity: 1; }
+    .pillar-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .pillar-icon svg { width: 22px; height: 22px; color: var(--blue); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pillar-num { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; display: block; }
+    .pillar-name { font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--navy); }
+    .pillar-desc { font-size: 14px; color: var(--text-dim); line-height: 1.72; }
+    .pillar-examples { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 6px; }
+    .pillar-ex-tag { font-size: 11px; font-weight: 600; color: var(--text-muted); padding: 3px 9px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--border); }
 
-    /* ── INDUSTRIES ── */
-    .industries { background: var(--bg-alt); border-top: 1px solid var(--border); }
-    .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .industry-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 26px 22px;
+    /* ── LIVE PROOF ── */
+    .liveproof { background: var(--card); border-top: 1px solid var(--border); }
+    .liveproof-box {
+      max-width: 780px; margin: 0 auto;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 1px solid var(--blue-border); border-radius: var(--radius-lg);
+      padding: 48px 52px; text-align: center; position: relative; overflow: hidden;
+    }
+    .liveproof-box::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .liveproof-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); background: rgba(37,99,235,0.1); padding: 5px 14px; border-radius: 999px; display: inline-block; margin-bottom: 20px; }
+    .liveproof-query { font-size: clamp(18px, 2.5vw, 26px); font-weight: 800; color: var(--navy); line-height: 1.3; margin-bottom: 28px; font-style: italic; }
+    .liveproof-stats { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .liveproof-stat strong { display: block; font-size: 28px; font-weight: 800; color: var(--blue); letter-spacing: -0.03em; }
+    .liveproof-stat span { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+
+    /* ── HOW IT WORKS ── */
+    .steps { background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .steps-list { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; position: relative; }
+    .steps-list::before { content: ''; position: absolute; left: 23px; top: 24px; bottom: 24px; width: 2px; background: var(--blue-light); z-index: 0; }
+    .step-item { display: flex; gap: 28px; align-items: flex-start; position: relative; z-index: 1; padding-bottom: 40px; }
+    .step-item:last-child { padding-bottom: 0; }
+    .step-circle { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-alt), 0 0 0 6px var(--blue-border); }
+    .step-body { padding-top: 10px; flex: 1; }
+    .step-when-tag { font-size: 11px; font-weight: 600; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; display: block; }
+    .step-h { font-size: 19px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .step-p { font-size: 14px; color: var(--text-dim); line-height: 1.72; }
+
+    /* ── OUTCOMES ── */
+    .outcomes { background: var(--card); border-top: 1px solid var(--border); }
+    .outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .outcome-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 32px 28px; text-align: center;
       transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
     }
-    .industry-card:hover { border-color: var(--blue-border); box-shadow: var(--shadow); transform: translateY(-3px); }
-    .industry-icon { font-size: 26px; margin-bottom: 12px; display: block; }
-    .industry-name { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
-    .industry-desc { font-size: 13px; color: var(--text-dim); line-height: 1.65; }
-    .industry-more { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; justify-content: center; }
-    .industry-pill {
-      padding: 7px 16px; border: 1px solid var(--border-strong); border-radius: 999px;
-      font-size: 13px; color: var(--text-dim); font-weight: 500; background: var(--card);
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .industry-pill:hover { border-color: var(--blue-border); color: var(--blue); }
+    .outcome-card:hover { border-color: var(--blue-border); box-shadow: var(--shadow); transform: translateY(-3px); }
+    .outcome-num { font-size: clamp(34px, 4vw, 50px); font-weight: 800; color: var(--blue); letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px; }
+    .outcome-label { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .outcome-sub { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-    /* ── PROCESS ── */
-    .process { background: var(--card); border-top: 1px solid var(--border); }
-    .process-steps { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-    .process-step {
-      display: grid; grid-template-columns: 80px 1fr; gap: 20px;
-      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 28px; transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    .process-step:hover { border-color: var(--blue-border); box-shadow: var(--shadow); }
-    .step-left { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .step-num {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--blue-light); border: 2px solid var(--blue-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 15px; font-weight: 800; color: var(--blue);
-    }
-    .step-when { font-size: 11px; font-weight: 600; color: var(--text-muted); text-align: center; line-height: 1.4; }
-    .step-title { font-size: 19px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
-    .step-desc { font-size: 15px; color: var(--text-dim); line-height: 1.7; }
+    /* ── WHO IT'S FOR ── */
+    .audience { background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .audience-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .audience-col { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; }
+    .audience-col.yes { border-color: rgba(16,185,129,0.25); background: rgba(16,185,129,0.02); }
+    .audience-col.no { border-color: rgba(239,68,68,0.2); background: rgba(239,68,68,0.02); }
+    .audience-head { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+    .audience-head-label { font-size: 15px; font-weight: 700; color: var(--navy); }
+    .audience-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .audience-list li { font-size: 14px; color: var(--text-dim); line-height: 1.65; display: flex; gap: 10px; }
+    .audience-list li::before { flex-shrink: 0; font-weight: 700; }
+    .audience-col.yes .audience-list li::before { content: '✓'; color: var(--green); }
+    .audience-col.no .audience-list li::before { content: '✗'; color: #EF4444; }
 
-    /* ── PRICING ── */
-    .pricing { background: var(--bg-alt); border-top: 1px solid var(--border); }
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
-    .pricing-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 32px 28px; position: relative; overflow: hidden;
-    }
-    .pricing-card.featured {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px var(--blue-light), var(--shadow-lg);
-    }
-    .pricing-card.featured::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, var(--blue), #60A5FA);
-    }
-    .pricing-badge {
-      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 4px 12px; border-radius: 999px;
-      background: var(--blue); color: #fff; margin-bottom: 20px;
-    }
-    .pricing-name { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
-    .pricing-price { font-size: 40px; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 4px; letter-spacing: -0.04em; }
-    .pricing-price-note { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
-    .pricing-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
-    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 28px; }
-    .pricing-features li { display: flex; align-items: flex-start; gap: 9px; font-size: 14px; color: var(--text-dim); line-height: 1.55; }
-    .pricing-features li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
-    .pricing-disclaimer { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 28px; line-height: 1.65; }
+    /* ── FOUNDER ── */
+    .founder { background: var(--card); border-top: 1px solid var(--border); }
+    .founder-inner { display: grid; grid-template-columns: 380px 1fr; gap: 72px; align-items: start; }
+    .founder-portrait { width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-alt); }
+    .founder-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .founder-right { padding-top: 8px; }
+    .founder-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; display: block; }
+    .founder-name { font-size: clamp(28px, 3vw, 40px); margin-bottom: 8px; }
+    .founder-role { font-size: 16px; color: var(--blue); font-weight: 600; margin-bottom: 24px; }
+    .founder-bio { font-size: 15px; color: var(--text-dim); line-height: 1.8; margin-bottom: 16px; }
+    .founder-calendly { margin-top: 36px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 
-    /* ── WHY ZEDEX ── */
-    .why { background: var(--card); border-top: 1px solid var(--border); }
-    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .why-card {
-      background: var(--bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 32px 28px; transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    .why-card:hover { border-color: var(--blue-border); box-shadow: var(--shadow); }
-    .why-num { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: var(--blue); text-transform: uppercase; margin-bottom: 14px; }
-    .why-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
-    .why-sub { font-size: 13px; font-weight: 600; color: var(--blue); margin-bottom: 12px; }
-    .why-desc { font-size: 14px; color: var(--text-dim); line-height: 1.72; }
-    .why-stat { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-    .why-stat strong { color: var(--text-dim); }
-
-    /* ── TESTIMONIALS ── */
-    .testimonials { background: var(--bg-alt); border-top: 1px solid var(--border); }
-    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .testimonial-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px 24px;
-      display: flex; flex-direction: column; gap: 18px;
-      transition: box-shadow 0.3s, transform 0.3s;
-    }
-    .testimonial-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-    .testimonial-stars { color: #F59E0B; font-size: 14px; letter-spacing: 2px; }
-    .testimonial-quote { font-size: 15px; color: var(--text-dim); line-height: 1.75; font-style: italic; flex: 1; }
-    .testimonial-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
-    .testimonial-role { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
-    .testimonial-outcome {
-      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 4px 12px; border-radius: 999px;
-      background: rgba(16,185,129,0.08); color: var(--green); border: 1px solid rgba(16,185,129,0.2);
-    }
+    /* ── ANTI-POSITIONING ── */
+    .antipos { background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .antipos-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .antipos-item { display: flex; align-items: flex-start; gap: 14px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; }
+    .antipos-x { font-size: 18px; font-weight: 800; color: #EF4444; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .antipos-text { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+    .antipos-text strong { color: var(--navy); }
 
     /* ── FAQ ── */
     .faq { background: var(--card); border-top: 1px solid var(--border); }
@@ -419,8 +399,6 @@
     .faq-item.open .faq-ic::after { transform: rotate(90deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
     .faq-a-inner { padding: 0 22px 20px; font-size: 14px; color: var(--text-dim); line-height: 1.78; }
-    .faq-cta { text-align: center; margin-top: 40px; }
-    .faq-cta p { font-size: 16px; color: var(--text-dim); margin-bottom: 18px; }
 
     /* ── FINAL CTA ── */
     .final-cta { background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 50%, #3B82F6 100%); padding: 100px 0; }
@@ -445,64 +423,59 @@
       transition: border-color 0.2s, background 0.2s, transform 0.2s;
     }
     .btn-white-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1); transform: translateY(-1px); }
-    .final-cta-email { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 22px; }
-    .final-cta-email a { color: rgba(255,255,255,0.85); font-weight: 500; }
-    .final-cta-email a:hover { text-decoration: underline; }
+    .final-cta-note { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 22px; }
+    .final-cta-note a { color: rgba(255,255,255,0.85); font-weight: 500; }
+    .final-cta-note a:hover { text-decoration: underline; }
 
     /* ── FOOTER ── */
-    footer { background: var(--navy); padding: 72px 0 36px; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
-    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-    .footer-logo-icon {
-      width: 30px; height: 30px; border-radius: 7px;
-      background: linear-gradient(135deg, var(--blue), #60A5FA);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .footer-logo-icon svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; }
-    .footer-logo-text { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; color: #fff; }
-    .footer-logo-text em { font-style: normal; color: #60A5FA; }
-    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 220px; }
-    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    footer { background: var(--navy); padding: 64px 0 32px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
+    .footer-brand .footer-logo-text { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; color: #fff; margin-bottom: 10px; display: block; }
+    .footer-brand .footer-logo-text em { font-style: normal; color: #60A5FA; }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 220px; }
+    .footer-links-group { display: flex; gap: 48px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
     .footer-col ul li a:hover { color: #fff; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.2s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .hero-dashboard { max-width: 600px; margin: 0 auto; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .services-grid-bottom { max-width: 100%; }
-      .industry-grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-      .why-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .insight-inner { grid-template-columns: 1fr; gap: 48px; }
+      .pillars-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+      .founder-inner { grid-template-columns: 1fr; gap: 48px; }
+      .founder-portrait { max-width: 340px; }
+      .outcomes-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 820px) {
       .nav-links { display: none; }
       .menu-btn { display: block; }
       section { padding: 80px 0; }
       .hero { padding: 110px 0 60px; }
-      .services-grid, .services-grid-bottom { grid-template-columns: 1fr; max-width: 100%; }
-      .testimonial-grid { grid-template-columns: 1fr; }
-      .process-step { grid-template-columns: 60px 1fr; gap: 14px; padding: 22px; }
-      .final-cta { padding: 80px 0; }
-      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .audience-inner { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; max-width: 100%; }
+      .footer-inner { flex-direction: column; }
+      .footer-links-group { flex-direction: column; gap: 28px; }
       .footer-bottom { flex-direction: column; text-align: center; }
+      .final-cta { padding: 80px 0; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 20px; }
       .nav-inner { padding: 0 20px; }
       h1.hero-title { font-size: 40px; }
       .hero-ctas { flex-direction: column; }
-      .industry-grid { grid-template-columns: 1fr; }
+      .outcomes-grid { grid-template-columns: 1fr; }
       .final-cta .ctas { flex-direction: column; align-items: center; }
       .dash-grid { grid-template-columns: 1fr; gap: 1px; }
+      .liveproof-box { padding: 32px 24px; }
+      .liveproof-stats { gap: 28px; }
     }
 
     .mobile-sticky { display: none; }
@@ -703,264 +676,292 @@
     </div>
   </section>
 
-  <!-- TRUST LOGOS -->
-  <div class="trust">
+  <!-- INSIGHT -->
+  <section class="insight">
     <div class="container">
-      <p class="trust-label">Trusted by growing businesses across industries</p>
-    </div>
-    <div class="logos-track">
-      <div class="logos-inner">
-        <span class="logo-item">FinoEdge</span>
-        <span class="logo-item">ReachPulse</span>
-        <span class="logo-item">LogiTrack</span>
-        <span class="logo-item">NovaBuild</span>
-        <span class="logo-item">PrimeHealth</span>
-        <span class="logo-item">CloudAxis</span>
-        <span class="logo-item">MetroRetail</span>
-        <span class="logo-item">DataVault</span>
-        <span class="logo-item">SwiftOps</span>
-        <span class="logo-item">NorthScale</span>
-        <span class="logo-item">FlexMedia</span>
-        <span class="logo-item">PeakSolutions</span>
-        <span class="logo-item">FinoEdge</span>
-        <span class="logo-item">ReachPulse</span>
-        <span class="logo-item">LogiTrack</span>
-        <span class="logo-item">NovaBuild</span>
-        <span class="logo-item">PrimeHealth</span>
-        <span class="logo-item">CloudAxis</span>
-        <span class="logo-item">MetroRetail</span>
-        <span class="logo-item">DataVault</span>
-        <span class="logo-item">SwiftOps</span>
-        <span class="logo-item">NorthScale</span>
-        <span class="logo-item">FlexMedia</span>
-        <span class="logo-item">PeakSolutions</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Five pillars of AI transformation</h2>
-        <p class="section-sub">Every part of the AI journey — from automation to governance — with measurable ROI in weeks, not quarters.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <span class="service-type">Pillar · Automation</span>
-          <h3 class="service-name">AI Automation</h3>
-          <p class="service-desc">Custom AI agents and orchestrated workflows that take over repetitive, error-prone tasks. 50+ deployments, 40% average cost reduction.</p>
-          <a href="#contact" class="service-link">Learn more <span class="arrow">→</span></a>
+      <div class="insight-inner">
+        <div class="insight-text reveal">
+          <span class="section-tag">The Problem</span>
+          <h2 class="section-title insight-title">Your team is doing work that doesn't need humans.</h2>
+          <p class="insight-body">You've got people copy-pasting data, chasing status updates, writing the same message 40 times a week. That work costs money and attention every single day. AI doesn't replace your team — it removes the work they shouldn't be doing in the first place.</p>
         </div>
-        <div class="service-card reveal d1">
-          <span class="service-type">Pillar · Governance</span>
-          <h3 class="service-name">AI Governance</h3>
-          <p class="service-desc">AI strategy, risk register, model lineage, and board-level oversight. Build AI the right way — secure, documented, and auditable from day one.</p>
-          <a href="#contact" class="service-link">Learn more <span class="arrow">→</span></a>
-        </div>
-        <div class="service-card reveal d2">
-          <span class="service-type">Pillar · Leadership</span>
-          <h3 class="service-name">AI Director</h3>
-          <p class="service-desc">Strategic AI leadership without the C-suite price tag. Owns your AI strategy, policy, risk register, and cross-team alignment on a fractional basis.</p>
-          <a href="#contact" class="service-link">Learn more <span class="arrow">→</span></a>
-        </div>
-      </div>
-      <div class="services-grid-bottom">
-        <div class="service-card reveal d1">
-          <span class="service-type">Pillar · Operations</span>
-          <h3 class="service-name">AI-OPS</h3>
-          <p class="service-desc">24/7 monitoring, performance tuning, and cost management for AI agents and automation pipelines running in production.</p>
-          <a href="#contact" class="service-link">Learn more <span class="arrow">→</span></a>
-        </div>
-        <div class="service-card reveal d2">
-          <span class="service-type">Pillar · Enablement</span>
-          <h3 class="service-name">AI Training</h3>
-          <p class="service-desc">Practical team upskilling — from prompt engineering to workflow integration. Your team leaves knowing how to use AI on Monday morning.</p>
-          <a href="#contact" class="service-link">Learn more <span class="arrow">→</span></a>
+        <div class="insight-chart reveal d2">
+          <div class="insight-chart-title">WHERE THE TIME GOES</div>
+          <div class="insight-bars">
+            <div class="insight-bar-row">
+              <span class="insight-bar-label">Reporting</span>
+              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:85%;background:var(--blue)"></div></div>
+              <span class="insight-bar-val">85%</span>
+            </div>
+            <div class="insight-bar-row">
+              <span class="insight-bar-label">Data entry</span>
+              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:72%;background:var(--blue)"></div></div>
+              <span class="insight-bar-val">72%</span>
+            </div>
+            <div class="insight-bar-row">
+              <span class="insight-bar-label">Follow-ups</span>
+              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:60%;background:#60A5FA"></div></div>
+              <span class="insight-bar-val">60%</span>
+            </div>
+            <div class="insight-bar-row">
+              <span class="insight-bar-label">Status checks</span>
+              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:55%;background:#60A5FA"></div></div>
+              <span class="insight-bar-val">55%</span>
+            </div>
+            <div class="insight-bar-row">
+              <span class="insight-bar-label">Content drafts</span>
+              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:45%;background:#BFDBFE"></div></div>
+              <span class="insight-bar-val">45%</span>
+            </div>
+          </div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:14px;">% of teams that still do these manually every week.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INDUSTRIES -->
-  <section class="industries">
+  <!-- PILLARS -->
+  <section class="pillars" id="services">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-label">Industries</span>
-        <h2 class="section-title">AI for your industry</h2>
-        <p class="section-sub">Engagements we've already delivered — across fintech, professional services, e-commerce, healthcare, and more.</p>
+        <span class="section-tag">WHAT I BUILD</span>
+        <h2 class="section-title">Three types of automation that move the needle.</h2>
+        <p class="section-sub">Not a menu of 30 services you'll never use. Three focused areas where automation creates real leverage — picked based on ROI, not what sounds impressive.</p>
       </div>
-      <div class="industry-grid">
-        <div class="industry-card reveal">
-          <span class="industry-icon">🏦</span>
-          <h3 class="industry-name">Fintech &amp; Banking</h3>
-          <p class="industry-desc">AI automation for KYC, document processing, fraud detection, and regulatory reporting.</p>
-        </div>
-        <div class="industry-card reveal d1">
-          <span class="industry-icon">🛒</span>
-          <h3 class="industry-name">E-commerce &amp; Retail</h3>
-          <p class="industry-desc">AI for personalization, customer support, content generation, and inventory ops.</p>
-        </div>
-        <div class="industry-card reveal d2">
-          <span class="industry-icon">⚕️</span>
-          <h3 class="industry-name">Healthcare</h3>
-          <p class="industry-desc">AI for patient intake, appointment workflows, documentation, and reporting automation.</p>
-        </div>
-        <div class="industry-card reveal d3">
-          <span class="industry-icon">🏗️</span>
-          <h3 class="industry-name">Professional Services</h3>
-          <p class="industry-desc">AI for agencies, consultancies, and service firms — proposals, reporting, client communications.</p>
-        </div>
-      </div>
-      <div class="industry-more reveal">
-        <span class="industry-pill">Real Estate</span>
-        <span class="industry-pill">Manufacturing</span>
-        <span class="industry-pill">Logistics</span>
-        <span class="industry-pill">Media</span>
-        <span class="industry-pill">Education</span>
-        <span class="industry-pill">SaaS</span>
-        <span class="industry-pill">Marketing Agencies</span>
-        <span class="industry-pill">Legal</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="process" id="process">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">How It Works</span>
-        <h2 class="section-title">Your AI Transformation Roadmap</h2>
-        <p class="section-sub">Predictable, paced, no mystery. Every step has clear deliverables and a decision gate.</p>
-      </div>
-      <div class="process-steps">
-        <div class="process-step reveal">
-          <div class="step-left"><div class="step-num">01</div><div class="step-when">Day 1</div></div>
-          <div>
-            <h3 class="step-title">Discovery Call</h3>
-            <p class="step-desc">Free 30-minute call. We map your AI footprint, identify top 3 risks, and top 3 automation opportunities. No prep needed from your side.</p>
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          </div>
+          <span class="pillar-num">01</span>
+          <h3 class="pillar-name">Reporting &amp; Data Pipelines</h3>
+          <p class="pillar-desc">Weekly reports that write themselves. Data pulled, cleaned, formatted, and delivered to the right inbox — automatically. No one touches a spreadsheet.</p>
+          <div class="pillar-examples">
+            <span class="pillar-ex-tag">Weekly KPI digests</span>
+            <span class="pillar-ex-tag">CRM snapshots</span>
+            <span class="pillar-ex-tag">GA4 + Sheets</span>
           </div>
         </div>
-        <div class="process-step reveal d1">
-          <div class="step-left"><div class="step-num">02</div><div class="step-when">Week 1</div></div>
-          <div>
-            <h3 class="step-title">Audit &amp; Roadmap</h3>
-            <p class="step-desc">Full process audit, ROI ranking, written roadmap. You decide what to ship first — we bring the prioritization framework and the honest cost-benefit math.</p>
+        <div class="pillar-card reveal d1">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="pillar-num">02</span>
+          <h3 class="pillar-name">Lead &amp; Client Operations</h3>
+          <p class="pillar-desc">AI that qualifies leads, follows up, enriches CRM records, and surfaces the ones worth calling. Your pipeline moves without you pushing it.</p>
+          <div class="pillar-examples">
+            <span class="pillar-ex-tag">Lead qualification</span>
+            <span class="pillar-ex-tag">CRM enrichment</span>
+            <span class="pillar-ex-tag">Follow-up sequences</span>
           </div>
         </div>
-        <div class="process-step reveal d2">
-          <div class="step-left"><div class="step-num">03</div><div class="step-when">Weeks 2–3</div></div>
-          <div>
-            <h3 class="step-title">Build Pilot</h3>
-            <p class="step-desc">Highest-ROI automation built and tested in supervised production with your real data. You see it working before it goes live.</p>
+        <div class="pillar-card reveal d2">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-        </div>
-        <div class="process-step reveal d3">
-          <div class="step-left"><div class="step-num">04</div><div class="step-when">Week 4</div></div>
-          <div>
-            <h3 class="step-title">Ship to Production</h3>
-            <p class="step-desc">Pilot goes live. KPIs defined and tracked. Your team is trained and knows how to operate it from day one.</p>
-          </div>
-        </div>
-        <div class="process-step reveal">
-          <div class="step-left"><div class="step-num">05</div><div class="step-when">Month 2+</div></div>
-          <div>
-            <h3 class="step-title">AI-OPS Handover</h3>
-            <p class="step-desc">24/7 monitoring, model upgrades, cost tuning, and performance reporting. We run it so you don't have to think about it.</p>
+          <span class="pillar-num">03</span>
+          <h3 class="pillar-name">Content &amp; Communications</h3>
+          <p class="pillar-desc">AI-generated first drafts, email sequences, and content pipelines — built with your brand voice and reviewed before anything sends.</p>
+          <div class="pillar-examples">
+            <span class="pillar-ex-tag">Email drafts</span>
+            <span class="pillar-ex-tag">Content pipelines</span>
+            <span class="pillar-ex-tag">SEO articles</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY ZEDEX -->
-  <section class="why" id="why">
+  <!-- LIVE PROOF -->
+  <section class="liveproof">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">Why Zedex</span>
-        <h2 class="section-title">Six reasons to work with us</h2>
-        <p class="section-sub">No slogans. Concrete promises — and the outcomes of those who've already trusted us.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <p class="why-num">01</p>
-          <h3 class="why-title">Operators, Not Advisors</h3>
-          <p class="why-sub">We ship live automations, not strategy decks.</p>
-          <p class="why-desc">Consultancies hand you a 60-page roadmap and walk away. We hand you a working AI agent — integrated into your CRM, your inbox, your ops tools — running in production. Slides come second. Code comes first.</p>
-          <p class="why-stat"><strong>4 avg. weeks</strong> to first automation in production · <strong>0</strong> generic strategy decks</p>
-        </div>
-        <div class="why-card reveal d1">
-          <p class="why-num">02</p>
-          <h3 class="why-title">Your Stack, Not Ours</h3>
-          <p class="why-sub">We work in your tools — not the other way around.</p>
-          <p class="why-desc">HubSpot, Salesforce, n8n, Notion, Airtable, Google Workspace, Slack, custom stacks — we integrate where you already are. No re-platforming, no vendor lock-in, no new dashboard to learn.</p>
-        </div>
-        <div class="why-card reveal">
-          <p class="why-num">03</p>
-          <h3 class="why-title">Speed Without Shortcuts</h3>
-          <p class="why-sub">First results in 2–4 weeks.</p>
-          <p class="why-desc">Discovery call → audit → pilot build → production ship → AI-OPS. Each stage has clear deliverables and a decision gate. You see progress weekly, not quarterly.</p>
-          <p class="why-stat"><strong>2–4 weeks</strong> to first results · <strong>5-stage</strong> delivery framework</p>
-        </div>
-        <div class="why-card reveal d1">
-          <p class="why-num">04</p>
-          <h3 class="why-title">AI-Native, Not AI-Curious</h3>
-          <p class="why-sub">We work inside the model APIs, not on top of them.</p>
-          <p class="why-desc">Direct implementation with Claude (Anthropic), GPT-4o (OpenAI), n8n, and the agent frameworks each use case demands. No generic SaaS wrappers. No middleware that adds cost without value.</p>
-        </div>
-        <div class="why-card reveal">
-          <p class="why-num">05</p>
-          <h3 class="why-title">Cross-Industry, by Design</h3>
-          <p class="why-sub">Automation principles are universal.</p>
-          <p class="why-desc">Fintech, e-commerce, healthcare, real estate, professional services — 50+ automations across dozens of industries. Your domain expertise plus our AI execution equals results, regardless of vertical.</p>
-          <p class="why-stat"><strong>50+</strong> automations deployed · <strong>30+</strong> clients across industries</p>
-        </div>
-        <div class="why-card reveal d1">
-          <p class="why-num">06</p>
-          <h3 class="why-title">Built Once, Managed Forever</h3>
-          <p class="why-sub">We don't disappear after launch.</p>
-          <p class="why-desc">Most vendors deliver the build and wave goodbye. We offer AI-OPS — 24/7 monitoring, model upgrades, cost tuning, drift detection, and performance reporting as one continuous service.</p>
+      <div class="liveproof-box reveal">
+        <span class="liveproof-tag">Live Example</span>
+        <p class="liveproof-query">"Lead qualification workflow running for a logistics client — 1,200 leads processed per week, 94% match accuracy, built in 12 days."</p>
+        <div class="liveproof-stats">
+          <div class="liveproof-stat"><strong>1,200+</strong><span>leads / week</span></div>
+          <div class="liveproof-stat"><strong>94%</strong><span>match accuracy</span></div>
+          <div class="liveproof-stat"><strong>12 days</strong><span>build time</span></div>
+          <div class="liveproof-stat"><strong>€0.018</strong><span>cost / execution</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="cases">
+  <!-- HOW IT WORKS -->
+  <section class="steps" id="process">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-label">Client Results</span>
-        <h2 class="section-title">What our clients say</h2>
-        <p class="section-sub">Trusted by businesses across industries worldwide.</p>
+        <span class="section-tag">THE PROCESS</span>
+        <h2 class="section-title">From call to production in under 4 weeks.</h2>
+        <p class="section-sub">Four steps. Fixed scope. Fixed price. You see it working before it goes live.</p>
       </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card reveal">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"Zedex automated our entire client onboarding workflow. What used to take our team 3 hours per client now runs overnight without anyone touching it. The quality actually improved."</p>
-          <div>
-            <p class="testimonial-name">Marcus T.</p>
-            <p class="testimonial-role">CEO, FinoEdge</p>
-            <span class="testimonial-outcome">15 hours/week saved</span>
+      <div class="steps-list">
+        <div class="step-item reveal">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <span class="step-when-tag">Day 1</span>
+            <h3 class="step-h">Discovery Call</h3>
+            <p class="step-p">30 minutes, free. We map 3 processes you're currently doing manually that AI should own. No prep needed — just show up.</p>
           </div>
         </div>
-        <div class="testimonial-card reveal d1">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"I came in skeptical about AI. Four weeks later we had a working automation in production. Petar built exactly what we needed and nothing extra — no bloat, no upsell, just the solution."</p>
-          <div>
-            <p class="testimonial-name">Sarah M.</p>
-            <p class="testimonial-role">COO, ReachPulse Agency</p>
-            <span class="testimonial-outcome">$2,400/month in saved labor</span>
+        <div class="step-item reveal d1">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <span class="step-when-tag">Week 1</span>
+            <h3 class="step-h">Spec + Fixed Quote</h3>
+            <p class="step-p">Written scope, timeline, and fixed price delivered within 5 days. No hourly billing, no moving goalposts, no surprise invoices.</p>
           </div>
         </div>
-        <div class="testimonial-card reveal d2">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"The reporting automation Zedex built saves us 20 hours every week. ROI was obvious in month one — we've since added two more workflows. This is core infrastructure for us now."</p>
-          <div>
-            <p class="testimonial-name">Daniel K.</p>
-            <p class="testimonial-role">Founder, LogiTrack Solutions</p>
-            <span class="testimonial-outcome">3 workflows in production</span>
+        <div class="step-item reveal d2">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <span class="step-when-tag">Weeks 2–3</span>
+            <h3 class="step-h">Build + Test</h3>
+            <p class="step-p">I build the automation inside your existing tools. You review a working demo with your real data before anything goes live.</p>
           </div>
+        </div>
+        <div class="step-item reveal d3">
+          <div class="step-circle">4</div>
+          <div class="step-body">
+            <span class="step-when-tag">Week 4</span>
+            <h3 class="step-h">Live + Documented</h3>
+            <p class="step-p">Ships to production with a recorded walkthrough. Your team can operate it independently from day one. Optional ongoing support available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="outcomes">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">BY THE NUMBERS</span>
+        <h2 class="section-title">Results, not promises.</h2>
+        <p class="section-sub">Numbers from live automations — not case study projections.</p>
+      </div>
+      <div class="outcomes-grid">
+        <div class="outcome-card reveal">
+          <div class="outcome-num">50+</div>
+          <div class="outcome-label">Automations Deployed</div>
+          <div class="outcome-sub">Live in production across industries</div>
+        </div>
+        <div class="outcome-card reveal d1">
+          <div class="outcome-num">30</div>
+          <div class="outcome-label">Clients Served</div>
+          <div class="outcome-sub">Solo operator — you work directly with me</div>
+        </div>
+        <div class="outcome-card reveal d2">
+          <div class="outcome-num">1.2M+</div>
+          <div class="outcome-label">Executions / Week</div>
+          <div class="outcome-sub">Workflow runs across all active clients</div>
+        </div>
+        <div class="outcome-card reveal">
+          <div class="outcome-num">40%</div>
+          <div class="outcome-label">Average Cost Reduction</div>
+          <div class="outcome-sub">On processes that get automated</div>
+        </div>
+        <div class="outcome-card reveal d1">
+          <div class="outcome-num">€0.018</div>
+          <div class="outcome-label">Avg Cost Per Execution</div>
+          <div class="outcome-sub">AI at scale without AI-at-scale pricing</div>
+        </div>
+        <div class="outcome-card reveal d2">
+          <div class="outcome-num">2–4 wks</div>
+          <div class="outcome-label">Time to First Results</div>
+          <div class="outcome-sub">From discovery call to production</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="audience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">WHO THIS IS FOR</span>
+        <h2 class="section-title">Built for people who want it working, not just planned.</h2>
+      </div>
+      <div class="audience-inner">
+        <div class="audience-col yes reveal">
+          <div class="audience-head">
+            <span class="audience-head-label">Good fit</span>
+          </div>
+          <ul class="audience-list">
+            <li>Founders and operators who are personally doing manual, recurring work</li>
+            <li>Businesses with repeating processes on a predictable schedule</li>
+            <li>Teams already using n8n, HubSpot, Notion, Airtable, or similar tools</li>
+            <li>Anyone who's been burned by a vendor who over-promised and under-delivered</li>
+            <li>People who want a working system, not a 60-page strategy document</li>
+          </ul>
+        </div>
+        <div class="audience-col no reveal d1">
+          <div class="audience-head">
+            <span class="audience-head-label">Not a good fit</span>
+          </div>
+          <ul class="audience-list">
+            <li>Companies that need a strategy presentation to take to a board, not a working system</li>
+            <li>Procurement-heavy enterprises that need 3 vendors, an RFP, and 6 months of legal</li>
+            <li>Anyone looking for the cheapest option — cheap AI builds break in month two</li>
+            <li>Teams without any existing automation or tooling — start with something simpler first</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder" id="founder">
+    <div class="container">
+      <div class="founder-inner">
+        <div class="founder-left reveal">
+          <div class="founder-portrait">
+            <img src="assets/founder.jpg" alt="Petar Krastev — Founder, Zedex AI" loading="lazy">
+          </div>
+        </div>
+        <div class="founder-right reveal d1">
+          <span class="founder-tag">The Person Behind Zedex</span>
+          <h2 class="founder-name">Petar Krastev</h2>
+          <p class="founder-role">Founder &amp; Automation Engineer</p>
+          <p class="founder-bio">I build AI automations for businesses that are tired of doing things manually. Before this, I spent five years as a full-stack developer — which means I actually understand your stack, not just the AI layer sitting on top of it.</p>
+          <p class="founder-bio">I work alone. When we talk, you're talking to the person who will build your system. No account managers, no handoffs, no juniors doing the actual work. Decisions get made on the call, not three days later in a Slack thread.</p>
+          <p class="founder-bio">50+ automations shipped across industries. The average client saves 15–20 hours per week. Book a call below — 30 minutes, no obligation, I'll tell you exactly what I'd build for you first.</p>
+          <div class="founder-calendly">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/krastev/meeting?hide_gdpr_banner=1&primary_color=2563EB" style="min-width:320px;height:630px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTI-POSITIONING -->
+  <section class="antipos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">WHAT THIS ISN'T</span>
+        <h2 class="section-title">Let's be direct about what you're not getting.</h2>
+      </div>
+      <div class="antipos-list">
+        <div class="antipos-item reveal">
+          <span class="antipos-x">✗</span>
+          <p class="antipos-text"><strong>Not an agency.</strong> No account managers, no handoff to a junior. You work directly with me from call one to launch.</p>
+        </div>
+        <div class="antipos-item reveal d1">
+          <span class="antipos-x">✗</span>
+          <p class="antipos-text"><strong>Not a SaaS tool.</strong> I don't sell you software to learn and operate yourself. I build and hand you a working system — documentation included.</p>
+        </div>
+        <div class="antipos-item reveal d2">
+          <span class="antipos-x">✗</span>
+          <p class="antipos-text"><strong>Not a strategy consultant.</strong> No 60-page roadmap and a wave goodbye. The engagement ends when your automation is live in production, not when the deck is done.</p>
+        </div>
+        <div class="antipos-item reveal">
+          <span class="antipos-x">✗</span>
+          <p class="antipos-text"><strong>Not "we'll figure it out."</strong> Fixed scope and fixed price before any build starts. If something changes, we discuss it — no surprise invoices.</p>
+        </div>
+        <div class="antipos-item reveal d1">
+          <span class="antipos-x">✗</span>
+          <p class="antipos-text"><strong>Not a general IT firm dabbling in AI.</strong> Automation is the only thing I do. 50+ builds, 30 clients, every working day — not a side offering from a dev shop.</p>
         </div>
       </div>
     </div>
@@ -970,47 +971,39 @@
   <section class="faq" id="faq">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-label">FAQ</span>
-        <h2 class="section-title">Frequently asked questions</h2>
-        <p class="section-sub">Common questions about implementing AI in your business.</p>
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Common questions.</h2>
+        <p class="section-sub">If yours isn't here, just email or book a call.</p>
       </div>
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-q">Do I need all five services? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">No. Most clients start with a single AI Automation build or the Growth retainer. We scope what makes sense based on your stage and budget — not what maximizes our invoice. If one workflow solves your biggest pain, we build one workflow.</div></div>
+          <button class="faq-q">How fast can you actually deliver? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most builds go from discovery call to production in 2–4 weeks. The pilot runs with your real data within 2–3 weeks of kick-off. If the scope is smaller (single workflow, clean data), sometimes faster. I'll tell you the realistic timeline before any money changes hands.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-q">How quickly can we see results? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">AI Automation implementations deliver measurable results in 2–4 weeks. The pilot runs in supervised production within 2–3 weeks of kick-off. We define KPIs upfront and track performance at every stage.</div></div>
+          <button class="faq-q">What tools do you work with? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">n8n, Claude (Anthropic), OpenAI, HubSpot, Salesforce, Airtable, Notion, Google Workspace (Sheets, Drive, Gmail, Slides), Slack, Asana, and most REST APIs. I work in your stack — you don't need to buy new software or re-platform anything.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-q">What tools and platforms do you work with? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">We work with the tools you already use — n8n, Claude (Anthropic), OpenAI, HubSpot, Salesforce, Airtable, Notion, Google Workspace, Slack, and most common APIs. We don't require you to switch platforms or buy new software.</div></div>
+          <button class="faq-q">How much does it cost? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Fixed price per project, scoped before we start. Simple single-workflow builds typically run $300–$800. Multi-workflow systems with integrations and AI logic range from $1,500–$6,000+. You get a written quote before committing. No hourly billing, no scope creep invoices.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-q">How do you ensure data security? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">We work with privacy-first AI models, implement data handling best practices, and ensure your data doesn't train third-party models. Credentials are stored in your own infrastructure — not ours. We document all data flows upfront before any build starts.</div></div>
+          <button class="faq-q">Do you work with non-technical clients? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Most of my clients are business owners and operators, not engineers. You describe the problem in plain language — I handle the technical build. You review the output and give feedback. No coding required on your end.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-q">What ROI can we expect? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Our clients typically see 30–50% reduction in operational costs for automated processes and 2–3x improvement in throughput. We model expected ROI before the build — not after.</div></div>
+          <button class="faq-q">What happens after the build is done? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Every build includes documentation and a recorded walkthrough — yours to run independently. If you want ongoing support (monitoring, error alerts, model upgrades, performance tuning), that's available as a separate monthly arrangement. Entirely optional.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-q">Are you a solo operator or a team? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Solo operator. You work directly with the person building your automation — no account manager relay, no handoffs, no juniors. Decisions get made on the call. If you need a large agency for enterprise procurement reasons, I'm not the right fit.</div></div>
+          <button class="faq-q">Are you solo or do you have a team? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Solo. You work directly with the person building your automation — from first call to final handoff. No account manager relay, no handoffs, no project managers between us. Decisions get made on the call.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-q">What industries do you work with? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Fintech, e-commerce, healthcare, professional services, real estate, manufacturing, logistics, media, SaaS, and more. If you have repetitive manual processes on a predictable cadence, we can automate them.</div></div>
+          <button class="faq-q">How do you handle data security? <span class="faq-ic"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Automations run inside your own infrastructure — your n8n instance, your cloud accounts, your credentials. Nothing routes through my systems. I document all data flows before build starts, and I use privacy-first AI models (Anthropic Claude) that don't train on your data.</div></div>
         </div>
-        <div class="faq-item reveal">
-          <button class="faq-q">What happens after the automation is built? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Fixed-fee builds come with documentation and a recorded walkthrough — yours to run independently. Growth and Enterprise clients get AI-OPS: ongoing monitoring, model upgrades, error alerts, and performance tuning.</div></div>
-        </div>
-      </div>
-      <div class="faq-cta reveal">
-        <p>Still have questions? We are here to help.</p>
-        <a href="mailto:petar@zedex.dev" class="btn-outline">Email Us Directly <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -1019,13 +1012,13 @@
   <section class="final-cta" id="contact">
     <div class="container">
       <div class="final-cta-inner reveal">
-        <h2>Ready to Build AI Into Your Business?</h2>
-        <p>Book a free 30-minute discovery call. We will map your AI opportunities, identify quick wins, and tell you exactly what we would build first — and what it would cost.</p>
+        <h2>Let's find the one thing to automate first.</h2>
+        <p>30-minute call, free. Tell me what you're doing manually. I'll tell you exactly what I'd build, how long it takes, and what it costs.</p>
         <div class="ctas">
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-white">Book a Strategy Call <span class="arrow">→</span></a>
-          <a href="#services" class="btn-white-outline">Explore Services <span class="arrow">→</span></a>
+          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-white">Book a Call <span class="arrow">→</span></a>
+          <a href="mailto:petar@zedex.dev" class="btn-white-outline">Email Directly <span class="arrow">→</span></a>
         </div>
-        <p class="final-cta-email">Or email directly: <a href="mailto:petar@zedex.dev">petar@zedex.dev</a></p>
+        <p class="final-cta-note">No commitment. No sales pitch. Just a conversation.</p>
       </div>
     </div>
   </section>
@@ -1034,60 +1027,45 @@
 
 <footer>
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-icon">
-            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <span class="footer-logo-text">Zedex <em>AI</em></span>
+        <span class="footer-logo-text">Zedex <em>AI</em></span>
+        <p>AI automation for businesses that want results, not roadmaps. First results in 2–4 weeks.</p>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#founder">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
         </div>
-        <p>AI automation and integration for growing businesses. First results in 2–4 weeks. Built to last.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#services">AI Automation</a></li>
-          <li><a href="#services">AI Governance</a></li>
-          <li><a href="#services">AI Director</a></li>
-          <li><a href="#services">AI-OPS</a></li>
-          <li><a href="#services">AI Training</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#why">Why Zedex</a></li>
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="/aeo.html">AEO for Local Services</a></li>
-          <li><a href="/wholesale.html">For Product Brands</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a></li>
-          <li><a href="mailto:petar@zedex.dev">petar@zedex.dev</a></li>
-          <li><a href="https://www.upwork.com/freelancers/~01346ba15f6da8a2f9" target="_blank" rel="noopener">Upwork Portfolio</a></li>
-        </ul>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a></li>
+            <li><a href="mailto:petar@zedex.dev">petar@zedex.dev</a></li>
+            <li><a href="https://www.upwork.com/freelancers/~01346ba15f6da8a2f9" target="_blank" rel="noopener">Upwork</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© <span id="year"></span> Zedex AI. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="mailto:petar@zedex.dev">Contact</a>
-        <a href="/aeo.html">AEO</a>
-        <a href="/wholesale.html">Wholesale</a>
+      <p class="footer-copy">© <span id="year"></span> Zedex AI. Petar Krastev, Bulgaria.</p>
+      <div class="footer-bottom-links">
+        <a href="/aeo.html">AEO for Local Services</a>
+        <a href="/wholesale.html">For Product Brands</a>
       </div>
     </div>
   </div>
 </footer>
 
 <div class="mobile-sticky">
-  <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Strategy Call <span class="arrow">→</span></a>
+  <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call <span class="arrow">→</span></a>
 </div>
+
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script>
   const header = document.getElementById('site-header');
