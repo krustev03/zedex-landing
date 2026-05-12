@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zedex AI — We Build AI Into Your Business</title>
-  <meta name="description" content="Custom AI automation, strategy, and management for growing businesses. 50+ automations deployed. 40% average cost reduction. First results in 2–4 weeks.">
+  <title>Zedex AI - We Build AI Into Your Business</title>
+  <meta name="description" content="Custom AI automation, strategy, and management for growing businesses. 50+ automations deployed. 40% average cost reduction. First results in 2-4 weeks.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,12 +134,7 @@
       background: linear-gradient(180deg, #EEF4FF 0%, #F8FAFF 60%);
       position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: radial-gradient(rgba(37,99,235,0.06) 1px, transparent 1px);
-      background-size: 32px 32px;
-      pointer-events: none;
-    }
+    .hero::before { display: none; }
     .hero-inner {
       position: relative; z-index: 1;
       display: grid; grid-template-columns: 1fr 540px; gap: 52px; align-items: center;
@@ -152,7 +147,7 @@
     }
     .hero-badge svg { width: 14px; height: 14px; fill: var(--blue); }
     .hero-eyebrow { font-size: 16px; font-weight: 600; color: var(--blue); margin-bottom: 18px; display: block; }
-    h1.hero-title { font-size: clamp(44px, 5.5vw, 78px); margin-bottom: 24px; }
+    h1.hero-title { font-size: clamp(40px, 4.5vw, 64px); margin-bottom: 24px; }
     h1.hero-title .blue { color: var(--blue); }
     .hero-sub { font-size: 17px; color: var(--text-dim); line-height: 1.72; max-width: 520px; margin-bottom: 32px; }
     .hero-checks { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 36px; }
@@ -269,25 +264,44 @@
     .pillar-examples { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 6px; }
     .pillar-ex-tag { font-size: 11px; font-weight: 600; color: var(--text-muted); padding: 3px 9px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--border); }
 
-    /* ── LIVE PROOF ── */
-    .liveproof { background: var(--card); border-top: 1px solid var(--border); }
-    .liveproof-box {
-      max-width: 780px; margin: 0 auto;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border: 1px solid var(--blue-border); border-radius: var(--radius-lg);
-      padding: 48px 52px; text-align: center; position: relative; overflow: hidden;
-    }
-    .liveproof-box::before {
-      content: ''; position: absolute; top: -60px; right: -60px;
-      width: 200px; height: 200px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .liveproof-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); background: rgba(37,99,235,0.1); padding: 5px 14px; border-radius: 999px; display: inline-block; margin-bottom: 20px; }
-    .liveproof-query { font-size: clamp(18px, 2.5vw, 26px); font-weight: 800; color: var(--navy); line-height: 1.3; margin-bottom: 28px; font-style: italic; }
-    .liveproof-stats { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
-    .liveproof-stat strong { display: block; font-size: 28px; font-weight: 800; color: var(--blue); letter-spacing: -0.03em; }
-    .liveproof-stat span { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    /* ── TRUST BAR ── */
+    .trust-bar { padding: 64px 0 48px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+    .trust-bar-head { text-align: center; margin-bottom: 40px; }
+    .trust-bar-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--navy); letter-spacing: -0.02em; margin: 0 0 10px; }
+    .trust-bar-sub { font-size: 15px; color: var(--text-dim); margin: 0; }
+    .trust-marquee { position: relative; overflow: hidden; mask-image: linear-gradient(90deg, transparent 0%, black 80px, black calc(100% - 80px), transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 80px, black calc(100% - 80px), transparent 100%); }
+    .trust-track { display: flex; align-items: center; width: max-content; gap: 44px; animation: trust-scroll 42s linear infinite; will-change: transform; }
+    .trust-marquee:hover .trust-track { animation-play-state: paused; }
+    .trust-logo { display: flex; align-items: center; flex-shrink: 0; height: 44px; }
+    .trust-logo img { height: 36px; width: auto; max-width: 150px; object-fit: contain; opacity: .7; filter: grayscale(100%); transition: opacity .3s ease, filter .3s ease; }
+    .trust-logo:hover img { opacity: 1; filter: grayscale(0%); }
+    .trust-logo img.logo-invert { filter: brightness(0) grayscale(100%); }
+    .trust-logo:hover img.logo-invert { filter: brightness(0); }
+    .trust-logo .logo-fallback { font-size: 17px; font-weight: 700; color: var(--text-dim); opacity: .7; white-space: nowrap; transition: opacity .3s ease; }
+    .trust-logo:hover .logo-fallback { opacity: 1; }
+    .trust-divider { display: inline-flex; align-items: center; justify-content: center; color: var(--blue); opacity: .35; flex-shrink: 0; }
+    .trust-divider svg { width: 12px; height: 12px; }
+    @keyframes trust-scroll { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+
+    /* ── CASE STUDIES ── */
+    .cases { background: var(--bg); border-top: 1px solid var(--border); }
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .case-card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 36px 32px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 22px; transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+    .case-card:hover { transform: translateY(-4px); border-color: var(--blue-border); box-shadow: var(--shadow-lg); }
+    .case-logo { height: 42px; display: flex; align-items: center; }
+    .case-logo img { max-height: 34px; max-width: 150px; object-fit: contain; opacity: .75; filter: grayscale(100%); transition: opacity .3s, filter .3s; }
+    .case-card:hover .case-logo img { opacity: 1; filter: grayscale(0%); }
+    .case-logo .logo-fallback { font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--navy); font-weight: 700; opacity: .7; }
+    .case-metric { padding: 22px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .case-number { font-size: 44px; font-weight: 800; color: var(--blue); line-height: 1; margin-bottom: 10px; letter-spacing: -.035em; }
+    .case-metric-label { font-size: 13px; color: var(--text-dim); line-height: 1.55; }
+    .case-quote { font-size: 15px; line-height: 1.68; color: var(--text-dim); flex-grow: 1; margin: 0; }
+    .case-quote::before { content: '\201C'; font-size: 32px; color: var(--blue); line-height: 0; vertical-align: -10px; margin-right: 3px; }
+    .case-author { display: flex; align-items: center; gap: 14px; padding-top: 4px; margin: 0; }
+    .case-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--blue-light); flex-shrink: 0; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--blue); font-weight: 700; font-size: 16px; overflow: hidden; }
+    .case-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .case-name { font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 3px; }
+    .case-role { font-size: 12px; color: var(--text-muted); line-height: 1.3; }
 
     /* ── HOW IT WORKS ── */
     .steps { background: var(--bg-alt); border-top: 1px solid var(--border); }
@@ -368,7 +382,7 @@
     .final-cta-inner { max-width: 720px; margin: 0 auto; text-align: center; }
     .final-cta h2 { font-size: clamp(32px, 4vw, 52px); color: #fff; margin-bottom: 18px; }
     .final-cta p { font-size: 17px; color: rgba(255,255,255,0.8); max-width: 500px; margin: 0 auto 36px; line-height: 1.7; }
-    .final-cta .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .final-cta .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
     .btn-white {
       display: inline-flex; align-items: center; gap: 8px;
       background: #fff; color: var(--blue);
@@ -386,7 +400,7 @@
       transition: border-color 0.2s, background 0.2s, transform 0.2s;
     }
     .btn-white-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1); transform: translateY(-1px); }
-    .final-cta-note { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 22px; }
+    .final-cta-note { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 40px; }
     .final-cta-note a { color: rgba(255,255,255,0.85); font-weight: 500; }
     .final-cta-note a:hover { text-decoration: underline; }
 
@@ -457,17 +471,19 @@
       <span class="logo-text">Zedex <em>AI</em></span>
     </a>
     <nav class="nav-links">
-      <a href="#services">What I Build</a>
+      <a href="#services">Services</a>
       <a href="#process">How It Works</a>
+      <!-- <a href="case-studies.html">Case Studies</a> -->
       <a href="#founder">About</a>
       <a href="#faq">FAQ</a>
-      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call <span class="arrow">→</span></a>
+      <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
   </div>
   <div class="mobile-panel" id="mobilePanel">
-    <a href="#services">What I Build</a>
+    <a href="#services">Services</a>
     <a href="#process">How It Works</a>
+    <!-- <a href="case-studies.html">Case Studies</a> -->
     <a href="#founder">About</a>
     <a href="#faq">FAQ</a>
     <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a>
@@ -486,12 +502,12 @@
             50+ AI Automations Deployed
           </div>
           <span class="hero-eyebrow reveal d1">AI automation and integration specialist</span>
-          <h1 class="hero-title reveal d2">AI Built <span class="blue">Into<br>Your Business.</span></h1>
-          <p class="hero-sub reveal d3">Your competitors are already using AI to cut costs by 40% and work 24/7. I set it up for you: automation, strategy, and management. In weeks, not months.</p>
+          <h1 class="hero-title reveal d2">AI Built Into<br><span class="blue">Your Business.</span></h1>
+          <p class="hero-sub reveal d3">Most businesses have 5 to 10 processes that could run automatically but still don't. I find them, build the system, and hand you something that actually works - inside the tools you already use.</p>
           <div class="hero-checks reveal d3">
             <span class="hero-check">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              First results in 2–4 weeks
+              First results in 2-4 weeks
             </span>
             <span class="hero-check">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -499,19 +515,13 @@
             </span>
           </div>
           <div class="hero-ctas reveal d4">
-            <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Strategy Call <span class="arrow">→</span></a>
-            <a href="#services" class="btn-outline">See What I Do <span class="arrow">→</span></a>
+            <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a Strategy Call</a>
+            <a href="#services" class="btn-outline">Services</a>
           </div>
         </div>
 
         <!-- Dashboard Widget -->
         <div class="hero-dashboard reveal d2">
-          <!-- Floating badge — top right -->
-          <div class="dash-badge-top">
-            <svg width="11" height="11" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            EU AI Act ready
-          </div>
-
           <div class="dash-card">
             <div class="dash-header">
               <div class="dash-dots">
@@ -626,6 +636,53 @@
     </div>
   </section>
 
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-head reveal">
+        <h2 class="trust-bar-title">Trusted by Industry Leaders</h2>
+        <p class="trust-bar-sub">Join the growing number of companies that trust me with their AI transformation.</p>
+      </div>
+    </div>
+    <div class="trust-marquee">
+      <div class="trust-track">
+        <a class="trust-logo" href="https://cupffee.com/" target="_blank" rel="noopener"><img src="assets/logos/cupffee.svg" alt="Cupffee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Cupffee&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://stroodles.co.uk/pages/trade-home" target="_blank" rel="noopener"><img src="assets/logos/stroodles.png" alt="Stroodles" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Stroodles&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://incredibleeats.com/" target="_blank" rel="noopener"><img class="logo-invert" src="assets/logos/incredibleeats.png" alt="IncrEDIBLE Eats" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;IncrEDIBLE Eats&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://biotrem.eu/" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/biotrem.eu" alt="Biotrem" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Biotrem&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://frenvi.eu/" target="_blank" rel="noopener"><img src="assets/logos/frenvi.png" alt="FRENVI" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;FRENVI&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://koovee.co/" target="_blank" rel="noopener"><img src="assets/logos/koovee.png" alt="Koovee" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Koovee&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://thooshan.com/" target="_blank" rel="noopener"><img src="assets/logos/thooshan.png" alt="Thooshan" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Thooshan&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://wearesorbos.com/" target="_blank" rel="noopener"><img src="assets/logos/sorbos.png" alt="Sorbos" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Sorbos&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <!-- duplicate set for seamless loop -->
+        <a class="trust-logo" href="https://cupffee.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/cupffee.svg" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Cupffee&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://stroodles.co.uk/pages/trade-home" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/stroodles.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Stroodles&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://incredibleeats.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img class="logo-invert" src="assets/logos/incredibleeats.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;IncrEDIBLE Eats&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://biotrem.eu/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="https://logo.clearbit.com/biotrem.eu" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Biotrem&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://frenvi.eu/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/frenvi.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;FRENVI&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://koovee.co/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/koovee.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Koovee&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://thooshan.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/thooshan.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Thooshan&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+        <a class="trust-logo" href="https://wearesorbos.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/logos/sorbos.png" alt="" onerror="this.outerHTML='&lt;span class=&quot;logo-fallback&quot;&gt;Sorbos&lt;/span&gt;'"></a>
+        <span class="trust-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13 11 L22 12 L13 13 L12 22 L11 13 L2 12 L11 11 Z"/></svg></span>
+      </div>
+    </div>
+  </section>
+
   <!-- INSIGHT -->
   <section class="insight">
     <div class="container">
@@ -675,8 +732,8 @@
     <div class="container">
       <div class="section-head reveal">
         <span class="section-tag">WHAT I BUILD</span>
-        <h2 class="section-title">Three types of automation that move the needle.</h2>
-        <p class="section-sub">Not a menu of 30 services you'll never use. Three focused areas where automation creates real leverage — picked based on ROI, not what sounds impressive.</p>
+        <h2 class="section-title">The six types of automation I build.</h2>
+        <p class="section-sub">These aren't theoretical categories. They're the types of systems I've built most often, across different industries, that consistently deliver measurable results.</p>
       </div>
       <div class="pillars-grid">
         <div class="pillar-card reveal">
@@ -718,21 +775,44 @@
             <span class="pillar-ex-tag">SEO articles</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIVE PROOF -->
-  <section class="liveproof">
-    <div class="container">
-      <div class="liveproof-box reveal">
-        <span class="liveproof-tag">Live Example</span>
-        <p class="liveproof-query">"Lead qualification workflow running for a logistics client — 1,200 leads processed per week, 94% match accuracy, built in 12 days."</p>
-        <div class="liveproof-stats">
-          <div class="liveproof-stat"><strong>1,200+</strong><span>leads / week</span></div>
-          <div class="liveproof-stat"><strong>94%</strong><span>match accuracy</span></div>
-          <div class="liveproof-stat"><strong>12 days</strong><span>build time</span></div>
-          <div class="liveproof-stat"><strong>€0.018</strong><span>cost / execution</span></div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+          </div>
+          <span class="pillar-num">04</span>
+          <h3 class="pillar-name">SEO &amp; AEO</h3>
+          <p class="pillar-desc">Your business shows up when people search on Google - and when AI tools like ChatGPT and Perplexity answer questions in your space. Built and maintained automatically.</p>
+          <div class="pillar-examples">
+            <span class="pillar-ex-tag">Blog articles</span>
+            <span class="pillar-ex-tag">Google rankings</span>
+            <span class="pillar-ex-tag">AI citations</span>
+          </div>
+        </div>
+        <div class="pillar-card reveal d1">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <span class="pillar-num">05</span>
+          <h3 class="pillar-name">Research &amp; Monitoring</h3>
+          <p class="pillar-desc">Track competitors, reviews, prices, and industry signals automatically. Stay on top of what matters without spending hours finding it.</p>
+          <div class="pillar-examples">
+            <span class="pillar-ex-tag">Review monitoring</span>
+            <span class="pillar-ex-tag">Price tracking</span>
+            <span class="pillar-ex-tag">Competitor alerts</span>
+          </div>
+        </div>
+        <div class="pillar-card reveal d2">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="pillar-num">06</span>
+          <h3 class="pillar-name">Custom Solutions</h3>
+          <p class="pillar-desc">Something doesn't fit a category? Good. The best automations are built specifically for how your business works - your tools, your process, your problem.</p>
+          <div class="pillar-examples">
+            <span class="pillar-ex-tag">Fully custom</span>
+            <span class="pillar-ex-tag">Your stack</span>
+            <span class="pillar-ex-tag">Your workflow</span>
+          </div>
         </div>
       </div>
     </div>
@@ -752,7 +832,7 @@
           <div class="step-body">
             <span class="step-when-tag">Day 1</span>
             <h3 class="step-h">Discovery Call</h3>
-            <p class="step-p">15 minutes, free. I map 3 processes you're currently doing manually that AI should own. No prep needed. Just show up.</p>
+            <p class="step-p">15 minutes, free. I map 3 processes you're currently doing manually that could run automatically. No prep needed. Just show up.</p>
           </div>
         </div>
         <div class="step-item reveal d1">
@@ -766,7 +846,7 @@
         <div class="step-item reveal d2">
           <div class="step-circle">3</div>
           <div class="step-body">
-            <span class="step-when-tag">Weeks 2–3</span>
+            <span class="step-when-tag">Weeks 2-3</span>
             <h3 class="step-h">Build + Test</h3>
             <p class="step-p">I build the automation inside your existing tools. You review a working demo with your real data before anything goes live.</p>
           </div>
@@ -798,7 +878,7 @@
           <div class="outcome-sub">Live in production across industries</div>
         </div>
         <div class="outcome-card reveal d1">
-          <div class="outcome-num">30</div>
+          <div class="outcome-num">30+</div>
           <div class="outcome-label">Clients Served</div>
           <div class="outcome-sub">Solo operator. You work directly with me.</div>
         </div>
@@ -815,10 +895,10 @@
         <div class="outcome-card reveal d1">
           <div class="outcome-num">€0.018</div>
           <div class="outcome-label">Avg Cost Per Execution</div>
-          <div class="outcome-sub">AI at scale without AI-at-scale pricing</div>
+          <div class="outcome-sub">Running cost per workflow execution across active clients</div>
         </div>
         <div class="outcome-card reveal d2">
-          <div class="outcome-num">2–4 wks</div>
+          <div class="outcome-num">2-4 wks</div>
           <div class="outcome-label">Time to First Results</div>
           <div class="outcome-sub">From discovery call to production</div>
         </div>
@@ -826,40 +906,6 @@
     </div>
   </section>
 
-  <!-- WHO IT'S FOR -->
-  <section class="audience">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">WHO THIS IS FOR</span>
-        <h2 class="section-title">Built for people who want it working, not just planned.</h2>
-      </div>
-      <div class="audience-inner">
-        <div class="audience-col yes reveal">
-          <div class="audience-head">
-            <span class="audience-head-label">Good fit</span>
-          </div>
-          <ul class="audience-list">
-            <li>Founders and operators who are personally doing manual, recurring work</li>
-            <li>Businesses with repeating processes on a predictable schedule</li>
-            <li>Teams already using n8n, HubSpot, Notion, Airtable, or similar tools</li>
-            <li>Anyone who's been burned by a vendor who overpromised and underdelivered</li>
-            <li>People who want a working system, not a 60-page strategy document</li>
-          </ul>
-        </div>
-        <div class="audience-col no reveal d1">
-          <div class="audience-head">
-            <span class="audience-head-label">Not a good fit</span>
-          </div>
-          <ul class="audience-list">
-            <li>Companies that need a strategy presentation to take to a board, not a working system</li>
-            <li>Procurement-heavy enterprises that need 3 vendors, an RFP, and 6 months of legal</li>
-            <li>Anyone looking for the cheapest option. Cheap AI builds break in month two.</li>
-            <li>Teams without any existing automation or tooling. Start with something simpler first.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FOUNDER -->
   <section class="founder" id="founder">
@@ -876,7 +922,7 @@
           <p class="founder-role">Founder &amp; Automation Engineer</p>
           <p class="founder-bio">I build AI automations for businesses that are tired of doing things manually. Before this, I spent five years as a full stack developer. I actually understand your stack, not just the AI layer sitting on top of it.</p>
           <p class="founder-bio">I work alone. When we talk, you're talking to the person who will build your system. No account managers, no handoffs, no juniors doing the actual work. Decisions get made on the call, not three days later in a Slack thread.</p>
-          <p class="founder-bio">50+ automations shipped across industries. The average client saves 15–20 hours per week. Book a call below. 15 minutes, no obligation. I'll tell you exactly what I'd build for you first.</p>
+          <p class="founder-bio">50+ automations shipped across industries. The average client saves 15-20 hours per week. Book a call below. 15 minutes, no obligation. I'll tell you exactly what I'd build for you first.</p>
         </div>
       </div>
       <div class="founder-calendly reveal">
@@ -885,37 +931,6 @@
     </div>
   </section>
 
-  <!-- ANTI-POSITIONING -->
-  <section class="antipos">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">WHAT THIS ISN'T</span>
-        <h2 class="section-title">Let's be direct about what you're not getting.</h2>
-      </div>
-      <div class="antipos-list">
-        <div class="antipos-item reveal">
-          <span class="antipos-x">✗</span>
-          <p class="antipos-text"><strong>Not an agency.</strong> No account managers, no handoff to a junior. You work directly with me from call one to launch.</p>
-        </div>
-        <div class="antipos-item reveal d1">
-          <span class="antipos-x">✗</span>
-          <p class="antipos-text"><strong>Not a SaaS tool.</strong> I don't sell you software to learn and operate yourself. I build and hand you a working system. Documentation included.</p>
-        </div>
-        <div class="antipos-item reveal d2">
-          <span class="antipos-x">✗</span>
-          <p class="antipos-text"><strong>Not a strategy consultant.</strong> No 60-page roadmap and a wave goodbye. The engagement ends when your automation is live in production, not when the deck is done.</p>
-        </div>
-        <div class="antipos-item reveal">
-          <span class="antipos-x">✗</span>
-          <p class="antipos-text"><strong>Not a "figure it out as we go" engagement.</strong> Fixed scope and fixed price before any build starts. If something changes, I'll flag it. No surprise invoices.</p>
-        </div>
-        <div class="antipos-item reveal d1">
-          <span class="antipos-x">✗</span>
-          <p class="antipos-text"><strong>Not a general IT firm dabbling in AI.</strong> Automation is the only thing I do. 50+ builds, 30 clients, every working day. Not a side offering from a dev shop.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ -->
   <section class="faq" id="faq">
@@ -928,7 +943,7 @@
       <div class="faq-list">
         <div class="faq-item reveal">
           <button class="faq-q">How fast can you actually deliver? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Most builds go from discovery call to production in 2–4 weeks. The pilot runs with your real data within 2–3 weeks of kickoff. If the scope is smaller (single workflow, clean data), sometimes faster. I'll tell you the realistic timeline before any money changes hands.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Most builds go from discovery call to production in 2-4 weeks. The pilot runs with your real data within 2-3 weeks of kickoff. If the scope is smaller (single workflow, clean data), sometimes faster. I'll tell you the realistic timeline before any money changes hands.</div></div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q">What tools do you work with? <span class="faq-ic"></span></button>
@@ -936,7 +951,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q">How much does it cost? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Fixed price per project, scoped upfront. Simple single workflow builds typically run $300–$800. Multi workflow systems with integrations and AI logic range from $1,500–$6,000+. You get a written quote before committing. No hourly billing, no scope creep invoices.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Fixed price per project, scoped upfront. Simple single workflow builds typically run $300-$800. Multi workflow systems with integrations and AI logic range from $1,500-$6,000+. You get a written quote before committing. No hourly billing, no scope creep invoices.</div></div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q">Do you work with non-technical clients? <span class="faq-ic"></span></button>
@@ -952,7 +967,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q">How do you handle data security? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Automations run inside your own infrastructure: your n8n instance, your cloud accounts, your credentials. Nothing routes through my systems. I document all data flows before the build starts, and I use privacy first AI models (Anthropic Claude) that don't train on your data.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Automations run inside your own infrastructure: your n8n instance, your cloud accounts, your credentials. Nothing routes through my systems. I document all data flows before the build starts, and I use privacy-first AI models (Anthropic Claude) that don't train on your data.</div></div>
         </div>
       </div>
     </div>
@@ -965,10 +980,10 @@
         <h2>Let's find the one thing to automate first.</h2>
         <p>15 minute call, free. Tell me what you're doing manually. I'll tell you exactly what I'd build, how long it takes, and what it costs.</p>
         <div class="ctas">
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-white">Book a Call <span class="arrow">→</span></a>
-          <a href="mailto:petar@zedex.dev" class="btn-white-outline">Email Directly <span class="arrow">→</span></a>
+          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-white">Book a Call</a>
+          <a href="mailto:petar@zedex.dev" class="btn-white-outline">Email Directly</a>
         </div>
-        <p class="final-cta-note">No commitment. No sales pitch. Just a conversation.</p>
+        <p class="final-cta-note">No deck. No pressure. You'll leave knowing exactly what to build first and what it'll cost.</p>
       </div>
     </div>
   </section>
@@ -980,7 +995,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="footer-logo-text">Zedex <em>AI</em></span>
-        <p>AI automation for businesses that want results, not roadmaps. First results in 2–4 weeks.</p>
+        <p>AI automation for businesses that want results, not roadmaps. First results in 2-4 weeks.</p>
       </div>
       <div class="footer-links-group">
         <div class="footer-col">
@@ -996,17 +1011,12 @@
           <ul>
             <li><a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a Call</a></li>
             <li><a href="mailto:petar@zedex.dev">petar@zedex.dev</a></li>
-            <li><a href="https://www.upwork.com/freelancers/~01346ba15f6da8a2f9" target="_blank" rel="noopener">Upwork</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© <span id="year"></span> Zedex AI. Petar Krastev, Bulgaria.</p>
-      <div class="footer-bottom-links">
-        <a href="/aeo.html">AEO for Local Services</a>
-        <a href="/wholesale.html">For Product Brands</a>
-      </div>
     </div>
   </div>
 </footer>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Zedex AI — Banner</title>
+<style>
+  :root {
+    --banner-w: 6336px;
+    --banner-h: 1584px;
+    --ink: #0f1830;
+    --ink-soft: #3b4660;
+    --blue: #2563ff;
+    --blue-dark: #2156ec;
+    --blue-light: #dbe6ff;
+    --white: #f6f8fc;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    min-height: 100vh;
+    font-family: "Inter", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  .stage {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  /* The banner is laid out at native size, then scaled down for the viewport. */
+  .banner-wrap {
+    width: var(--banner-w);
+    height: var(--banner-h);
+    transform-origin: top left;
+  }
+  .banner {
+    width: var(--banner-w);
+    height: var(--banner-h);
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    /* Subtle dot pattern across the whole banner; the blue side covers it. */
+    background-image:
+      radial-gradient(circle, #c9d3e6 6px, transparent 7px);
+    background-size: 88px 88px;
+    background-position: 0 0;
+  }
+  /* Solid white base behind dots so blue side stays clean. */
+  .banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle, rgba(168,184,212,0.55) 5px, transparent 6px) 0 0 / 88px 88px,
+      var(--white);
+    z-index: 0;
+  }
+
+  /* Left-hand blue panel with two diagonal stripes (mirrored). */
+  .blue-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 46%;
+    z-index: 1;
+    clip-path: polygon(0 0, 86% 0, 94% 100%, 0 100%);
+    background: var(--blue);
+  }
+  /* Lighter blue diagonal accent stripe just right of the main blue. */
+  .stripe-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 49.5%;
+    z-index: 1;
+    clip-path: polygon(84% 0, 89% 0, 97% 100%, 92% 100%);
+    background: var(--blue-light);
+    opacity: 0.85;
+  }
+  /* Inner lighter band inside the blue. */
+  .stripe-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 47%;
+    z-index: 2;
+    clip-path: polygon(78% 0, 82% 0, 90% 100%, 86% 100%);
+    background: #4b85ff;
+    opacity: 0.55;
+  }
+
+  /* Text block. */
+  .content {
+    position: absolute;
+    z-index: 3;
+    right: 12.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+  }
+  .title {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 520px;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin: 0;
+    white-space: nowrap;
+  }
+  .title .ai {
+    color: var(--blue);
+    margin-left: 0.18em;
+  }
+  .rule {
+    width: 240px;
+    height: 18px;
+    background: var(--blue);
+    margin-top: 56px;
+    margin-bottom: 64px;
+    border-radius: 2px;
+  }
+  .subtitle {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 168px;
+    letter-spacing: -0.005em;
+    color: var(--ink-soft);
+    margin: 0;
+    white-space: nowrap;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stage">
+    <div class="banner-wrap" id="bannerWrap">
+      <div class="banner" id="banner">
+        <div class="stripe-light"></div>
+        <div class="blue-panel"></div>
+        <div class="stripe-inner"></div>
+
+        <div class="content">
+          <h1 class="title">Zedex<span class="ai">AI</span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Auto-fit the 6336×1584 banner into the viewport.
+  function fit() {
+    const wrap = document.getElementById('bannerWrap');
+    if (!wrap) return;
+    const padding = 48;
+    const availW = window.innerWidth - padding;
+    const availH = window.innerHeight - padding;
+    const scale = Math.min(availW / 6336, availH / 1584);
+    wrap.style.transform = `scale(${scale})`;
+    wrap.style.width = (6336 * scale) + 'px';
+    wrap.style.height = (1584 * scale) + 'px';
+    // Inner element keeps its native size; we scale it visually.
+    const banner = document.getElementById('banner');
+    banner.style.transformOrigin = 'top left';
+  }
+  // Different scaling strategy: use a CSS scale on a fixed-size element.
+  function fitV2() {
+    const wrap = document.getElementById('bannerWrap');
+    const padding = 48;
+    const availW = window.innerWidth - padding;
+    const availH = window.innerHeight - padding;
+    const scale = Math.min(availW / 6336, availH / 1584);
+    wrap.style.transform = `scale(${scale})`;
+    // Reserve layout space equal to the scaled size so it centers correctly.
+    wrap.style.marginRight = (-(6336 - 6336*scale)) + 'px';
+    wrap.style.marginBottom = (-(1584 - 1584*scale)) + 'px';
+  }
+  window.addEventListener('resize', fitV2);
+  window.addEventListener('load', fitV2);
+  fitV2();
+</script>
+</body>
+</html>
