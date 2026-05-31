@@ -28,6 +28,7 @@
       --orange: #F59E0B;
       --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 24px rgba(15,23,42,0.07);
       --shadow-lg: 0 12px 40px rgba(37,99,235,0.12);
       --radius: 14px;
       --radius-lg: 20px;
@@ -471,20 +472,20 @@
       <span class="logo-text">Zedex <em>AI</em></span>
     </a>
     <nav class="nav-links">
-      <a href="#process">How it works</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="/">Portfolio</a>
+      <a href="#services">Services</a>
       <a href="#skills">Free skills</a>
-      <a href="#founder">About</a>
       <a href="#faq">FAQ</a>
       <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">Book a call</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
   </div>
   <div class="mobile-panel" id="mobilePanel">
-    <a href="#process">How it works</a>
-    <a href="#pricing">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="/">Portfolio</a>
+    <a href="#services">Services</a>
     <a href="#skills">Free skills</a>
-    <a href="#founder">About</a>
     <a href="#faq">FAQ</a>
     <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener">Book a call</a>
   </div>
@@ -516,7 +517,7 @@
           </div>
           <div class="hero-ctas reveal d4">
             <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="btn-primary">See If You're AI-Ready (Free Test)</a>
-            <a href="#pricing" class="btn-outline">Book a Strategy Call</a>
+            <a href="#reviews" class="btn-outline">See what clients say</a>
           </div>
           <style>
             .hero-stats{ display:flex; gap:0; margin-top:40px; border-top:1px solid var(--border); padding-top:24px; }
@@ -705,139 +706,132 @@
     </div>
   </section>
 
-  <!-- INSIGHT -->
-  <section class="insight">
+  <!-- ============ REVIEWS ============ -->
+  <style>
+    #reviews{ background:var(--bg); border-top:1px solid var(--border); }
+    #reviews .rev-rating{ display:flex; flex-direction:column; align-items:center; gap:8px; margin:0 auto 48px; }
+    #reviews .rev-stars{ display:flex; gap:3px; }
+    #reviews .rev-stars svg{ width:26px; height:26px; fill:var(--orange); }
+    #reviews .rev-rating-line{ font-size:15px; color:var(--text-dim); font-weight:500; }
+    #reviews .rev-rating-line strong{ color:var(--navy); font-weight:800; }
+    #reviews .rev-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
+    #reviews .rev-card{ background:var(--card); border:1px solid var(--border); border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; gap:18px; box-shadow:var(--shadow-sm); transition:transform .3s, border-color .3s, box-shadow .3s; }
+    #reviews .rev-card:hover{ transform:translateY(-4px); border-color:var(--blue-border); box-shadow:var(--shadow-lg); }
+    #reviews .rev-card-stars{ display:flex; gap:2px; }
+    #reviews .rev-card-stars svg{ width:16px; height:16px; fill:var(--orange); }
+    #reviews .rev-quote{ font-size:14px; line-height:1.72; color:var(--text-dim); margin:0; display:-webkit-box; -webkit-line-clamp:6; -webkit-box-orient:vertical; overflow:hidden; }
+    #reviews .rev-more{ font-size:13px; font-weight:700; color:var(--blue); text-decoration:none; align-self:flex-start; margin-top:-6px; transition:gap .2s; display:inline-flex; align-items:center; gap:5px; }
+    #reviews .rev-more:hover{ text-decoration:underline; }
+    #reviews .rev-more .arrow{ transition:transform .2s; }
+    #reviews .rev-card:hover .rev-more .arrow{ transform:translateX(3px); }
+    #reviews .rev-author{ display:flex; align-items:center; gap:13px; padding-top:18px; border-top:1px solid var(--border); margin-top:auto; }
+    #reviews .rev-avatar{ width:46px; height:46px; border-radius:50%; background:var(--blue-light); flex-shrink:0; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--blue); font-weight:700; font-size:15px; overflow:hidden; }
+    #reviews .rev-avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+    #reviews .rev-name{ font-size:14px; font-weight:700; color:var(--navy); line-height:1.25; }
+    #reviews .rev-role{ font-size:12px; color:var(--text-muted); line-height:1.35; margin-top:2px; }
+    #reviews .rev-li{ margin-left:auto; flex-shrink:0; display:flex; }
+    #reviews .rev-li svg{ width:20px; height:20px; }
+    @media (max-width:980px){ #reviews .rev-grid{ grid-template-columns:1fr; max-width:560px; margin:0 auto; } }
+  </style>
+  <section id="reviews">
     <div class="container">
-      <div class="insight-inner">
-        <div class="insight-text reveal">
-          <span class="section-tag">THE PROBLEM</span>
-          <h2 class="section-title insight-title">You keep doing the same work yourself.</h2>
-          <p class="insight-body">Reports, follow ups, lead research, the same email for the fortieth time. It is the work that fills your day and never moves the business. You do not need another tool. You need someone to take it off your plate.</p>
+      <div class="section-head reveal">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What clients say.</h2>
+      </div>
+      <div class="rev-rating reveal">
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
         </div>
-        <div class="insight-chart reveal d2">
-          <div class="insight-chart-title">WHERE THE TIME GOES</div>
-          <div class="insight-bars">
-            <div class="insight-bar-row">
-              <span class="insight-bar-label">Reporting</span>
-              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:85%;background:var(--blue)"></div></div>
-              <span class="insight-bar-val">85%</span>
-            </div>
-            <div class="insight-bar-row">
-              <span class="insight-bar-label">Lead research</span>
-              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:72%;background:var(--blue)"></div></div>
-              <span class="insight-bar-val">72%</span>
-            </div>
-            <div class="insight-bar-row">
-              <span class="insight-bar-label">Follow ups</span>
-              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:60%;background:#60A5FA"></div></div>
-              <span class="insight-bar-val">60%</span>
-            </div>
-            <div class="insight-bar-row">
-              <span class="insight-bar-label">Status checks</span>
-              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:55%;background:#60A5FA"></div></div>
-              <span class="insight-bar-val">55%</span>
-            </div>
-            <div class="insight-bar-row">
-              <span class="insight-bar-label">Content drafts</span>
-              <div class="insight-bar-track"><div class="insight-bar-fill" style="width:45%;background:#BFDBFE"></div></div>
-              <span class="insight-bar-val">45%</span>
-            </div>
+        <div class="rev-rating-line"><strong>4.9 / 5</strong> from 43 reviews</div>
+      </div>
+      <div class="rev-grid">
+
+        <div class="rev-card reveal">
+          <div class="rev-card-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
           </div>
-          <p style="font-size:11px;color:var(--text-muted);margin-top:14px;">Where founder hours quietly go every week.</p>
+          <p class="rev-quote">I had the pleasure of working with Petar on a comprehensive AI-driven automation project for the Visa Innovation Program Europe, and the results were fantastic. Petar designed, built, and deployed an incredibly sophisticated automation ecosystem using n8n as the orchestration layer, flawlessly integrating tools like Airtable, the OpenAI API, Perplexity API, Slack, and email workflows. He successfully delivered multiple core engines, including an automated Startup-Partner Matching Engine with high accuracy, a PoC Suggestion Engine, and robust communication tracking systems. Beyond his deep technical expertise, Petar is a highly structured and dependable professional who maintained quality and clear communication throughout. If you are looking for an expert who can translate complex business operational needs into powerful, intelligent systems, I highly recommend partnering with Petar.</p>
+          <a class="rev-more" href="/">See more <span class="arrow">&rarr;</span></a>
+          <div class="rev-author">
+            <div class="rev-avatar">TN</div>
+            <div>
+              <div class="rev-name">Todor Nikolov</div>
+              <div class="rev-role">Business Development Manager · Visa Innovation Program Europe Lead</div>
+            </div>
+            <span class="rev-li" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
+          </div>
         </div>
+
+        <div class="rev-card reveal d1">
+          <div class="rev-card-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="rev-quote">I had the pleasure of working with Petar on the development of a highly customized AI-driven sales and automation infrastructure for Cupffee, and I can confidently say that he is exceptionally talented when it comes to transforming ideas into fully working systems. What impressed me most is how easily Petar understands complex business logic and turns it into practical, scalable solutions. Together, we built an advanced AI-powered lead generation and sales system that automates the discovery, qualification, scoring, CRM management, outreach, and follow-up with B2B leads across multiple international markets. He connects AI tools, CRM systems, scraping solutions, and communication flows into one seamless ecosystem that genuinely saves time. Beyond the technical execution, he is proactive, solution-oriented, reliable, and extremely easy to work with. He is one of the most capable people I've worked with in this field.</p>
+          <a class="rev-more" href="/">See more <span class="arrow">&rarr;</span></a>
+          <div class="rev-author">
+            <div class="rev-avatar"><img src="assets/miroslav_cupffee.jpg" alt="Miroslav Zapryanov"></div>
+            <div>
+              <div class="rev-name">Miroslav Zapryanov</div>
+              <div class="rev-role">Founder &amp; CEO, Cupffee</div>
+            </div>
+            <span class="rev-li" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
+          </div>
+        </div>
+
+        <div class="rev-card reveal d2">
+          <div class="rev-card-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="rev-quote">Working with Petar was a pleasure. He delivered more than what was expected from the project we worked on, helped develop it, and suggested new features that made the end result better. Petar took initiative and handled the project with the same interest as if it was his own.</p>
+          <a class="rev-more" href="/">See more <span class="arrow">&rarr;</span></a>
+          <div class="rev-author">
+            <div class="rev-avatar">AB</div>
+            <div>
+              <div class="rev-name">Alfred Bou Dagher</div>
+              <div class="rev-role">Founder, VISUWALL Property Launch studio</div>
+            </div>
+            <span class="rev-li" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:48px;" class="reveal">
+        <a href="/" class="btn-outline">See all portfolio <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
 
-  <!-- PILLARS -->
+  <!-- SERVICES -->
   <section class="pillars" id="services">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">WHAT IT DOES</span>
-        <h2 class="section-title">Jobs a digital employee can take off you.</h2>
-        <p class="section-sub">These are the jobs I see eating founders' weeks. Each one becomes a digital employee that handles it, inside the tools you already use.</p>
+        <span class="section-tag">Services</span>
+        <h2 class="section-title">I put AI to work inside your business.</h2>
+        <p class="section-sub">Two ways, depending on what you need. Both run on the tools you already use, and both are mine to build, run, and keep improving.</p>
       </div>
-      <div class="pillars-grid">
+      <div class="pillars-grid" style="grid-template-columns:repeat(2,1fr);max-width:840px;margin:0 auto;">
         <div class="pillar-card reveal">
           <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9 9h6M9 12h4"/></svg>
           </div>
           <span class="pillar-num">01</span>
-          <h3 class="pillar-name">Client reports</h3>
-          <p class="pillar-desc">Pull the numbers, write the report your client actually reads, send it on schedule. You stop writing reports at 9pm.</p>
-          <div class="pillar-examples">
-            <span class="pillar-ex-tag">Weekly digests</span>
-            <span class="pillar-ex-tag">Plain English</span>
-            <span class="pillar-ex-tag">Sent for you</span>
-          </div>
+          <h3 class="pillar-name">Custom workflows</h3>
+          <p class="pillar-desc">Systems that take the manual work off your plate, the reports, the follow-ups, the lead research, the same task on repeat, and solve the specific problems slowing you down. Built once, running for good.</p>
         </div>
         <div class="pillar-card reveal d1">
           <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 11 2 2 4-4"/></svg>
           </div>
           <span class="pillar-num">02</span>
-          <h3 class="pillar-name">Lead research and follow up</h3>
-          <p class="pillar-desc">Research every lead, draft the follow up, keep the pipeline warm. You stop letting good ones go cold.</p>
-          <div class="pillar-examples">
-            <span class="pillar-ex-tag">Lead briefs</span>
-            <span class="pillar-ex-tag">Follow ups</span>
-            <span class="pillar-ex-tag">Your pipeline</span>
-          </div>
-        </div>
-        <div class="pillar-card reveal d2">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <span class="pillar-num">03</span>
-          <h3 class="pillar-name">Inbox and admin</h3>
-          <p class="pillar-desc">Sort the inbox, surface what matters, draft the replies, log the rest. You stop living in your email.</p>
-          <div class="pillar-examples">
-            <span class="pillar-ex-tag">Inbox triage</span>
-            <span class="pillar-ex-tag">Drafted replies</span>
-            <span class="pillar-ex-tag">Notes filed</span>
-          </div>
-        </div>
-        <div class="pillar-card reveal">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-          </div>
-          <span class="pillar-num">04</span>
-          <h3 class="pillar-name">Content and posts</h3>
-          <p class="pillar-desc">Turn one idea into a week of posts in your voice, ready for you to review. You stop staring at a blank page.</p>
-          <div class="pillar-examples">
-            <span class="pillar-ex-tag">A week from one idea</span>
-            <span class="pillar-ex-tag">Your voice</span>
-            <span class="pillar-ex-tag">Ready to post</span>
-          </div>
-        </div>
-        <div class="pillar-card reveal d1">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-          </div>
-          <span class="pillar-num">05</span>
-          <h3 class="pillar-name">Research and monitoring</h3>
-          <p class="pillar-desc">Track competitors, reviews, prices, and signals. You hear what matters without digging for it.</p>
-          <div class="pillar-examples">
-            <span class="pillar-ex-tag">Competitors</span>
-            <span class="pillar-ex-tag">Reviews</span>
-            <span class="pillar-ex-tag">Price moves</span>
-          </div>
-        </div>
-        <div class="pillar-card reveal d2">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <span class="pillar-num">06</span>
-          <h3 class="pillar-name">Whatever you keep doing</h3>
-          <p class="pillar-desc">Something not on this list? Good. The best digital employees are built around the one job that eats your week.</p>
-          <div class="pillar-examples">
-            <span class="pillar-ex-tag">Built for you</span>
-            <span class="pillar-ex-tag">Your tools</span>
-            <span class="pillar-ex-tag">Your way</span>
-          </div>
+          <h3 class="pillar-name">Digital employees</h3>
+          <p class="pillar-desc">My main deliverable. A digital employee that keeps learning and settles into how you work, handling its job day after day and getting sharper over time. Have one, a few, or a whole team.</p>
         </div>
       </div>
-      <p style="text-align:center;margin-top:40px;font-size:15px;color:var(--text-dim);">Each one is a single digital employee. Have one, a few, or a whole team.</p>
     </div>
   </section>
 
@@ -886,156 +880,6 @@
     </div>
   </section>
 
-  <!-- OUTCOMES -->
-  <section class="outcomes">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">BY THE NUMBERS</span>
-        <h2 class="section-title">Results, not promises.</h2>
-        <p class="section-sub">What you get when a digital employee takes the work off you.</p>
-      </div>
-      <div class="outcomes-grid">
-        <div class="outcome-card reveal">
-          <div class="outcome-num">7 days</div>
-          <div class="outcome-label">To your first hire</div>
-          <div class="outcome-sub">Your first digital employee working in a week, or that month is free.</div>
-        </div>
-        <div class="outcome-card reveal d1">
-          <div class="outcome-num">1 fee</div>
-          <div class="outcome-label">Flat monthly</div>
-          <div class="outcome-sub">No surprises, cancel any time.</div>
-        </div>
-        <div class="outcome-card reveal d2">
-          <div class="outcome-num">10+ hrs</div>
-          <div class="outcome-label">Back each week</div>
-          <div class="outcome-sub">The work you used to do by hand, handled.</div>
-        </div>
-        <div class="outcome-card reveal">
-          <div class="outcome-num">Always</div>
-          <div class="outcome-label">On and working</div>
-          <div class="outcome-sub">Your employees keep going while you sleep and travel.</div>
-        </div>
-        <div class="outcome-card reveal d1">
-          <div class="outcome-num">40+</div>
-          <div class="outcome-label">Companies helped</div>
-          <div class="outcome-sub">Across 15+ countries in the last year.</div>
-        </div>
-        <div class="outcome-card reveal d2">
-          <div class="outcome-num">Yours</div>
-          <div class="outcome-label">You own it all</div>
-          <div class="outcome-sub">Leave anytime and take everything with you.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ PRICING ============ -->
-  <style>
-    #pricing{ --p-gold:#2563EB; --p-gold-soft:#60A5FA; --p-cream:#F8FAFF; --p-navy:#0F172A; --p-text:#1E293B; --p-dim:#475569; --p-border:rgba(37,99,235,0.18); --p-border-strong:rgba(37,99,235,0.38); background:var(--p-cream); }
-    #pricing .p-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:stretch; max-width:1080px; margin:0 auto; }
-    #pricing .p-card{ background:#fff; border:1px solid var(--p-border); border-radius:20px; padding:32px 28px; display:flex; flex-direction:column; }
-    #pricing .p-card.feature{ border:2px solid var(--p-gold); box-shadow:0 16px 50px rgba(37,99,235,0.16); }
-    #pricing .p-pop{ display:inline-block; align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:var(--p-gold); border-radius:999px; padding:5px 13px; margin-bottom:14px; }
-    #pricing .p-name{ font-size:15px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--p-gold); margin-bottom:10px; }
-    #pricing .p-price{ font-size:40px; font-weight:800; color:var(--p-navy); letter-spacing:-0.03em; line-height:1; }
-    #pricing .p-price span{ font-size:15px; font-weight:600; color:var(--p-dim); }
-    #pricing .p-line{ font-size:14.5px; color:var(--p-dim); margin:10px 0 22px; }
-    #pricing .p-list{ list-style:none; padding:0; margin:0 0 26px; display:flex; flex-direction:column; gap:12px; flex:1; }
-    #pricing .p-list li{ font-size:14.5px; color:var(--p-text); line-height:1.5; padding-left:26px; position:relative; }
-    #pricing .p-list li::before{ content:''; position:absolute; left:0; top:5px; width:13px; height:7px; border-left:2px solid var(--p-gold); border-bottom:2px solid var(--p-gold); transform:rotate(-45deg); }
-    #pricing .p-cta{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 24px; border-radius:999px; font-size:15px; font-weight:600; transition:all .25s; }
-    #pricing .p-cta.solid{ background:var(--p-gold); color:#fff; }
-    #pricing .p-cta.solid:hover{ background:var(--p-gold-soft); transform:translateY(-1px); box-shadow:0 8px 24px rgba(37,99,235,0.32); }
-    #pricing .p-cta.ghost{ border:2px solid var(--p-border-strong); color:var(--p-gold); }
-    #pricing .p-cta.ghost:hover{ border-color:var(--p-gold); background:var(--p-cream); }
-    #pricing .p-cta .arrow{ transition:transform .25s; } #pricing .p-cta:hover .arrow{ transform:translateX(4px); }
-    #pricing .p-foot{ max-width:680px; margin:44px auto 0; text-align:center; }
-    #pricing .p-promise{ font-size:18px; font-weight:700; color:var(--p-navy); margin-bottom:14px; }
-    #pricing .p-promise em{ font-style:italic; color:var(--p-gold); }
-    #pricing .p-extra{ font-size:14.5px; color:var(--p-dim); line-height:1.7; }
-    @media (max-width:900px){ #pricing .p-grid{ grid-template-columns:1fr; max-width:440px; } }
-  </style>
-  <section id="pricing">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">Pricing</span>
-        <h2 class="section-title">One flat fee. <em>Cancel any time.</em></h2>
-        <p class="section-sub">Start with a free call. I find the jobs worth handing over first, then you pick how much you want off your plate.</p>
-      </div>
-      <div class="p-grid">
-        <div class="p-card reveal">
-          <div class="p-name">Starter</div>
-          <div class="p-price">&euro;1,200<span> / mo</span></div>
-          <p class="p-line">One thing that eats your time.</p>
-          <ul class="p-list">
-            <li>One digital employee, one job</li>
-            <li>5 new skills a month, for any part of your business</li>
-            <li>The skills vault</li>
-            <li>A call every two weeks</li>
-            <li>Message me anytime, same day reply</li>
-          </ul>
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="p-cta ghost">Book a free call <span class="arrow">&rarr;</span></a>
-        </div>
-        <div class="p-card feature reveal d1">
-          <span class="p-pop">Most pick this</span>
-          <div class="p-name">Team</div>
-          <div class="p-price">&euro;2,500<span> / mo</span></div>
-          <p class="p-line">A few jobs you want off your plate.</p>
-          <ul class="p-list">
-            <li>Up to three digital employees</li>
-            <li>15 new skills a month</li>
-            <li>Everything in Starter</li>
-            <li>Two calls a week, just us</li>
-          </ul>
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="p-cta solid">Book a free call <span class="arrow">&rarr;</span></a>
-        </div>
-        <div class="p-card reveal d2">
-          <div class="p-name">AI OS</div>
-          <div class="p-price">&euro;5,000<span> / mo</span></div>
-          <p class="p-line">A whole layer of work that just runs.</p>
-          <ul class="p-list">
-            <li>As many digital employees as you need</li>
-            <li>New skills whenever you need them</li>
-            <li>Your own private system</li>
-            <li>First one live in 48 hours</li>
-            <li>Calls whenever you need them</li>
-          </ul>
-          <a href="https://calendly.com/krastev/meeting" target="_blank" rel="noopener" class="p-cta ghost">Book a free call <span class="arrow">&rarr;</span></a>
-        </div>
-      </div>
-      <div class="p-foot reveal">
-        <p class="p-promise">Your first digital employee working in 7 days, <em>or that month is free.</em></p>
-        <p class="p-extra">Every plan: your employees sound like you, a few are ready on day one, a short video for each build, and you own all of it. Tool costs sit on your own accounts, no markup.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOUNDER -->
-  <section class="founder" id="founder">
-    <div class="container">
-      <div class="founder-inner">
-        <div class="founder-left reveal">
-          <div class="founder-portrait">
-            <img src="assets/founder.jpg" alt="Petar Krastev, Founder at Zedex AI" loading="lazy">
-          </div>
-        </div>
-        <div class="founder-right reveal d1">
-          <span class="founder-tag">The Person Behind Zedex</span>
-          <h2 class="founder-name">Petar Krastev</h2>
-          <p class="founder-role">Founder of Zedex</p>
-          <p class="founder-bio">I set up digital employees for businesses that are tired of doing things by hand. Before this, I spent five years as a full stack developer. I actually understand your stack, not just the AI layer sitting on top of it.</p>
-          <p class="founder-bio">When we talk, you talk to the person who builds your system. Decisions get made on the call, not three days later in a Slack thread.</p>
-          <p class="founder-bio">Book a call below. It is free and there is no obligation. Tell me what you keep doing by hand, and I'll tell you the first digital employee I would set up for you.</p>
-        </div>
-      </div>
-      <div class="founder-calendly reveal">
-        <div class="calendly-inline-widget" data-url="https://calendly.com/krastev/meeting?hide_gdpr_banner=1&amp;primary_color=2563EB" style="min-width:320px;height:700px;"></div>
-      </div>
-    </div>
-  </section>
-
-
   <!-- FAQ -->
   <section class="faq" id="faq">
     <div class="container">
@@ -1055,7 +899,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q">How much does it cost? <span class="faq-ic"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">One flat fee a month, cancel any time. Starter is 1,200 euro, Team is 2,500 euro, and the full setup is 5,000 euro. You pick on the call, no pressure.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">One flat fee a month, cancel any time. The right number depends on how much you want off your plate, so I work it out with you on the call. No pressure, no deck.</div></div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q">Do you work with non technical clients? <span class="faq-ic"></span></button>
@@ -1206,6 +1050,30 @@
     </div>
   </section>
 
+  <!-- FOUNDER -->
+  <section class="founder" id="founder">
+    <div class="container">
+      <div class="founder-inner">
+        <div class="founder-left reveal">
+          <div class="founder-portrait">
+            <img src="assets/founder.jpg" alt="Petar Krastev, Founder at Zedex AI" loading="lazy">
+          </div>
+        </div>
+        <div class="founder-right reveal d1">
+          <span class="founder-tag">The Person Behind Zedex</span>
+          <h2 class="founder-name">Petar Krastev</h2>
+          <p class="founder-role">Founder of Zedex</p>
+          <p class="founder-bio">I set up digital employees for businesses that are tired of doing things by hand. Before this, I spent five years as a full stack developer. I actually understand your stack, not just the AI layer sitting on top of it.</p>
+          <p class="founder-bio">When we talk, you talk to the person who builds your system. Decisions get made on the call, not three days later in a Slack thread.</p>
+          <p class="founder-bio">Book a call below. It is free and there is no obligation. Tell me what you keep doing by hand, and I'll tell you the first digital employee I would set up for you.</p>
+        </div>
+      </div>
+      <div class="founder-calendly reveal">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/krastev/meeting?hide_gdpr_banner=1&amp;primary_color=2563EB" style="min-width:320px;height:700px;"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- FINAL CTA -->
   <section class="final-cta" id="contact">
     <div class="container">
@@ -1234,10 +1102,10 @@
         <div class="footer-col">
           <h4>Work</h4>
           <ul>
-            <li><a href="#process">How it works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="/">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#skills">Free skills</a></li>
-            <li><a href="#founder">About</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
